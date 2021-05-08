@@ -17,10 +17,12 @@ struct TreatmentCard: View {
             
             VStack (alignment: .leading) {
                 Text("Nome do Tratamento")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title)
+                    .foregroundColor(.black)
                 
                 Text("Descrição do Tramento, detalhes dos passos, etc e tal.")
                     .font(.subheadline)
+                    .foregroundColor(.black)
                 
                 HStack (alignment: .center) {
                     ForEach(0..<3){_ in

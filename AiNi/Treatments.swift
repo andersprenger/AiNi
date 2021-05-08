@@ -17,7 +17,9 @@ struct Treatments: View {
                 VStack(alignment: .center, spacing: 17) {
                     Spacer() // descola o primeiro card da navigationbar
                     ForEach (0..<10) {_ in
-                        TreatmentCard()
+                        NavigationLink(destination: TreatmentStages()) {
+                            TreatmentCard()
+                        }
                     }
                 }
             }
