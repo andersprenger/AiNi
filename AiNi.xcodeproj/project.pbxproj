@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711A06BD26461AB5000CA449 /* TreatmentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06BC26461AB5000CA449 /* TreatmentCard.swift */; };
 		71D1407B26430DD700D2774C /* AiNiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1407A26430DD700D2774C /* AiNiApp.swift */; };
 		71D1407D26430DD700D2774C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1407C26430DD700D2774C /* ContentView.swift */; };
 		71D1407F26430DD900D2774C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D1407E26430DD900D2774C /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		711A06BC26461AB5000CA449 /* TreatmentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentCard.swift; sourceTree = "<group>"; };
 		71D1407726430DD700D2774C /* AiNi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiNi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D1407A26430DD700D2774C /* AiNiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiNiApp.swift; sourceTree = "<group>"; };
 		71D1407C26430DD700D2774C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				71D1407A26430DD700D2774C /* AiNiApp.swift */,
 				71D1407C26430DD700D2774C /* ContentView.swift */,
+				711A06BC26461AB5000CA449 /* TreatmentCard.swift */,
 				71D1407E26430DD900D2774C /* Assets.xcassets */,
 				71D1408326430DD900D2774C /* Info.plist */,
 				71D1408026430DD900D2774C /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				711A06BD26461AB5000CA449 /* TreatmentCard.swift in Sources */,
 				71D1407D26430DD700D2774C /* ContentView.swift in Sources */,
 				71D1407B26430DD700D2774C /* AiNiApp.swift in Sources */,
 			);
