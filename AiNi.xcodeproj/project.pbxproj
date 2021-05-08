@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711A06BD26461AB5000CA449 /* TreatmentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06BC26461AB5000CA449 /* TreatmentCard.swift */; };
+		711A06BF264623D8000CA449 /* Treatments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06BE264623D8000CA449 /* Treatments.swift */; };
+		711A06C1264630FA000CA449 /* TreatmentStages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06C0264630FA000CA449 /* TreatmentStages.swift */; };
+		711A06C326463647000CA449 /* TreatmentStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06C226463647000CA449 /* TreatmentStage.swift */; };
+		711A06C52646414B000CA449 /* PatientCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06C42646414B000CA449 /* PatientCard.swift */; };
+		711A06C7264641DD000CA449 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06C6264641DD000CA449 /* CircleImage.swift */; };
+		711A06CB26464C40000CA449 /* Patients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06CA26464C40000CA449 /* Patients.swift */; };
+		711A06CD26464CD5000CA449 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06CC26464CD5000CA449 /* Notifications.swift */; };
+		711A06D026464DF4000CA449 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06CF26464DF4000CA449 /* Settings.swift */; };
+		711A06D426464F54000CA449 /* ProfessionalTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06D326464F54000CA449 /* ProfessionalTabView.swift */; };
 		71D1407B26430DD700D2774C /* AiNiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1407A26430DD700D2774C /* AiNiApp.swift */; };
 		71D1407D26430DD700D2774C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1407C26430DD700D2774C /* ContentView.swift */; };
 		71D1407F26430DD900D2774C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D1407E26430DD900D2774C /* Assets.xcassets */; };
@@ -14,6 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		711A06BC26461AB5000CA449 /* TreatmentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentCard.swift; sourceTree = "<group>"; };
+		711A06BE264623D8000CA449 /* Treatments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treatments.swift; sourceTree = "<group>"; };
+		711A06C0264630FA000CA449 /* TreatmentStages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentStages.swift; sourceTree = "<group>"; };
+		711A06C226463647000CA449 /* TreatmentStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentStage.swift; sourceTree = "<group>"; };
+		711A06C42646414B000CA449 /* PatientCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCard.swift; sourceTree = "<group>"; };
+		711A06C6264641DD000CA449 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		711A06CA26464C40000CA449 /* Patients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patients.swift; sourceTree = "<group>"; };
+		711A06CC26464CD5000CA449 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		711A06CF26464DF4000CA449 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		711A06D326464F54000CA449 /* ProfessionalTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalTabView.swift; sourceTree = "<group>"; };
 		71D1407726430DD700D2774C /* AiNi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiNi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D1407A26430DD700D2774C /* AiNiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiNiApp.swift; sourceTree = "<group>"; };
 		71D1407C26430DD700D2774C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +53,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		711A06C826464BCC000CA449 /* Treatments */ = {
+			isa = PBXGroup;
+			children = (
+				711A06BC26461AB5000CA449 /* TreatmentCard.swift */,
+				711A06BE264623D8000CA449 /* Treatments.swift */,
+				711A06C0264630FA000CA449 /* TreatmentStages.swift */,
+				711A06C226463647000CA449 /* TreatmentStage.swift */,
+			);
+			path = Treatments;
+			sourceTree = "<group>";
+		};
+		711A06C926464C2A000CA449 /* Patients */ = {
+			isa = PBXGroup;
+			children = (
+				711A06C42646414B000CA449 /* PatientCard.swift */,
+				711A06CA26464C40000CA449 /* Patients.swift */,
+			);
+			path = Patients;
+			sourceTree = "<group>";
+		};
+		711A06CE26464CDD000CA449 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				711A06CC26464CD5000CA449 /* Notifications.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		711A06D126464E5C000CA449 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				711A06CF26464DF4000CA449 /* Settings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		711A06D226464E71000CA449 /* Professional */ = {
+			isa = PBXGroup;
+			children = (
+				711A06C826464BCC000CA449 /* Treatments */,
+				711A06C926464C2A000CA449 /* Patients */,
+				711A06D126464E5C000CA449 /* Settings */,
+				711A06CE26464CDD000CA449 /* Notifications */,
+				711A06D326464F54000CA449 /* ProfessionalTabView.swift */,
+			);
+			path = Professional;
+			sourceTree = "<group>";
+		};
 		71D1406E26430DD700D2774C = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +122,8 @@
 			children = (
 				71D1407A26430DD700D2774C /* AiNiApp.swift */,
 				71D1407C26430DD700D2774C /* ContentView.swift */,
+				711A06D226464E71000CA449 /* Professional */,
+				711A06C6264641DD000CA449 /* CircleImage.swift */,
 				71D1407E26430DD900D2774C /* Assets.xcassets */,
 				71D1408326430DD900D2774C /* Info.plist */,
 				71D1408026430DD900D2774C /* Preview Content */,
@@ -138,8 +208,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				711A06CD26464CD5000CA449 /* Notifications.swift in Sources */,
+				711A06CB26464C40000CA449 /* Patients.swift in Sources */,
+				711A06BD26461AB5000CA449 /* TreatmentCard.swift in Sources */,
+				711A06D426464F54000CA449 /* ProfessionalTabView.swift in Sources */,
+				711A06C7264641DD000CA449 /* CircleImage.swift in Sources */,
+				711A06C52646414B000CA449 /* PatientCard.swift in Sources */,
+				711A06C326463647000CA449 /* TreatmentStage.swift in Sources */,
 				71D1407D26430DD700D2774C /* ContentView.swift in Sources */,
+				711A06BF264623D8000CA449 /* Treatments.swift in Sources */,
 				71D1407B26430DD700D2774C /* AiNiApp.swift in Sources */,
+				711A06D026464DF4000CA449 /* Settings.swift in Sources */,
+				711A06C1264630FA000CA449 /* TreatmentStages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
