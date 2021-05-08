@@ -18,11 +18,11 @@ struct TreatmentCard: View {
             VStack (alignment: .leading) {
                 Text("Nome do Tratamento")
                     .font(.title)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("dynamicCollor"))
                 
                 Text("Descrição do Tramento, detalhes dos passos, etc e tal.")
                     .font(.subheadline)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("dynamicCollor"))
                 
                 HStack (alignment: .center) {
                     ForEach(0..<3){_ in
