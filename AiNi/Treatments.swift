@@ -13,12 +13,12 @@ import SwiftUI
 struct Treatments: View {
     var body: some View {
         NavigationView {
-            
-            List {
-                // substituir o foreach pela parametrização da
-                // list quando definido o modelo de dados
-                ForEach (0..<10) {_ in
-                    TreatmentCard()
+            ScrollView {
+                VStack(alignment: .center, spacing: 17) {
+                    Spacer() // descola o primeiro card da navigationbar
+                    ForEach (0..<10) {_ in
+                        TreatmentCard()
+                    }
                 }
             }
             .navigationTitle("Tratamentos")
@@ -26,7 +26,6 @@ struct Treatments: View {
             // MARK: --TODO: adicionar botoes de add e editar quando prontos
             //.navigationBarItems(leading: <#T##View#>, trailing: <#T##View#>)
         }
-        
     }
 }
 
