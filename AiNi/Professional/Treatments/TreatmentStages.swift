@@ -1,5 +1,5 @@
 //
-//  TreatmentDetail.swift
+//  TreatmentStages.swift
 //  AiNi
 //
 //  Etapas de um tratamento, a view chamada ao editar um tratamento.
@@ -12,7 +12,7 @@ import SwiftUI
 struct TreatmentStages: View {
     var body: some View {
         ScrollView {
-            VStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 15) {
+            VStack (alignment: .center, spacing: 15) {
                 Text("Crie o seu tratamento do jeito que quiser, adicione etapas, tarefas, frequência e tempo.")
                     .font(.footnote)
                     .frame(width: 339, alignment: .center)
