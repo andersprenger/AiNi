@@ -17,6 +17,7 @@ struct CircleImage: View {
         Image(imageName)
             .resizable()
             .clipShape(Circle())
+            .scaledToFill()
             .frame(width: 86, height: 86, alignment: .center)
     }
 }
