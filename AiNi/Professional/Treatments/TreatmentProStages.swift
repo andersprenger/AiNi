@@ -1,5 +1,5 @@
 //
-//  TreatmentStages.swift
+//  TreatmentProStages.swift
 //  AiNi
 //
 //  Etapas de um tratamento, a view chamada ao editar um tratamento.
@@ -9,18 +9,19 @@
 
 import SwiftUI
 
-struct TreatmentStages: View {
+struct TreatmentProStages: View {
     var body: some View {
         ScrollView {
             VStack (alignment: .center, spacing: 15) {
                 Text("Crie o seu tratamento do jeito que quiser, adicione etapas, tarefas, frequência e tempo.")
                     .font(.footnote)
                     .frame(width: 339, alignment: .center)
+                    .padding(.top, 15)
                 
                 ZStack {
                     RoundedRectangle(cornerRadius: 10.0)
-                        .frame(width: 327, height: 46, alignment: .center)
-                        .foregroundColor(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)))
+                        .frame(height: 46, alignment: .center)
+                        .foregroundColor(Color("card-color"))
                     
                     Text("\(Image(systemName: "plus")) Nova Etapa")
                         .font(.footnote)
@@ -29,12 +30,13 @@ struct TreatmentStages: View {
                     TreatmentStage(text:"ETAPA 1 - INICIANDO TRATAMENTO")
                 }
             }
+            .padding(.horizontal)
         }
     }
 }
 
-struct TreatmentDetail_Previews: PreviewProvider {
+struct TreatmentProStages_Previews: PreviewProvider {
     static var previews: some View {
-        TreatmentStages()
+        TreatmentProStages()
     }
 }

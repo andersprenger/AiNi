@@ -1,5 +1,5 @@
 //
-//  Patients.swift
+//  PatientsView.swift
 //  AiNi
 //
 //  Created by Anderson Sprenger on 08/05/21.
@@ -7,15 +7,16 @@
 
 import SwiftUI
 
-struct Patients: View {
+struct PatientsView: View {
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .center, spacing: 17) {
                     Spacer() // descola o primeiro card da navigationbar
-                    ForEach (0..<10) {_ in
+                    ForEach (0..<10) { _ in
                         PatientCard()
                     }
+                    .padding(.horizontal)
                 }
             }
             .navigationTitle("Pacientes")
@@ -28,6 +29,6 @@ struct Patients: View {
 
 struct Patients_Previews: PreviewProvider {
     static var previews: some View {
-        Patients()
+        PatientsView()
     }
 }
