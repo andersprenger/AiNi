@@ -1,5 +1,5 @@
 //
-//  Patients.swift
+//  PatientsView.swift
 //  AiNi
 //
 //  Created by Anderson Sprenger on 08/05/21.

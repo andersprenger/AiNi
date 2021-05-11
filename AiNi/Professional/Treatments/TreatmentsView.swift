@@ -1,5 +1,5 @@
 //
-//  Treatments.swift
+//  TreatmentsView.swift
 //
 //  View dos Tratamentos, usada como aba de tratamentos na TabView do Profissional
 //

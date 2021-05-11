@@ -1,6 +1,8 @@
 //
-//  Notifications.swift
+//  NotificationsView.swift
 //  AiNi
+//
+//  Lista de notificações do app.
 //
 //  Created by Anderson Sprenger on 08/05/21.
 //
@@ -15,7 +17,7 @@ struct NotificationsView: View {
                     Spacer() // descola o primeiro card da navigationbar
                     ForEach (0..<10) {_ in
                         RoundedRectangle(cornerRadius: 28)
-                            .foregroundColor(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1))) // FIXME: alterar cor para funcionar dark mode.
+                            .foregroundColor(Color("card-color"))
                             .frame(height: 133, alignment: .center)
                     }
                 }
