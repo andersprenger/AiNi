@@ -13,7 +13,7 @@ struct TreatmentCard: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 28)
-                .foregroundColor(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)))
+                .foregroundColor(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1))) // FIXME: alterar cor para funcionar dark mode.
             
             VStack (alignment: .leading) {
                 Text("Nome do Tratamento")
@@ -28,8 +28,8 @@ struct TreatmentCard: View {
                     HStack (alignment: .center, spacing: -5) {
                         ForEach(0..<3){ index in
                             Circle()
-                                .strokeBorder(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)), lineWidth: 2)
-                                .background(Circle().fill(Color(#colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1))))
+                                .strokeBorder(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)), lineWidth: 2) // FIXME: alterar cor para funcionar dark mode.
+                                .background(Circle().fill(Color(#colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)))) // FIXME: alterar cor para funcionar dark mode.
                                 .frame(width: 20, height: 20)
                                 .zIndex(2 - Double(index))
 

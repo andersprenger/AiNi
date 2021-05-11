@@ -20,7 +20,7 @@ struct TreatmentStages: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10.0)
                         .frame(width: 327, height: 46, alignment: .center)
-                        .foregroundColor(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)))
+                        .foregroundColor(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1))) // FIXME: alterar cor para funcionar dark mode.
                     
                     Text("\(Image(systemName: "plus")) Nova Etapa")
                         .font(.footnote)

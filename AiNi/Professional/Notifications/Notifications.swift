@@ -15,7 +15,7 @@ struct Notifications: View {
                     Spacer() // descola o primeiro card da navigationbar
                     ForEach (0..<10) {_ in
                         RoundedRectangle(cornerRadius: 28)
-                            .foregroundColor(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)))
+                            .foregroundColor(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1))) // FIXME: alterar cor para funcionar dark mode.
                             .frame(width: 329, height: 133, alignment: .center)
                     }
                 }
