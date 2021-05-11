@@ -7,15 +7,22 @@
 //  Created by Anderson Sprenger on 07/05/21.
 //
 
+
 import SwiftUI
 
 struct TreatmentStages: View {
+    
+    
+    @ObservedObject var viewModel : TreatmentDetailsModel = TreatmentDetailsModel()
+    
+    @State var novaEtapa = false
     var body: some View {
         ScrollView {
             VStack (alignment: .center, spacing: 15) {
                 Text("Crie o seu tratamento do jeito que quiser, adicione etapas, tarefas, frequência e tempo.")
                     .font(.footnote)
                     .frame(width: 339, alignment: .center)
+                    
                 
                 ZStack {
                     RoundedRectangle(cornerRadius: 10.0)
@@ -24,10 +31,17 @@ struct TreatmentStages: View {
                     
                     Text("\(Image(systemName: "plus")) Nova Etapa")
                         .font(.footnote)
+                        .sheet(isPresented: $novaEtapa , content: {
+                            ModalNovaEtapa()
+                        } )
+                        .onTapGesture {
+                            novaEtapa = true
+                        }
                 }
                 ForEach(0..<2) { _ in
                     TreatmentStage(text:"ETAPA 1 - INICIANDO TRATAMENTO")
                 }
+                
             }
         }
     }

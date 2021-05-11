@@ -21,6 +21,10 @@
 		71D1407D26430DD700D2774C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1407C26430DD700D2774C /* ContentView.swift */; };
 		71D1407F26430DD900D2774C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D1407E26430DD900D2774C /* Assets.xcassets */; };
 		71D1408226430DD900D2774C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D1408126430DD900D2774C /* Preview Assets.xcassets */; };
+		FD480D35264AFD52008A8F07 /* ModalNovaEtapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD480D34264AFD52008A8F07 /* ModalNovaEtapa.swift */; };
+		FD480D37264B0176008A8F07 /* TreatmentDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD480D36264B0176008A8F07 /* TreatmentDetailsModel.swift */; };
+		FD480D39264B0239008A8F07 /* StepDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD480D38264B0239008A8F07 /* StepDetailsModel.swift */; };
+		FD480D3B264B04CA008A8F07 /* TreatmentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD480D3A264B04CA008A8F07 /* TreatmentsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		71D1407E26430DD900D2774C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71D1408126430DD900D2774C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		71D1408326430DD900D2774C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD480D34264AFD52008A8F07 /* ModalNovaEtapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNovaEtapa.swift; sourceTree = "<group>"; };
+		FD480D36264B0176008A8F07 /* TreatmentDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentDetailsModel.swift; sourceTree = "<group>"; };
+		FD480D38264B0239008A8F07 /* StepDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDetailsModel.swift; sourceTree = "<group>"; };
+		FD480D3A264B04CA008A8F07 /* TreatmentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				711A06BE264623D8000CA449 /* Treatments.swift */,
 				711A06C0264630FA000CA449 /* TreatmentStages.swift */,
 				711A06C226463647000CA449 /* TreatmentStage.swift */,
+				FD480D34264AFD52008A8F07 /* ModalNovaEtapa.swift */,
+				FD480D36264B0176008A8F07 /* TreatmentDetailsModel.swift */,
+				FD480D38264B0239008A8F07 /* StepDetailsModel.swift */,
+				FD480D3A264B04CA008A8F07 /* TreatmentsModel.swift */,
 			);
 			path = Treatments;
 			sourceTree = "<group>";
@@ -208,14 +220,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD480D35264AFD52008A8F07 /* ModalNovaEtapa.swift in Sources */,
 				711A06CD26464CD5000CA449 /* Notifications.swift in Sources */,
 				711A06CB26464C40000CA449 /* Patients.swift in Sources */,
+				FD480D39264B0239008A8F07 /* StepDetailsModel.swift in Sources */,
 				711A06BD26461AB5000CA449 /* TreatmentCard.swift in Sources */,
 				711A06D426464F54000CA449 /* ProfessionalTabView.swift in Sources */,
 				711A06C7264641DD000CA449 /* CircleImage.swift in Sources */,
 				711A06C52646414B000CA449 /* PatientCard.swift in Sources */,
+				FD480D3B264B04CA008A8F07 /* TreatmentsModel.swift in Sources */,
 				711A06C326463647000CA449 /* TreatmentStage.swift in Sources */,
 				71D1407D26430DD700D2774C /* ContentView.swift in Sources */,
+				FD480D37264B0176008A8F07 /* TreatmentDetailsModel.swift in Sources */,
 				711A06BF264623D8000CA449 /* Treatments.swift in Sources */,
 				71D1407B26430DD700D2774C /* AiNiApp.swift in Sources */,
 				711A06D026464DF4000CA449 /* Settings.swift in Sources */,
