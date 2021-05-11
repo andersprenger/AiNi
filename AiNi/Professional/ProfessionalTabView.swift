@@ -10,26 +10,26 @@ import SwiftUI
 struct ProfessionalTabView: View {
     var body: some View {
         TabView {
-            Treatments()
+            TreatmentsView()
                 .tabItem {
                     Image(systemName: "bandage.fill")
                     Text("Tratamentos")
                 }
             
-            Patients()
+            PatientsView()
                 .tabItem {
                     Image(systemName: "person.2.square.stack.fill")
                     // Image(systemName: "rectangle.stack.person.crop.fill")
                     Text("Pacientes")
                 }
             
-            Notifications()
+            NotificationsView()
                 .tabItem {
                     Image(systemName: "tray.fill")
                     Text("Notificações")
                 }
             
-            Profile()
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person.crop.circle.fill")
                     Text("Perfil")

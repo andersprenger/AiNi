@@ -10,7 +10,7 @@
 
 import SwiftUI
 
-struct Treatments: View {
+struct TreatmentsView: View {
     var body: some View {
         NavigationView {
             ScrollView {
@@ -22,6 +22,7 @@ struct Treatments: View {
                         }
                     }
                 }
+                .padding(.horizontal)
             }
             .navigationTitle("Tratamentos")
             .navigationBarTitleDisplayMode(.inline)
@@ -33,6 +34,6 @@ struct Treatments: View {
 
 struct Treatments_Previews: PreviewProvider {
     static var previews: some View {
-        Treatments()
+        TreatmentsView()
     }
 }

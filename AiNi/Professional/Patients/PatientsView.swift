@@ -1,5 +1,5 @@
 //
-//  Notifications.swift
+//  Patients.swift
 //  AiNi
 //
 //  Created by Anderson Sprenger on 08/05/21.
@@ -7,20 +7,19 @@
 
 import SwiftUI
 
-struct Notifications: View {
+struct PatientsView: View {
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .center, spacing: 17) {
                     Spacer() // descola o primeiro card da navigationbar
-                    ForEach (0..<10) {_ in
-                        RoundedRectangle(cornerRadius: 28)
-                            .foregroundColor(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1))) // FIXME: alterar cor para funcionar dark mode.
-                            .frame(width: 329, height: 133, alignment: .center)
+                    ForEach (0..<10) { _ in
+                        PatientCard()
                     }
+                    .padding(.horizontal)
                 }
             }
-            .navigationTitle("Notificações")
+            .navigationTitle("Pacientes")
             .navigationBarTitleDisplayMode(.inline)
             // MARK: --TODO: adicionar botoes de add e editar quando prontos
             //.navigationBarItems(leading: <#T##View#>, trailing: <#T##View#>)
@@ -28,8 +27,8 @@ struct Notifications: View {
     }
 }
 
-struct Notifications_Previews: PreviewProvider {
+struct Patients_Previews: PreviewProvider {
     static var previews: some View {
-        Notifications()
+        PatientsView()
     }
 }
