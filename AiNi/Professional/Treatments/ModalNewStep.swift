@@ -7,16 +7,18 @@
 
 import SwiftUI
 
-struct ModalNovaEtapa: View {
-    @State private var activityTime = false
-    @State private var frequency = false
-    
+struct ModalNewStep: View {
+    @State var activityTime = false
+    @State var frequency = false
+    @State var byStep : String = ""
     
     var body: some View {
         VStack{
             HStack{
                 Spacer()
+                
                 Text("Lixo").padding()
+                
             }
             HStack{
                 
@@ -25,11 +27,14 @@ struct ModalNovaEtapa: View {
             }
             Spacer()
             HStack{
+                
                 Text("Passo a passo:")
+                
                 Spacer()
             }.padding(.bottom)
             .padding()
             
+            TextField("", text: $byStep).frame(height: 40.0)
             
             HStack{
                 Text("Adicionar Imagem:")
@@ -72,18 +77,20 @@ struct ModalNovaEtapa: View {
                 
                 Text("concluir")
                     .font(.footnote)
+                
             }
-            Spacer()
             
             
+            
+           
             
         }
     }
     
 }
 
-struct ModalNovaEtapa_Previews: PreviewProvider {
+struct ModalNewStep_Previews: PreviewProvider {
     static var previews: some View {
-        ModalNovaEtapa()
+        ModalNewStep()
     }
 }

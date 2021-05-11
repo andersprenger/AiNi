@@ -32,7 +32,7 @@ struct TreatmentStages: View {
                     Text("\(Image(systemName: "plus")) Nova Etapa")
                         .font(.footnote)
                         .sheet(isPresented: $novaEtapa , content: {
-                            ModalNovaEtapa()
+                            ModalNewStep()
                         } )
                         .onTapGesture {
                             novaEtapa = true
