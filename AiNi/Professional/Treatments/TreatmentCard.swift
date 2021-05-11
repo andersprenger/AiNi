@@ -38,6 +38,7 @@ struct TreatmentCard: View {
                     Text("+5")
                         .font(.subheadline)
                         .foregroundColor(Color(#colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1))) // FIXME: alterar cor para funcionar dark mode.
+                    
                     Spacer()
                     // esse spacer garante que o conteudo do card se espalhe horizontalmente
                     // por todo o card, respeitando o alinhamento do vstack e o padding.
@@ -47,7 +48,7 @@ struct TreatmentCard: View {
             .padding()
             
         }
-        .frame(width: 329, height: 133, alignment: .center)
+        .frame(height: 133, alignment: .center)
     }
 }
 

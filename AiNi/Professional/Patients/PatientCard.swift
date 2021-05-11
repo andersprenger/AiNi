@@ -29,11 +29,12 @@ struct PatientCard: View {
                     Text("Tem alzheimer.")
                         .font(.footnote)
                 }
+                Spacer()
             }
             .padding()
             
         }
-        .frame(width: 329, height: 133, alignment: .center)
+        .frame(height: 133, alignment: .center)
     }
 }
 
