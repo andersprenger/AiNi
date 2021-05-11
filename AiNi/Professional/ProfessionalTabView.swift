@@ -19,6 +19,7 @@ struct ProfessionalTabView: View {
             Patients()
                 .tabItem {
                     Image(systemName: "person.2.square.stack.fill")
+                    // Image(systemName: "rectangle.stack.person.crop.fill")
                     Text("Pacientes")
                 }
             
