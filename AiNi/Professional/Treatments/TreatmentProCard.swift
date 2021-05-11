@@ -1,5 +1,5 @@
 //
-//  TreatmentCard.swift
+//  TreatmentProCard.swift
 //  AiNi
 //
 //  Card de tratamento, usado na Lista de Tratamento presente na tab tratamentos do profissional.
@@ -9,7 +9,7 @@
 
 import SwiftUI
 
-struct TreatmentCard: View {
+struct TreatmentProCard: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 28)
@@ -52,9 +52,9 @@ struct TreatmentCard: View {
     }
 }
 
-struct TreatmentCard_Previews: PreviewProvider {
+struct TreatmentProCard_Previews: PreviewProvider {
     static var previews: some View {
-        TreatmentCard()
+        TreatmentProCard()
             .preferredColorScheme(.dark)
             .previewLayout(.fixed(width: 349, height: 153))
         

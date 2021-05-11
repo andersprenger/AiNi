@@ -1,5 +1,5 @@
 //
-//  TreatmentStages.swift
+//  TreatmentProStages.swift
 //  AiNi
 //
 //  Etapas de um tratamento, a view chamada ao editar um tratamento.
@@ -9,7 +9,7 @@
 
 import SwiftUI
 
-struct TreatmentStages: View {
+struct TreatmentProStages: View {
     var body: some View {
         ScrollView {
             VStack (alignment: .center, spacing: 15) {
@@ -35,8 +35,8 @@ struct TreatmentStages: View {
     }
 }
 
-struct TreatmentDetail_Previews: PreviewProvider {
+struct TreatmentProStages_Previews: PreviewProvider {
     static var previews: some View {
-        TreatmentStages()
+        TreatmentProStages()
     }
 }

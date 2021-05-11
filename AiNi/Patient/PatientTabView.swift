@@ -1,26 +1,26 @@
 //
-//  ProfessionalTabView.swift
+//  PatientTabView.swift
 //  AiNi
 //
-//  Created by Anderson Sprenger on 08/05/21.
+//  Created by Anderson Sprenger on 11/05/21.
 //
 
 import SwiftUI
 
-struct ProfessionalTabView: View {
+struct PatientTabView: View {
     var body: some View {
         TabView {
+            Today()
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("Hoje")
+                }
+            
             TreatmentsProView()
                 .tabItem {
                     Image(systemName: "bandage.fill")
-                    Text("Tratamentos")
-                }
-            
-            PatientsView()
-                .tabItem {
-                    Image(systemName: "person.2.square.stack.fill")
                     // Image(systemName: "rectangle.stack.person.crop.fill")
-                    Text("Pacientes")
+                    Text("Tratamentos")
                 }
             
             NotificationsView()
@@ -38,8 +38,8 @@ struct ProfessionalTabView: View {
     }
 }
 
-struct ProfessionalTabView_Previews: PreviewProvider {
+struct PatientView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfessionalTabView()
+        PatientTabView()
     }
 }

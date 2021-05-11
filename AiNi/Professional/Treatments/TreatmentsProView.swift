@@ -1,5 +1,5 @@
 //
-//  TreatmentsView.swift
+//  TreatmentsProView.swift
 //
 //  View dos Tratamentos, usada como aba de tratamentos na TabView do Profissional
 //
@@ -10,15 +10,15 @@
 
 import SwiftUI
 
-struct TreatmentsView: View {
+struct TreatmentsProView: View {
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .center, spacing: 17) {
                     Spacer() // descola o primeiro card da navigationbar
                     ForEach (0..<10) {_ in
-                        NavigationLink(destination: TreatmentStages()) {
-                            TreatmentCard()
+                        NavigationLink(destination: TreatmentProStages()) {
+                            TreatmentProCard()
                         }
                     }
                 }
@@ -34,6 +34,6 @@ struct TreatmentsView: View {
 
 struct Treatments_Previews: PreviewProvider {
     static var previews: some View {
-        TreatmentsView()
+        TreatmentsProView()
     }
 }
