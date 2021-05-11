@@ -18,7 +18,7 @@ struct ProfessionalTabView: View {
             
             Patients()
                 .tabItem {
-                    Image(systemName: "person.3.fill")
+                    Image(systemName: "person.2.square.stack.fill")
                     Text("Pacientes")
                 }
             
@@ -28,10 +28,10 @@ struct ProfessionalTabView: View {
                     Text("Notificações")
                 }
             
-            Settings()
+            Profile()
                 .tabItem {
-                    Image(systemName: "slider.horizontal.3")
-                    Text("Configurações")
+                    Image(systemName: "person.crop.circle.fill")
+                    Text("Perfil")
                 }
         }
     }
