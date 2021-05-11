@@ -21,6 +21,7 @@
 		71D1407D26430DD700D2774C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1407C26430DD700D2774C /* ContentView.swift */; };
 		71D1407F26430DD900D2774C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D1407E26430DD900D2774C /* Assets.xcassets */; };
 		71D1408226430DD900D2774C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D1408126430DD900D2774C /* Preview Assets.xcassets */; };
+		9F7E4B97264AD66A007AB642 /* PatientTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E4B96264AD66A007AB642 /* PatientTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		71D1407E26430DD900D2774C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71D1408126430DD900D2774C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		71D1408326430DD900D2774C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F7E4B96264AD66A007AB642 /* PatientTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				71D1407A26430DD700D2774C /* AiNiApp.swift */,
 				71D1407C26430DD700D2774C /* ContentView.swift */,
 				711A06D226464E71000CA449 /* Professional */,
+				9F7E4B95264AD5E4007AB642 /* Patient */,
 				711A06C6264641DD000CA449 /* CircleImage.swift */,
 				71D1407E26430DD900D2774C /* Assets.xcassets */,
 				71D1408326430DD900D2774C /* Info.plist */,
@@ -137,6 +140,14 @@
 				71D1408126430DD900D2774C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9F7E4B95264AD5E4007AB642 /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				9F7E4B96264AD66A007AB642 /* PatientTabView.swift */,
+			);
+			path = Patient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				711A06CD26464CD5000CA449 /* Notifications.swift in Sources */,
+				9F7E4B97264AD66A007AB642 /* PatientTabView.swift in Sources */,
 				711A06CB26464C40000CA449 /* Patients.swift in Sources */,
 				711A06BD26461AB5000CA449 /* TreatmentCard.swift in Sources */,
 				711A06D426464F54000CA449 /* ProfessionalTabView.swift in Sources */,
