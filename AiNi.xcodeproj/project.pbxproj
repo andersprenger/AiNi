@@ -12,7 +12,6 @@
 		711A06C1264630FA000CA449 /* TreatmentProStages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06C0264630FA000CA449 /* TreatmentProStages.swift */; };
 		711A06C326463647000CA449 /* TreatmentStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06C226463647000CA449 /* TreatmentStage.swift */; };
 		711A06C52646414B000CA449 /* PatientCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06C42646414B000CA449 /* PatientCard.swift */; };
-		711A06C7264641DD000CA449 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06C6264641DD000CA449 /* CircleImage.swift */; };
 		711A06CB26464C40000CA449 /* PatientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06CA26464C40000CA449 /* PatientsView.swift */; };
 		711A06CD26464CD5000CA449 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06CC26464CD5000CA449 /* NotificationsView.swift */; };
 		711A06D026464DF4000CA449 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A06CF26464DF4000CA449 /* ProfileView.swift */; };
@@ -20,12 +19,13 @@
 		71A869DE264A52B4006B1176 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A869DD264A52B4006B1176 /* ProfileHeader.swift */; };
 		71A869E1264A5395006B1176 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A869E0264A5395006B1176 /* Patient.swift */; };
 		71A869E3264A53A2006B1176 /* Treatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A869E2264A53A2006B1176 /* Treatment.swift */; };
-		71A869E6264A7007006B1176 /* PatientTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A869E5264A7007006B1176 /* PatientTabView.swift */; };
 		71A869E9264A7144006B1176 /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A869E8264A7144006B1176 /* Today.swift */; };
 		71D1407B26430DD700D2774C /* AiNiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1407A26430DD700D2774C /* AiNiApp.swift */; };
 		71D1407D26430DD700D2774C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1407C26430DD700D2774C /* ContentView.swift */; };
 		71D1407F26430DD900D2774C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D1407E26430DD900D2774C /* Assets.xcassets */; };
 		71D1408226430DD900D2774C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D1408126430DD900D2774C /* Preview Assets.xcassets */; };
+		71DC3047264B10B60044CA11 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC3046264B10B60044CA11 /* CircleImage.swift */; };
+		71DC304B264B11910044CA11 /* PatientTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC304A264B11910044CA11 /* PatientTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,6 @@
 		711A06C0264630FA000CA449 /* TreatmentProStages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentProStages.swift; sourceTree = "<group>"; };
 		711A06C226463647000CA449 /* TreatmentStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentStage.swift; sourceTree = "<group>"; };
 		711A06C42646414B000CA449 /* PatientCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCard.swift; sourceTree = "<group>"; };
-		711A06C6264641DD000CA449 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		711A06CA26464C40000CA449 /* PatientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsView.swift; sourceTree = "<group>"; };
 		711A06CC26464CD5000CA449 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		711A06CF26464DF4000CA449 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -42,7 +41,6 @@
 		71A869DD264A52B4006B1176 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		71A869E0264A5395006B1176 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		71A869E2264A53A2006B1176 /* Treatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treatment.swift; sourceTree = "<group>"; };
-		71A869E5264A7007006B1176 /* PatientTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTabView.swift; sourceTree = "<group>"; };
 		71A869E8264A7144006B1176 /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
 		71D1407726430DD700D2774C /* AiNi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiNi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D1407A26430DD700D2774C /* AiNiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiNiApp.swift; sourceTree = "<group>"; };
@@ -50,6 +48,8 @@
 		71D1407E26430DD900D2774C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71D1408126430DD900D2774C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		71D1408326430DD900D2774C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71DC3046264B10B60044CA11 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		71DC304A264B11910044CA11 /* PatientTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +121,8 @@
 		71A869E4264A6FE4006B1176 /* Patient */ = {
 			isa = PBXGroup;
 			children = (
+				71DC304A264B11910044CA11 /* PatientTabView.swift */,
 				71A869E7264A7130006B1176 /* Today */,
-				71A869EA264A723E006B1176 /* Treatments */,
-				71A869E5264A7007006B1176 /* PatientTabView.swift */,
 			);
 			path = Patient;
 			sourceTree = "<group>";
@@ -136,17 +135,9 @@
 			path = Today;
 			sourceTree = "<group>";
 		};
-		71A869EA264A723E006B1176 /* Treatments */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Treatments;
-			sourceTree = "<group>";
-		};
 		71A869EB264A72BE006B1176 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				711A06C6264641DD000CA449 /* CircleImage.swift */,
 				71D1407C26430DD700D2774C /* ContentView.swift */,
 				71A869ED264A73DA006B1176 /* Treatments */,
 				711A06CE26464CDD000CA449 /* Notifications */,
@@ -182,6 +173,7 @@
 		71D1407926430DD700D2774C /* AiNi */ = {
 			isa = PBXGroup;
 			children = (
+				71DC3046264B10B60044CA11 /* CircleImage.swift */,
 				71D1407A26430DD700D2774C /* AiNiApp.swift */,
 				71A869EB264A72BE006B1176 /* Common */,
 				71A869E4264A6FE4006B1176 /* Patient */,
@@ -275,11 +267,11 @@
 				711A06CB26464C40000CA449 /* PatientsView.swift in Sources */,
 				711A06BD26461AB5000CA449 /* TreatmentProCard.swift in Sources */,
 				711A06D426464F54000CA449 /* ProfessionalTabView.swift in Sources */,
-				711A06C7264641DD000CA449 /* CircleImage.swift in Sources */,
+				71DC3047264B10B60044CA11 /* CircleImage.swift in Sources */,
 				71A869DE264A52B4006B1176 /* ProfileHeader.swift in Sources */,
-				71A869E6264A7007006B1176 /* PatientTabView.swift in Sources */,
 				711A06C52646414B000CA449 /* PatientCard.swift in Sources */,
 				711A06C326463647000CA449 /* TreatmentStage.swift in Sources */,
+				71DC304B264B11910044CA11 /* PatientTabView.swift in Sources */,
 				71A869E9264A7144006B1176 /* Today.swift in Sources */,
 				71A869E3264A53A2006B1176 /* Treatment.swift in Sources */,
 				71D1407D26430DD700D2774C /* ContentView.swift in Sources */,
