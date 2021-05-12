@@ -16,6 +16,7 @@ struct TreatmentStages: View {
     @ObservedObject var viewModel : TreatmentDetailsModel = TreatmentDetailsModel()
     
     @State var novaEtapa = false
+    
     var body: some View {
         ScrollView {
             VStack (alignment: .center, spacing: 15) {
@@ -32,18 +33,28 @@ struct TreatmentStages: View {
                     Text("\(Image(systemName: "plus")) Nova Etapa")
                         .font(.footnote)
                         .sheet(isPresented: $novaEtapa , content: {
-                            ModalNewStep()
+                            ModalNewStep(viewModel : StepDetailsModel(title: "Nova Etapa", stepByStep: "", activityTime: false, frequency: false),novaEtapa: $novaEtapa,completeStep: completeStep)
                         } )
                         .onTapGesture {
                             novaEtapa = true
                         }
                 }
-                ForEach(0..<2) { _ in
-                    TreatmentStage(text:"ETAPA 1 - INICIANDO TRATAMENTO")
+                ForEach(viewModel.stepList, id: \.self) { stepItem in
+                    TreatmentStage(text:stepItem.title)
+                        .sheet(isPresented: $novaEtapa , content: {
+                            ModalNewStep(viewModel : stepItem,novaEtapa: $novaEtapa,completeStep: completeStep)
+                        } ).onTapGesture {
+                            novaEtapa = true
+                        }
+                    
                 }
                 
             }
         }
+    }
+    func completeStep(title : String, stepByStep:String, activityTime : Bool, frequency : Bool) {
+        let step : StepDetailsModel = StepDetailsModel(title:title, stepByStep:stepByStep, activityTime:activityTime, frequency:frequency)
+        viewModel.stepList.append(step)
     }
 }
 

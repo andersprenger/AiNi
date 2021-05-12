@@ -8,38 +8,58 @@
 import SwiftUI
 
 struct ModalNewStep: View {
+    
+    
+    @ObservedObject var viewModel : StepDetailsModel
+    @Binding var novaEtapa : Bool
     @State var activityTime = false
     @State var frequency = false
     @State var byStep : String = ""
+    @State var stepName : String = "Nova Estapa"
+    @State var stepTitle : String = ""
+    var completeStep : ( ( String, String,  Bool, Bool) -> Void)
     
     var body: some View {
         VStack{
             HStack{
-                Spacer()
                 
+                
+                Text("\(self.viewModel.title)")
+                    .padding(.leading, 120)
+                    .font(.title)
+                
+                Spacer()
                 Text("Lixo").padding()
                 
             }
-            HStack{
-                
-                Text("Nova etapa")
-                
-            }
-            Spacer()
-            HStack{
-                
-                Text("Passo a passo:")
-                
-                Spacer()
-            }.padding(.bottom)
-            .padding()
             
-            TextField("", text: $byStep).frame(height: 40.0)
+            HStack{
+                
+                Text("Título: ").padding()
+                    
+                Spacer()
+            }
+            
+            TextField("\(viewModel.title)", text: $stepTitle).padding()
+            
+           
+            HStack{
+                
+                Text("Passo a passo:").padding()
+                    
+                Spacer()
+            }
+            
+            
+            TextField("\(viewModel.stepByStep)", text: $byStep).frame(height: 40.0).padding()
             
             HStack{
                 Text("Adicionar Imagem:")
                 Spacer()
             }.padding()
+            
+           //adicionar imagem aqui
+
             Spacer()
             ZStack {
                 RoundedRectangle(cornerRadius: 10.0)
@@ -78,19 +98,23 @@ struct ModalNewStep: View {
                 Text("concluir")
                     .font(.footnote)
                 
+            }.onTapGesture{
+                self.completeStep(stepTitle,byStep,activityTime,frequency)
+                novaEtapa = false
             }
             
-            
-            
-           
-            
+        }.onAppear{
+            self.activityTime = viewModel.activityTime
+            self.frequency = viewModel.frequency
         }
+        
+        
     }
     
 }
 
-struct ModalNewStep_Previews: PreviewProvider {
-    static var previews: some View {
-        ModalNewStep()
-    }
-}
+//struct ModalNewStep_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ModalNewStep()
+//    }
+//}
