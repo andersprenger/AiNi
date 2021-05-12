@@ -10,7 +10,7 @@ import SwiftUI
 struct PatientTabView: View {
     var body: some View {
         TabView {
-            Today()
+            TodayView()
                 .tabItem {
                     Image(systemName: "calendar")
                     Text("Hoje")
