@@ -9,8 +9,10 @@ import SwiftUI
 
 struct AuthView: View {
     @Environment(\.presentationMode) var presentationMode
+    @State private var showingFullScreen = false
     
     var body: some View {
+        
         ZStack {
             Color.gray.opacity(0.4)
             VStack {
@@ -19,6 +21,7 @@ struct AuthView: View {
                         Spacer()
                         Text("Login")
                             .font(.title2)
+                            .bold()
                         Spacer()
                         Button("X") {
                             presentationMode.wrappedValue.dismiss()
@@ -28,17 +31,24 @@ struct AuthView: View {
                 .padding()
                 Spacer()
                 VStack(alignment: .center) {
-                    Text("Login")
+                    Text("E-mail")
                         .font(.title2)
-                    Text("Login")
+                    Text("Senha")
                         .font(.title2)
-                    Text("Login")
-                        .font(.title2)
+                    
+                    Button("Login") {
+                        showingFullScreen.toggle()
+                    }
+                    .font(.title2)
+                    .fullScreenCover(isPresented: $showingFullScreen) {
+                        PatientTabView()
+                    }
+                    
+                    
                 }
                 Spacer()
             }
         }
-        
         
     }
 }
