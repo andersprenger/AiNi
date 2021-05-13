@@ -11,7 +11,5 @@ import SwiftUI
 class TreatmentsModel: ObservableObject {
     @Published var treatmentList : [TreatmentDetailsModel] = []
     
-    init() {
-    }
-    
+    init() {}
 }

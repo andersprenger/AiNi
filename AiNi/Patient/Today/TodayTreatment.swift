@@ -1,10 +1,8 @@
 //
-//  Today.swift
+//  TodayTreatment.swift
 //  AiNi
 //
-//  Placeholder for TK26, US15.
-//
-//  Created by Anderson Sprenger on 11/05/21.
+//  Created by Julia Silveira de Souza on 12/05/21.
 //
 
 import SwiftUI

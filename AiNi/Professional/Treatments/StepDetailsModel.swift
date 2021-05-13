@@ -22,12 +22,12 @@ class StepDetailsModel : ObservableObject , Hashable {
         self.image = ""
         self.activityTime = activityTime
         self.frequency = frequency
-        
     }
     
     static func == (lhs: StepDetailsModel, rhs: StepDetailsModel) -> Bool {
         return lhs.title == rhs.title
     }
+    
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.title)
         hasher.combine(self.stepByStep)
@@ -35,9 +35,6 @@ class StepDetailsModel : ObservableObject , Hashable {
         hasher.combine(self.activityTime)
         hasher.combine(self.frequency)
     }
-    
-    
-    
 }
 
 

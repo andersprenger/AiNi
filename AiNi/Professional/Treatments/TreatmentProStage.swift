@@ -16,7 +16,7 @@ struct TreatmentProStage: View {
         ZStack {
             RoundedRectangle(cornerRadius: 10.0)
                 .frame(height: 46, alignment: .center)
-                .foregroundColor(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)))
+                .foregroundColor(Color("card-color"))
             
             Text(text)
                 .font(.footnote)

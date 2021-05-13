@@ -8,8 +8,8 @@ import SwiftUI
 import Foundation
 
 class TreatmentDetailsModel: ObservableObject {
-    @Published var treatmentName : String = ""
-    @Published var stepList : [StepDetailsModel] = []
+    @Published var treatmentName: String = ""
+    @Published var stepList: [StepDetailsModel] = []
     
     init() {
         
