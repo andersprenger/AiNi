@@ -1,13 +1,15 @@
 //
-//  Notifications.swift
+//  NotificationsView.swift
 //  AiNi
+//
+//  Lista de notificações do app.
 //
 //  Created by Anderson Sprenger on 08/05/21.
 //
 
 import SwiftUI
 
-struct Notifications: View {
+struct NotificationsView: View {
     var body: some View {
         NavigationView {
             ScrollView {
@@ -15,10 +17,11 @@ struct Notifications: View {
                     Spacer() // descola o primeiro card da navigationbar
                     ForEach (0..<10) {_ in
                         RoundedRectangle(cornerRadius: 28)
-                            .foregroundColor(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)))
-                            .frame(width: 329, height: 133, alignment: .center)
+                            .foregroundColor(Color("card-color"))
+                            .frame(height: 133, alignment: .center)
                     }
                 }
+                .padding(.horizontal)
             }
             .navigationTitle("Notificações")
             .navigationBarTitleDisplayMode(.inline)
@@ -30,6 +33,6 @@ struct Notifications: View {
 
 struct Notifications_Previews: PreviewProvider {
     static var previews: some View {
-        Notifications()
+        NotificationsView()
     }
 }

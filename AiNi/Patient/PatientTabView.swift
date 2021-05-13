@@ -1,44 +1,45 @@
 //
-//  PatientMainView.swift
+//  PatientTabView.swift
 //  AiNi
 //
-//  Created by Julia Silveira de Souza on 11/05/21.
+//  Created by Anderson Sprenger on 11/05/21.
 //
 
 import SwiftUI
 
-struct PatientMainView: View {
+struct PatientTabView: View {
     var body: some View {
         TabView {
-            Treatments()
+            TodayView()
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("Hoje")
+                }
+            
+            TreatmentsProView()
                 .tabItem {
                     Image(systemName: "bandage.fill")
+                    // Image(systemName: "rectangle.stack.person.crop.fill")
                     Text("Tratamentos")
                 }
             
-            Patients()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
-            
-            Notifications()
+            NotificationsView()
                 .tabItem {
                     Image(systemName: "tray.fill")
                     Text("Notificações")
                 }
             
-            Settings()
+            ProfileView()
                 .tabItem {
-                    Image(systemName: "person.fill")
+                    Image(systemName: "person.crop.circle.fill")
                     Text("Perfil")
                 }
         }
     }
 }
 
-struct PatientMainView_Previews: PreviewProvider {
+struct PatientView_Previews: PreviewProvider {
     static var previews: some View {
-        PatientMainView()
+        PatientTabView()
     }
 }

@@ -13,7 +13,7 @@ struct PatientCard: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 28)
-                .foregroundColor(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)))
+                .foregroundColor(Color("card-color"))
             
             HStack(alignment: .center, spacing: 21) {
                 CircleImage(imageName: "patient-image", size: 86)
@@ -29,11 +29,12 @@ struct PatientCard: View {
                     Text("Tem alzheimer.")
                         .font(.footnote)
                 }
+                Spacer()
             }
             .padding()
             
         }
-        .frame(width: 329, height: 133, alignment: .center)
+        .frame(height: 133, alignment: .center)
     }
 }
 
