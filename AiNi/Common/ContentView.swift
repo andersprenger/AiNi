@@ -8,8 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingSheetRegister = false
+    @State private var showingSheetAuth = false
+    
     var body: some View {
-        PatientTabView()
+        //PatientTabView()
+        //TODO Imagens de Onboarding
+        VStack {
+            ZStack{
+                Color.blue
+                TabView {
+                    Text("First")
+                    Text("Second")
+                    Text("Third")
+                }
+            }
+            .tabViewStyle(PageTabViewStyle())
+            VStack(spacing:20) {
+                Button("Abra sua Conta") {
+                    showingSheetRegister.toggle()
+                }
+                .sheet(isPresented: $showingSheetRegister) {
+                    RegisterView()
+                }
+                Button("Login") {
+                    showingSheetAuth.toggle()
+                }
+                .sheet(isPresented: $showingSheetAuth) {
+                    AuthView()
+                }
+            }.padding(40)
+        }
+        
     }
 }
 
