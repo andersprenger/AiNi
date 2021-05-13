@@ -16,6 +16,7 @@
 		719AC363264CF5BB000DF672 /* PatientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719AC362264CF5BB000DF672 /* PatientsView.swift */; };
 		719AC365264CF5C5000DF672 /* TreatmentProCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719AC364264CF5C5000DF672 /* TreatmentProCard.swift */; };
 		719AC367264CF5C9000DF672 /* TreatmentsProView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719AC366264CF5C9000DF672 /* TreatmentsProView.swift */; };
+		719AC36B264D115B000DF672 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 719AC36A264D115B000DF672 /* CloudKit.framework */; };
 		71A869DE264A52B4006B1176 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A869DD264A52B4006B1176 /* ProfileHeader.swift */; };
 		71A869E1264A5395006B1176 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A869E0264A5395006B1176 /* Patient.swift */; };
 		71A869E3264A53A2006B1176 /* Treatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A869E2264A53A2006B1176 /* Treatment.swift */; };
@@ -44,6 +45,8 @@
 		719AC362264CF5BB000DF672 /* PatientsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PatientsView.swift; path = ../../../../../PatientsView.swift; sourceTree = "<group>"; };
 		719AC364264CF5C5000DF672 /* TreatmentProCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreatmentProCard.swift; path = ../../../../../TreatmentProCard.swift; sourceTree = "<group>"; };
 		719AC366264CF5C9000DF672 /* TreatmentsProView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreatmentsProView.swift; path = ../../../../../TreatmentsProView.swift; sourceTree = "<group>"; };
+		719AC368264D114C000DF672 /* AiNi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AiNi.entitlements; sourceTree = "<group>"; };
+		719AC36A264D115B000DF672 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		71A869DD264A52B4006B1176 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		71A869E0264A5395006B1176 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		71A869E2264A53A2006B1176 /* Treatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treatment.swift; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				719AC36B264D115B000DF672 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +130,14 @@
 			path = Professional;
 			sourceTree = "<group>";
 		};
+		719AC369264D115B000DF672 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				719AC36A264D115B000DF672 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		71A869DF264A537B006B1176 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +189,7 @@
 			children = (
 				71D1407926430DD700D2774C /* AiNi */,
 				71D1407826430DD700D2774C /* Products */,
+				719AC369264D115B000DF672 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +204,7 @@
 		71D1407926430DD700D2774C /* AiNi */ = {
 			isa = PBXGroup;
 			children = (
+				719AC368264D114C000DF672 /* AiNi.entitlements */,
 				71DC3046264B10B60044CA11 /* CircleImage.swift */,
 				71D1407A26430DD700D2774C /* AiNiApp.swift */,
 				71A869EB264A72BE006B1176 /* Common */,
@@ -439,9 +453,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AiNi/AiNi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AiNi/Preview Content\"";
-				DEVELOPMENT_TEAM = VHG5SDJ6H6;
+				DEVELOPMENT_TEAM = M7DG8QRAF9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AiNi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -461,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AiNi/AiNi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AiNi/Preview Content\"";
 				DEVELOPMENT_TEAM = M7DG8QRAF9;
