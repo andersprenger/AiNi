@@ -35,6 +35,7 @@
 		FD480D37264B0176008A8F07 /* TreatmentDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD480D36264B0176008A8F07 /* TreatmentDetailsModel.swift */; };
 		FD480D39264B0239008A8F07 /* StepDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD480D38264B0239008A8F07 /* StepDetailsModel.swift */; };
 		FD480D3B264B04CA008A8F07 /* TreatmentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD480D3A264B04CA008A8F07 /* TreatmentsModel.swift */; };
+		FD8FE7FA264EEAD300317AD0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE7F9264EEAD300317AD0 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		FD480D36264B0176008A8F07 /* TreatmentDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentDetailsModel.swift; sourceTree = "<group>"; };
 		FD480D38264B0239008A8F07 /* StepDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDetailsModel.swift; sourceTree = "<group>"; };
 		FD480D3A264B04CA008A8F07 /* TreatmentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentsModel.swift; sourceTree = "<group>"; };
+		FD8FE7F9264EEAD300317AD0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				71A869ED264A73DA006B1176 /* Treatments */,
 				711A06CE26464CDD000CA449 /* Notifications */,
 				711A06D126464E5C000CA449 /* Profile */,
+				FD8FE7F9264EEAD300317AD0 /* ImagePicker.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				FD480D3B264B04CA008A8F07 /* TreatmentsModel.swift in Sources */,
 				71DC304B264B11910044CA11 /* PatientTabView.swift in Sources */,
 				71A869E9264A7144006B1176 /* TodayTreatment.swift in Sources */,
+				FD8FE7FA264EEAD300317AD0 /* ImagePicker.swift in Sources */,
 				9FF30FAF264C69D200161638 /* PatientTreatmentsView.swift in Sources */,
 				71A869E3264A53A2006B1176 /* Treatment.swift in Sources */,
 				9F852752264DB75900B5B485 /* NotificationsView.swift in Sources */,

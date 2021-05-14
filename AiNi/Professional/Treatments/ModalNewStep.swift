@@ -19,6 +19,11 @@ struct ModalNewStep: View {
     @State var byStep : String = ""
     @State var stepName : String = "Nova Estapa"
     @State var stepTitle : String = ""
+    
+    @State var image : Image?
+    @State var mostrandoPicker: Bool = false
+    @State var inputImage: UIImage?
+    
     var completeStep : (( String, String,  Bool, Bool) -> Void)
     
     var body: some View {
@@ -67,10 +72,22 @@ struct ModalNewStep: View {
             
             VStack {
                 HStack {
-                    Text("Adicionar Imagem:")
+                    
+                    Text("Inserir imagem").sheet(isPresented: $mostrandoPicker, onDismiss: loadImage, content: {
+                        ImagePicker(image: self.$inputImage)
+                        
+                    })
+                    Spacer()
+                    } .onTapGesture {
+                        mostrandoPicker = true
+                     }
+                if image != nil{
+                    image?.resizable().scaledToFit()
+                    
                     
                     Spacer()
                 }
+               
                 
                 // FIXME: adicionar imagem aqui
             }
@@ -142,6 +159,14 @@ struct ModalNewStep: View {
             self.frequency = viewModel.frequency
         }
     }
+    
+    func loadImage(){
+        guard let inputImage = inputImage else {return}
+        image = Image(uiImage: inputImage)
+        
+    }
+    
+    
 }
 
 //struct ModalNewStep_Previews: PreviewProvider {
