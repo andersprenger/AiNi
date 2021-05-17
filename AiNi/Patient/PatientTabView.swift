@@ -16,7 +16,7 @@ struct PatientTabView: View {
                     Text("Hoje")
                 }
             
-            TreatmentsProView()
+            PatientTreatmentsView()
                 .tabItem {
                     Image(systemName: "bandage.fill")
                     // Image(systemName: "rectangle.stack.person.crop.fill")
