@@ -8,15 +8,17 @@
 import Foundation
 import SwiftUI
 
-class StepDetailsModel : ObservableObject , Hashable {
+class StepDetailsModel: ObservableObject, Hashable, Identifiable{
     
-    @Published var title : String = ""
-    @Published var stepByStep : String = ""
-    @Published var image : String = ""
-    @Published var activityTime : Bool = false
-    @Published var frequency : Bool = false
+    @Published var title: String = ""
+    @Published var stepByStep: String = ""
+    @Published var image: String = ""
+    @Published var activityTime: Bool = false
+    @Published var frequency: Bool = false
     
-    init(title : String, stepByStep:String, activityTime : Bool, frequency : Bool) {
+    var id: UUID = UUID()
+    
+    init(title: String, stepByStep:String, activityTime: Bool, frequency: Bool) {
         self.title = title
         self.stepByStep = stepByStep
         self.image = ""
@@ -25,15 +27,16 @@ class StepDetailsModel : ObservableObject , Hashable {
     }
     
     static func == (lhs: StepDetailsModel, rhs: StepDetailsModel) -> Bool {
-        return lhs.title == rhs.title
+        return lhs.title == rhs.title && lhs.stepByStep == rhs.stepByStep && lhs.activityTime == rhs.activityTime && lhs.frequency == rhs.frequency && lhs.id == rhs.id
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(self.title)
-        hasher.combine(self.stepByStep)
-        hasher.combine(self.image)
-        hasher.combine(self.activityTime)
-        hasher.combine(self.frequency)
+//        hasher.combine(self.title)
+//        hasher.combine(self.stepByStep)
+//        hasher.combine(self.image)
+//        hasher.combine(self.activityTime)
+//        hasher.combine(self.frequency)
+        hasher.combine(self.id)
     }
 }
 
