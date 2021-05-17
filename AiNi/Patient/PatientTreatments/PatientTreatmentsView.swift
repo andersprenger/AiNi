@@ -9,7 +9,23 @@ import SwiftUI
 
 struct PatientTreatmentsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                VStack(alignment: .center, spacing: 17) {
+                    Spacer()
+                    ForEach (0..<4) {_ in
+                        NavigationLink(destination: PatientStageView()) {
+                            PatientTreatmentCard()
+                        }
+                    }
+                }
+                .padding(.horizontal)
+            }
+            .navigationTitle("Tratamentos")
+            .navigationBarTitleDisplayMode(.inline)
+            // MARK: --TODO: adicionar botoes de add e editar quando prontos
+            //.navigationBarItems(leading: <#T##View#>, trailing: <#T##View#>)
+        }
     }
 }
 

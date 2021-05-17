@@ -12,11 +12,12 @@ struct TodayView: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .center, spacing: 17) {
+                    Spacer()
                     ForEach (0..<3) {_ in
-                        NavigationLink(destination: TodayTreatment()) {
-                            TodayTreatment()
-                        }
+                        NavigationLink(destination: PatientDoingStep()) {
+                            PatientTreatmentCard()                       }
                     }
+                    
                 }
                 .padding(.horizontal)
             }
