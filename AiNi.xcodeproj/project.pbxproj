@@ -187,18 +187,10 @@
 				9F89D4B72652EA9B008558C6 /* Components */,
 				9F852759264DB8D700B5B485 /* Login */,
 				71D1407C26430DD700D2774C /* ContentView.swift */,
-				71A869ED264A73DA006B1176 /* Treatments */,
 				711A06CE26464CDD000CA449 /* Notifications */,
 				711A06D126464E5C000CA449 /* Profile */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		71A869ED264A73DA006B1176 /* Treatments */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Treatments;
 			sourceTree = "<group>";
 		};
 		71D1406E26430DD700D2774C = {
