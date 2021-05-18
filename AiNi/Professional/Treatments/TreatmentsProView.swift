@@ -12,7 +12,15 @@ import SwiftUI
 
 struct TreatmentsProView: View {
     var body: some View {
+        
         NavigationView {
+            
+//            NavigationLink(
+//                destination: CreateNewTreatment(),
+//                label: {
+//                    Text("Novo Tratamento")
+//                }).navigationBarTitle( Text("Novo Tratamento"))
+            
             ScrollView {
                 VStack(alignment: .center, spacing: 17) {
                     Spacer() // descola o primeiro card da navigationbar
@@ -27,10 +35,27 @@ struct TreatmentsProView: View {
             .navigationTitle("Tratamentos")
             .navigationBarTitleDisplayMode(.inline)
             // MARK: --TODO: adicionar botoes de add e editar quando prontos
-            //.navigationBarItems(leading: <#T##View#>, trailing: <#T##View#>)
+            .navigationBarItems(leading: EmptyView(), trailing: mais())
         }
     }
 }
+struct mais : View {
+    
+    var body: some View {
+        
+      
+            NavigationLink(destination: CreateNewTreatment()) {
+                Text("mais")
+            }
+            
+        }
+        
+        
+        
+    
+    }
+
+
 
 struct Treatments_Previews: PreviewProvider {
     static var previews: some View {
