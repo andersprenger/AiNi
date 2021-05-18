@@ -23,7 +23,7 @@ struct ListedPacientView: View {
                 
                 
             }
-        }
+        }.frame(maxHeight:49)
         
     }
 }

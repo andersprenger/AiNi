@@ -109,8 +109,6 @@
 				9F85274D264DB73C00B5B485 /* TreatmentProCard.swift */,
 				711A06C0264630FA000CA449 /* TreatmentProStages.swift */,
 				719AC35E264CF103000DF672 /* TreatmentProStage.swift */,
-				FD480D36264B0176008A8F07 /* TreatmentDetailsModel.swift */,
-				FD480D38264B0239008A8F07 /* StepDetailsModel.swift */,
 				FD480D3A264B04CA008A8F07 /* TreatmentsModel.swift */,
 				9F85274E264DB73C00B5B485 /* TreatmentsProView.swift */,
 				FD480D34264AFD52008A8F07 /* ModalNewStep.swift */,
@@ -168,6 +166,8 @@
 		71A869DF264A537B006B1176 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FD480D38264B0239008A8F07 /* StepDetailsModel.swift */,
+				FD480D36264B0176008A8F07 /* TreatmentDetailsModel.swift */,
 				71A869E0264A5395006B1176 /* Patient.swift */,
 				71A869E2264A53A2006B1176 /* Treatment.swift */,
 			);

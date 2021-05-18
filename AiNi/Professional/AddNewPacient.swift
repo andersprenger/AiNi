@@ -26,15 +26,15 @@ struct AddNewPacient: View {
                         
                         
                     }
-                    
-                    ForEach(1...5, id: \.self) {_ in
+                    ScrollView{
+                    ForEach(1...3, id: \.self) {_ in
                         HStack{
                             ListedPacientView()
                             Spacer()
                             Image(systemName: "minus.circle")
                         }
                     }
-                    
+                    }
                 }.padding()
             }.background(CardsGradientStyle().opacity(0.1)).padding()
             

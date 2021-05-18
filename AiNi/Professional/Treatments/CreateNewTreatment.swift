@@ -37,8 +37,8 @@ struct CreateNewTreatment: View {
                 ZStack{
                     VStack{
                         HStack{
-                           
-                                Text("Adicionar Pacientes").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
+                            
+                            Text("Adicionar Pacientes").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
                             
                             Spacer()
                         }
@@ -52,15 +52,15 @@ struct CreateNewTreatment: View {
                             
                             
                         }
-                        
-                        ForEach(1...5, id: \.self) {_ in
-                            HStack{
-                                ListedPacientView()
-                                Spacer()
-                                Image(systemName: "minus.circle")
+                        ScrollView{
+                            ForEach(1...5, id: \.self) {_ in
+                                HStack{
+                                    ListedPacientView()
+                                    Spacer()
+                                    Image(systemName: "minus.circle")
+                                }
                             }
                         }
-                        
                     }.padding()
                 }.background(CardsGradientStyle().opacity(0.1))
                 
