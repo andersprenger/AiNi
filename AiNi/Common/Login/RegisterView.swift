@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @State private var typeUser = "Profissional"
-    var users = ["Profissional", "Paciente"]
+    @State private var showingFullScreen = false
+    @State private var currentSegment = 0
     @State var name = ""
+    @State var profissao = ""
+    @State var especializacao = ""
     @State var data_nascimento = ""
     @State var celular = ""
     @State var email = ""
@@ -40,28 +42,68 @@ struct RegisterView: View {
                 }
                 .padding()
                 Spacer()
+                    .frame(height: 50)
                 VStack(alignment: .center) {
-                    Picker(selection: $typeUser, label: Text("")) {
-                        ForEach(users, id: \.self) {
-                            Text($0)
-                        }
+                    Picker(selection: $currentSegment, label: Text("")) {
+                        Text("Profissional").tag(0)
+                        Text("Paciente").tag(1)
                     }
                     //.cornerRadius(18)
                     .pickerStyle(SegmentedPickerStyle())
-                    //.background(CardsGradientStyle())
                     .padding(.vertical, 20)
                     .padding(.horizontal, 70)
-                    
-                    
-                    CustomTextField(title: "Nome Completo", value: $name)
-                    CustomTextField(title: "", value: $data_nascimento)
-                    CustomTextField(title: "Celular", value: $celular)
-                        .padding(.bottom, 15)
-                    CustomTextField(title: "E-mail", value: $email)
-                    CustomTextField(title: "Senha", value: $password)
+                    GeometryReader { geo in
+                        ZStack {
+                            VStack() {
+                                CustomTextField(title: "Nome Completo", value: $name)
+                                CustomTextField(title: "", value: $data_nascimento)
+                                CustomTextField(title: "Celular", value: $celular)
+                                    .padding(.bottom, 15)
+                                CustomTextField(title: "E-mail", value: $email)
+                                CustomTextField(title: "Senha", value: $password)
+                                HStack {
+                                    Spacer()
+                                        .frame(width: 40, alignment: .center)
+                                    Button("     Cadastrar     ") {
+                                        showingFullScreen.toggle()
+                                    }
+                                    .buttonStyle(BlueButton())
+                                    .fullScreenCover(isPresented: $showingFullScreen) {
+                                        PatientTabView()
+                                    }
+                                    Spacer()
+                                        .frame(width: 40, alignment: .center)
+                                }
+                            }.offset(x: self.currentSegment == 1 ? 0 : -geo.size.width-300, y: 0)
+                            .animation(.default)
+                            
+                            VStack() {
+                                CustomTextField(title: "Nome Completo", value: $name)
+                                CustomTextField(title: "Profissão", value: $profissao)
+                                CustomTextField(title: "Especialização", value: $especializacao)
+                                CustomTextField(title: "Celular", value: $celular)
+                                    .padding(.bottom, 15)
+                                CustomTextField(title: "E-mail", value: $email)
+                                CustomTextField(title: "Senha", value: $password)
+                                HStack {
+                                    Spacer()
+                                        .frame(width: 40, alignment: .center)
+                                    Button("     Cadastrar     ") {
+                                        showingFullScreen.toggle()
+                                    }
+                                    .buttonStyle(BlueButton())
+                                    .fullScreenCover(isPresented: $showingFullScreen) {
+                                        PatientTabView()
+                                    }
+                                    Spacer()
+                                        .frame(width: 40, alignment: .center)
+                                }
+                            }.offset(x: self.currentSegment == 0 ? 0 : -geo.size.width-300, y: 0)
+                            .animation(.default)
+                        }
+                    }
                 }
                 .padding(.horizontal)
-                .padding(.vertical, 20)
                 Spacer()
             }
         }

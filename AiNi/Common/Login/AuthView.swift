@@ -34,19 +34,19 @@ struct AuthView: View {
                         
                     CustomTextField(title: "E-mail", value: $email)
                     CustomTextField(title: "Senha", value: $password)
-                    Button("     Login     ") {
-                        showingFullScreen.toggle()
+                    HStack {
+                        Spacer()
+                            .frame(width: 40, alignment: .center)
+                        Button("     Login     ") {
+                            showingFullScreen.toggle()
+                        }
+                        .buttonStyle(BlueButton())
+                        .fullScreenCover(isPresented: $showingFullScreen) {
+                            PatientTabView()
+                        }
+                        Spacer()
+                            .frame(width: 40, alignment: .center)
                     }
-                    .padding(.horizontal, 40)
-                    .padding(.vertical, 25)
-                    .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
-                    .background(CardsGradientStyle())
-                    .foregroundColor(.white)
-                    .fullScreenCover(isPresented: $showingFullScreen) {
-                        PatientTabView()
-                    }
-                    .cornerRadius(20)
-                    
                 }
                 .padding(.horizontal)
                 .padding(.vertical, 20)

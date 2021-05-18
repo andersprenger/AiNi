@@ -42,8 +42,15 @@ struct CustomTextField: View {
                         .keyboardType(.emailAddress)
                         .textContentType(.emailAddress)
                         .disableAutocorrection(true)
-                }
-                else if (title == "Nome Completo"){
+                } else if (title == "Profissão"){
+                    TextField("", text: $value)
+                        .keyboardType(.default)
+                        .disableAutocorrection(true)
+                } else if (title == "Especialização"){
+                    TextField("", text: $value)
+                        .keyboardType(.default)
+                        .disableAutocorrection(true)
+                } else if (title == "Nome Completo"){
                     TextField("", text: $value)
                         .keyboardType(.alphabet)
                         .textContentType(.name)
