@@ -14,7 +14,7 @@ struct PatientStageView: View {
                 Spacer()
                 ForEach (0..<4) {_ in
                     NavigationLink(destination: PatientDoingStep()) {
-                        StageCard(StageTitle: "Etapa do tratamento")
+                        StageCard(stageTitle: "Etapa do tratamento")
                     }
                 }
             }
