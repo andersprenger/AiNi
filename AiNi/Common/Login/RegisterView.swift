@@ -8,33 +8,60 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @State private var typeUser = "Profissional"
+    var users = ["Profissional", "Paciente"]
+    @State var name = ""
+    @State var data_nascimento = ""
+    @State var celular = ""
+    @State var email = ""
+    @State var password = ""
+    
+    init() {
+        // TODO Inserir CornerRadius
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.systemBlue], for: .normal)
+        
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.systemBlue
+        UISegmentedControl.appearance().backgroundColor = UIColor.systemBlue.withAlphaComponent(0.1)
+    }
+    
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ZStack {
-            Color.green.opacity(0.4)
             VStack {
                 HStack(alignment:.top) {
                     HStack {
-                        Spacer()
-                        Text("Abra sua Conta")
-                            .font(.title2)
-                        Spacer()
                         Button("X") {
                             presentationMode.wrappedValue.dismiss()
                         }.font(.title3)
+                        Spacer()
                     }
                 }
                 .padding()
                 Spacer()
                 VStack(alignment: .center) {
-                    Text("Abra sua Conta")
-                        .font(.title2)
-                    Text("Abra sua Conta")
-                        .font(.title2)
-                    Text("Abra sua Conta")
-                        .font(.title2)
+                    Picker(selection: $typeUser, label: Text("")) {
+                        ForEach(users, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    //.cornerRadius(18)
+                    .pickerStyle(SegmentedPickerStyle())
+                    //.background(CardsGradientStyle())
+                    .padding(.vertical, 20)
+                    .padding(.horizontal, 70)
+                    
+                    
+                    CustomTextField(title: "Nome Completo", value: $name)
+                    CustomTextField(title: "", value: $data_nascimento)
+                    CustomTextField(title: "Celular", value: $celular)
+                        .padding(.bottom, 15)
+                    CustomTextField(title: "E-mail", value: $email)
+                    CustomTextField(title: "Senha", value: $password)
                 }
+                .padding(.horizontal)
+                .padding(.vertical, 20)
                 Spacer()
             }
         }

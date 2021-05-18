@@ -8,44 +8,48 @@
 import SwiftUI
 
 struct AuthView: View {
+    @State var email = ""
+    @State var password = ""
+    
     @Environment(\.presentationMode) var presentationMode
+    
     @State private var showingFullScreen = false
+    
     
     var body: some View {
         
         ZStack {
-            Color.gray.opacity(0.4)
             VStack {
                 HStack(alignment:.top) {
                     HStack {
-                        Spacer()
-                        Text("Login")
-                            .font(.title2)
-                            .bold()
-                        Spacer()
                         Button("X") {
                             presentationMode.wrappedValue.dismiss()
                         }.font(.title3)
+                        Spacer()
                     }
                 }
                 .padding()
                 Spacer()
                 VStack(alignment: .center) {
-                    Text("E-mail")
-                        .font(.title2)
-                    Text("Senha")
-                        .font(.title2)
-                    
-                    Button("Login") {
+                        
+                    CustomTextField(title: "E-mail", value: $email)
+                    CustomTextField(title: "Senha", value: $password)
+                    Button("     Login     ") {
                         showingFullScreen.toggle()
                     }
-                    .font(.title2)
+                    .padding(.horizontal, 40)
+                    .padding(.vertical, 25)
+                    .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
+                    .background(CardsGradientStyle())
+                    .foregroundColor(.white)
                     .fullScreenCover(isPresented: $showingFullScreen) {
                         PatientTabView()
                     }
-                    
+                    .cornerRadius(20)
                     
                 }
+                .padding(.horizontal)
+                .padding(.vertical, 20)
                 Spacer()
             }
         }

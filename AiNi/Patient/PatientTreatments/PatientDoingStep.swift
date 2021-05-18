@@ -24,7 +24,7 @@ struct PatientDoingStep: View {
                     .frame(width: 339, alignment: .center)
                     .padding(.top, 10)
                 
-                BlueButton()
+//                BlueButton()
             }
         }
     }

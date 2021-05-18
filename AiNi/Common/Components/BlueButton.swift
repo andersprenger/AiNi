@@ -7,12 +7,26 @@
 import SwiftUI
 
 struct BlueButton: View {
+    
+    var title: String
+//    @Binding var value: String
+    
     var body: some View {
         ZStack {
-            CardsGradientStyle()
+            Button(action: {}) {
+                Text(title)
+                    .foregroundColor(.white)
+            }
+            .padding(.horizontal, 10.0)
+            .background(CardsGradientStyle())
             
-            Text("Concluir")
-                .font(.footnote)
+//            if value == "" {
+//
+//            }
+//
+//
+//            Text("Concluir")
+                //.font(.footnote)
             
             //                }.onTapGesture {
             //                    self.completeStep(stepTitle,byStep,activityTime,frequency)
@@ -26,6 +40,6 @@ struct BlueButton: View {
 
 struct BlueButton_Previews: PreviewProvider {
     static var previews: some View {
-        BlueButton()
+        BlueButton(title: "Conlcuir")
     }
 }
