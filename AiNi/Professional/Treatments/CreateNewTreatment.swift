@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CreateNewTreatment: View {
     
-    @State var name : String = ""
-    @State var description : String = ""
+    @State var name : String = "Nome do Tratamento"
+    @State var description : String = "Descrição"
     @State var pacientName : String = ""
     var body: some View {
         NavigationView{
@@ -18,7 +18,7 @@ struct CreateNewTreatment: View {
             VStack{
                 ZStack{
                     ZStack {
-                        TextField("Nome do Tratamento", text: $name)
+                        TextField("Nome do Tratamento", text: $name).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
                         
                     }.padding()
                     .background(CardsGradientStyle().opacity(0.1))
@@ -29,7 +29,7 @@ struct CreateNewTreatment: View {
                 }
                 ZStack {
                     
-                    TextField("Descrição", text: $description)
+                    TextField("Descrição", text: $description).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
                     
                 }.padding()
                 .background(CardsGradientStyle().opacity(0.1))
@@ -37,18 +37,18 @@ struct CreateNewTreatment: View {
                 ZStack{
                     VStack{
                         HStack{
-                            Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
-                                Image(systemName: "plus")
-                                Text("Adicionar Pacientes")
-                            }
+                           
+                                Text("Adicionar Pacientes").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
+                            
                             Spacer()
                         }
                         HStack{
-                            TextField("Pesquisar Pacientes", text: $pacientName).background(Color.white)
+                            TextField("Pesquisar Pacientes", text: $pacientName).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5)).textFieldStyle(RoundedBorderTextFieldStyle.init())
+                            
                             
                             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                                 Text("Adicionar").font(.custom("SF Pro Display", size: 12)).padding()
-                            }).background(Color.white)
+                            }).background(Color.white).cornerRadius(10)
                             
                             
                         }
@@ -66,11 +66,11 @@ struct CreateNewTreatment: View {
                 
                 
                 BlueButton()
-
+                
             }.navigationBarHidden(true)
             .padding()
             
-                        
+            
         }.navigationBarTitle("bergmann")
     }
 }

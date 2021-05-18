@@ -44,6 +44,7 @@
 		FD8FE7FA264EEAD300317AD0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE7F9264EEAD300317AD0 /* ImagePicker.swift */; };
 		FD8FE83F2652ECEF00317AD0 /* CreateNewTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE83E2652ECEF00317AD0 /* CreateNewTreatment.swift */; };
 		FD8FE8412654356500317AD0 /* ListedPacientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE8402654356500317AD0 /* ListedPacientView.swift */; };
+		FD8FE843265444D400317AD0 /* AddNewPacient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE842265444D400317AD0 /* AddNewPacient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		FD8FE7F9264EEAD300317AD0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FD8FE83E2652ECEF00317AD0 /* CreateNewTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTreatment.swift; sourceTree = "<group>"; };
 		FD8FE8402654356500317AD0 /* ListedPacientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedPacientView.swift; sourceTree = "<group>"; };
+		FD8FE842265444D400317AD0 /* AddNewPacient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPacient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				FD8FE8402654356500317AD0 /* ListedPacientView.swift */,
+				FD8FE842265444D400317AD0 /* AddNewPacient.swift */,
 				711A06C826464BCC000CA449 /* Treatments */,
 				711A06C926464C2A000CA449 /* Patients */,
 				711A06D326464F54000CA449 /* ProfessionalTabView.swift */,
@@ -356,6 +359,7 @@
 				71DC3047264B10B60044CA11 /* CircleImage.swift in Sources */,
 				FD8FE83F2652ECEF00317AD0 /* CreateNewTreatment.swift in Sources */,
 				71A869DE264A52B4006B1176 /* ProfileHeader.swift in Sources */,
+				FD8FE843265444D400317AD0 /* AddNewPacient.swift in Sources */,
 				711A06C52646414B000CA449 /* PatientCard.swift in Sources */,
 				9F16FB11264EFCBA00792B9B /* CardsGradientStyle.swift in Sources */,
 				FD480D3B264B04CA008A8F07 /* TreatmentsModel.swift in Sources */,
