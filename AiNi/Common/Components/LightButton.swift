@@ -1,12 +1,13 @@
 //
-//  BlueButton.swift
+//  LightButton.swift
 //  AiNi
 //
-//  Created by Julia Silveira de Souza on 17/05/21.
+//  Created by Julia Silveira de Souza on 19/05/21.
 //
+
 import SwiftUI
 
-struct BlueButton: View {
+struct LightButton: View {
     
     var ButtonTitle: String
     @State var NextStep = false
@@ -17,11 +18,11 @@ struct BlueButton: View {
             Button(action: {}) {
                 Text(ButtonTitle)
                     .font(.footnote)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color(.systemBlue))
                     .padding()
                     .frame(width: 130, height: 48, alignment: .center)
                 
-            }.background(CardsGradientStyle())
+            }.background(LightGradientStyle())
             
             .onTapGesture {
                 NextStep = true
@@ -31,8 +32,8 @@ struct BlueButton: View {
     }
 }
 
-struct BlueButton_Previews: PreviewProvider {
+struct LightButton_Previews: PreviewProvider {
     static var previews: some View {
-        BlueButton(ButtonTitle: "")
+        LightButton(ButtonTitle: "")
     }
 }

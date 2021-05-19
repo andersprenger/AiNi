@@ -26,6 +26,8 @@
 		9F16FB09264E0D2C00792B9B /* StageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16FB08264E0D2C00792B9B /* StageCard.swift */; };
 		9F16FB0D264ED9AC00792B9B /* PatientStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16FB0C264ED9AC00792B9B /* PatientStageView.swift */; };
 		9F16FB11264EFCBA00792B9B /* CardsGradientStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16FB10264EFCBA00792B9B /* CardsGradientStyle.swift */; };
+		9F7DA082265430F70086F13E /* TreatmentTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DA081265430F70086F13E /* TreatmentTimer.swift */; };
+		9F7DA084265467F60086F13E /* LightGradientStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DA083265467F60086F13E /* LightGradientStyle.swift */; };
 		9F85274F264DB73C00B5B485 /* TreatmentProCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85274D264DB73C00B5B485 /* TreatmentProCard.swift */; };
 		9F852750264DB73C00B5B485 /* TreatmentsProView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85274E264DB73C00B5B485 /* TreatmentsProView.swift */; };
 		9F852752264DB75900B5B485 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F852751264DB75900B5B485 /* NotificationsView.swift */; };
@@ -35,6 +37,7 @@
 		9F89D4B42652DEBA008558C6 /* PatientDoingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F89D4B32652DEBA008558C6 /* PatientDoingStep.swift */; };
 		9F89D4B62652E12E008558C6 /* PatientProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F89D4B52652E12E008558C6 /* PatientProgressView.swift */; };
 		9F89D4B92652EADF008558C6 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F89D4B82652EADF008558C6 /* BlueButton.swift */; };
+		9FD5D6762654B877004F39F6 /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5D6752654B877004F39F6 /* LightButton.swift */; };
 		9FF30FAC264C446600161638 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF30FAB264C446600161638 /* TodayView.swift */; };
 		9FF30FAF264C69D200161638 /* PatientTreatmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF30FAE264C69D200161638 /* PatientTreatmentsView.swift */; };
 		FD480D35264AFD52008A8F07 /* ModalNewStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD480D34264AFD52008A8F07 /* ModalNewStep.swift */; };
@@ -66,6 +69,8 @@
 		9F16FB08264E0D2C00792B9B /* StageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCard.swift; sourceTree = "<group>"; };
 		9F16FB0C264ED9AC00792B9B /* PatientStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientStageView.swift; sourceTree = "<group>"; };
 		9F16FB10264EFCBA00792B9B /* CardsGradientStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsGradientStyle.swift; sourceTree = "<group>"; };
+		9F7DA081265430F70086F13E /* TreatmentTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentTimer.swift; sourceTree = "<group>"; };
+		9F7DA083265467F60086F13E /* LightGradientStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightGradientStyle.swift; sourceTree = "<group>"; };
 		9F85274D264DB73C00B5B485 /* TreatmentProCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentProCard.swift; sourceTree = "<group>"; };
 		9F85274E264DB73C00B5B485 /* TreatmentsProView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentsProView.swift; sourceTree = "<group>"; };
 		9F852751264DB75900B5B485 /* NotificationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 		9F89D4B32652DEBA008558C6 /* PatientDoingStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDoingStep.swift; sourceTree = "<group>"; };
 		9F89D4B52652E12E008558C6 /* PatientProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientProgressView.swift; sourceTree = "<group>"; };
 		9F89D4B82652EADF008558C6 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		9FD5D6752654B877004F39F6 /* LightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButton.swift; sourceTree = "<group>"; };
 		9FF30FAB264C446600161638 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		9FF30FAE264C69D200161638 /* PatientTreatmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTreatmentsView.swift; sourceTree = "<group>"; };
 		FD480D34264AFD52008A8F07 /* ModalNewStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNewStep.swift; sourceTree = "<group>"; };
@@ -166,19 +172,10 @@
 		71A869E4264A6FE4006B1176 /* Patient */ = {
 			isa = PBXGroup;
 			children = (
-				71DC304A264B11910044CA11 /* PatientTabView.swift */,
-				9FF30FAD264C697500161638 /* PatientTreatments */,
-				71A869E7264A7130006B1176 /* Today */,
+				9F89D4BC26530ED7008558C6 /* Components */,
+				9FF30FAD264C697500161638 /* Views */,
 			);
 			path = Patient;
-			sourceTree = "<group>";
-		};
-		71A869E7264A7130006B1176 /* Today */ = {
-			isa = PBXGroup;
-			children = (
-				9FF30FAB264C446600161638 /* TodayView.swift */,
-			);
-			path = Today;
 			sourceTree = "<group>";
 		};
 		71A869EB264A72BE006B1176 /* Common */ = {
@@ -258,20 +255,32 @@
 				9F89D4B82652EADF008558C6 /* BlueButton.swift */,
 				9F16FB08264E0D2C00792B9B /* StageCard.swift */,
 				9F16FB10264EFCBA00792B9B /* CardsGradientStyle.swift */,
+				9F7DA083265467F60086F13E /* LightGradientStyle.swift */,
+				9F7DA081265430F70086F13E /* TreatmentTimer.swift */,
+				9FD5D6752654B877004F39F6 /* LightButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		9FF30FAD264C697500161638 /* PatientTreatments */ = {
+		9F89D4BC26530ED7008558C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9F89D4B52652E12E008558C6 /* PatientProgressView.swift */,
 				9F16FB04264E0A2800792B9B /* PatientTreatmentsCard.swift */,
+				9F89D4B52652E12E008558C6 /* PatientProgressView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9FF30FAD264C697500161638 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				71DC304A264B11910044CA11 /* PatientTabView.swift */,
 				9FF30FAE264C69D200161638 /* PatientTreatmentsView.swift */,
 				9F16FB0C264ED9AC00792B9B /* PatientStageView.swift */,
 				9F89D4B32652DEBA008558C6 /* PatientDoingStep.swift */,
+				9FF30FAB264C446600161638 /* TodayView.swift */,
 			);
-			path = PatientTreatments;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +359,7 @@
 				FD480D39264B0239008A8F07 /* StepDetailsModel.swift in Sources */,
 				9F852750264DB73C00B5B485 /* TreatmentsProView.swift in Sources */,
 				9F16FB05264E0A2800792B9B /* PatientTreatmentsCard.swift in Sources */,
+				9F7DA082265430F70086F13E /* TreatmentTimer.swift in Sources */,
 				711A06D426464F54000CA449 /* ProfessionalTabView.swift in Sources */,
 				9FF30FAC264C446600161638 /* TodayView.swift in Sources */,
 				71DC3047264B10B60044CA11 /* CircleImage.swift in Sources */,
@@ -364,6 +374,7 @@
 				71A869E3264A53A2006B1176 /* Treatment.swift in Sources */,
 				9F852752264DB75900B5B485 /* NotificationsView.swift in Sources */,
 				9F85275D264DB90000B5B485 /* AuthView.swift in Sources */,
+				9F7DA084265467F60086F13E /* LightGradientStyle.swift in Sources */,
 				71D1407D26430DD700D2774C /* ContentView.swift in Sources */,
 				9F85274F264DB73C00B5B485 /* TreatmentProCard.swift in Sources */,
 				FD480D37264B0176008A8F07 /* TreatmentDetailsModel.swift in Sources */,
@@ -373,6 +384,7 @@
 				9F16FB09264E0D2C00792B9B /* StageCard.swift in Sources */,
 				711A06D026464DF4000CA449 /* ProfileView.swift in Sources */,
 				711A06C1264630FA000CA449 /* TreatmentProStages.swift in Sources */,
+				9FD5D6762654B877004F39F6 /* LightButton.swift in Sources */,
 				9F89D4B62652E12E008558C6 /* PatientProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,7 +516,7 @@
 				CODE_SIGN_ENTITLEMENTS = AiNi/AiNi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AiNi/Preview Content\"";
-				DEVELOPMENT_TEAM = M7DG8QRAF9;
+				DEVELOPMENT_TEAM = 876KXU24XS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AiNi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -527,7 +539,7 @@
 				CODE_SIGN_ENTITLEMENTS = AiNi/AiNi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AiNi/Preview Content\"";
-				DEVELOPMENT_TEAM = M7DG8QRAF9;
+				DEVELOPMENT_TEAM = 876KXU24XS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AiNi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

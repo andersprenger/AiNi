@@ -1,22 +1,23 @@
 //
-//  CardsGradientStyle.swift
+//  LightGradient.swift
 //  AiNi
 //
-//  Created by Julia Silveira de Souza on 14/05/21.
+//  Created by Julia Silveira de Souza on 18/05/21.
 //
 
 import SwiftUI
 
-struct CardsGradientStyle: View {
+struct LightGradientStyle: View {
     var body: some View {
         ZStack {
         LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)
+            .opacity(0.10)
         }
     }
 }
 
-struct CardsGradientStyle_Previews: PreviewProvider {
+struct LightGradient_Previews: PreviewProvider {
     static var previews: some View {
-        CardsGradientStyle()
+        LightGradientStyle()
     }
 }

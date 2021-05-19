@@ -15,7 +15,7 @@ struct TodayView: View {
                     Spacer()
                     ForEach (0..<3) {_ in
                         NavigationLink(destination: PatientDoingStep()) {
-                            PatientTreatmentCard()                       }
+                            PatientTreatmentCard(Treatment: "", StageofTreatment: "")                       }
                     }
                     
                 }
