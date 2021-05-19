@@ -16,7 +16,6 @@ struct ContentView: View {
         //TODO Imagens de Onboarding
         VStack {
             ZStack{
-                Color.blue
                 TabView {
                     Text("First")
                     Text("Second")
@@ -24,20 +23,23 @@ struct ContentView: View {
                 }
             }
             .tabViewStyle(PageTabViewStyle())
-            VStack(spacing:20) {
+            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+            VStack(spacing:10) {
                 Button("Abra sua Conta") {
                     showingSheetRegister.toggle()
                 }
+                .buttonStyle(BlueButton())
                 .sheet(isPresented: $showingSheetRegister) {
                     RegisterView()
                 }
                 Button("Login") {
                     showingSheetAuth.toggle()
                 }
+                .buttonStyle(BlueButton())
                 .sheet(isPresented: $showingSheetAuth) {
                     AuthView()
                 }
-            }.padding(40)
+            }.padding(.vertical,30)
         }
         
     }

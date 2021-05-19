@@ -362,7 +362,6 @@
 				9F16FB0D264ED9AC00792B9B /* PatientStageView.swift in Sources */,
 				71DC304B264B11910044CA11 /* PatientTabView.swift in Sources */,
 				9F89D4B42652DEBA008558C6 /* PatientDoingStep.swift in Sources */,
-				71A869E9264A7144006B1176 /* TodayTreatment.swift in Sources */,
 				FD8FE7FA264EEAD300317AD0 /* ImagePicker.swift in Sources */,
 				9FF30FAF264C69D200161638 /* PatientTreatmentsView.swift in Sources */,
 				71A869E3264A53A2006B1176 /* Treatment.swift in Sources */,
@@ -517,7 +516,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.aini.AiNi;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ain.AiNi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -540,7 +539,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.aini.AiNi;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ain.AiNi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -98,7 +98,7 @@ struct RegisterView: View {
                                     Spacer()
                                         .frame(width: 40, alignment: .center)
                                 }
-                            }.offset(x: self.currentSegment == 0 ? 0 : -geo.size.width-300, y: 0)
+                            }.offset(x: self.currentSegment == 0 ? 0 : -geo.size.width+900, y: 0)
                             .animation(.default)
                         }
                     }
