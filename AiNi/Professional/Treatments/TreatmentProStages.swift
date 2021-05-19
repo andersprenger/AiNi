@@ -41,7 +41,7 @@ struct TreatmentProStages: View {
                         }
                 }
                 ForEach(viewModel.stepList) { stepItem in
-                    StageCard(stageTitle: stepItem.title)
+                    StageCard(StageTitle: stepItem.title)
                         .onTapGesture {
                             selectedStage = stepItem
                         }

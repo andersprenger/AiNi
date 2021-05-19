@@ -32,7 +32,7 @@ struct RegisterPatient: View {
                 .padding()
                 
                 ZStack {
-                    LightGradientBox()
+                    LightGradientStyle()
                     
                     TextField("Nome Completo", text: $nome)
                         .textContentType(.name)
@@ -44,7 +44,7 @@ struct RegisterPatient: View {
                 .padding(.horizontal)
                 
                 ZStack {
-                    LightGradientBox()
+                    LightGradientStyle()
                     
                     TextField("Email", text: $email)
                         .textContentType(.emailAddress)
@@ -57,7 +57,7 @@ struct RegisterPatient: View {
                 .padding(.horizontal)
                 
                 ZStack {
-                    LightGradientBox()
+                    LightGradientStyle()
                     
                     VStack {
                         TextField("Mensagem", text: $message)
@@ -72,7 +72,7 @@ struct RegisterPatient: View {
                 .padding(.horizontal)
                 
                 ZStack {
-                    LightGradientBox()
+                    LightGradientStyle()
                     
                     VStack {
                         HStack {
@@ -125,7 +125,10 @@ struct RegisterPatient: View {
                 
                 Spacer()
                 
-                BlueButton()
+                Button("botao") {
+                    //
+                }
+                .buttonStyle(BlueButton())
             }
         }
     }

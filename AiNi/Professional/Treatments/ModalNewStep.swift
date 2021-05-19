@@ -18,6 +18,9 @@ struct ModalNewStep: View {
     @State private var byStep: String
     var completeStep : ((UUID, String, String, Bool, Bool) -> Void)
     var stepId: UUID
+    @State var inputImage: UIImage?
+    @State var mostrandoPicker: Bool = false
+    @State var image : Image?
     
     init(viewModel: StepDetailsModel, completeStep: @escaping ((UUID, String, String,  Bool, Bool) -> Void)){
         _title = .init(initialValue: viewModel.title)
@@ -74,10 +77,22 @@ struct ModalNewStep: View {
             
             VStack {
                 HStack {
-                    Text("Adicionar Imagem:")
+                    
+                    Text("Inserir imagem").sheet(isPresented: $mostrandoPicker, onDismiss: loadImage, content: {
+                        ImagePicker(image: self.$inputImage)
+                        
+                    })
+                    Spacer()
+                    } .onTapGesture {
+                        mostrandoPicker = true
+                     }
+                if image != nil{
+                    image?.resizable().scaledToFit()
+                    
                     
                     Spacer()
                 }
+               
                 
                 // FIXME: adicionar imagem aqui
             }
@@ -146,6 +161,14 @@ struct ModalNewStep: View {
             
         }
     }
+    
+    func loadImage(){
+        guard let inputImage = inputImage else {return}
+        image = Image(uiImage: inputImage)
+        
+    }
+    
+    
 }
 
 struct ModalNewStep_Previews: PreviewProvider {

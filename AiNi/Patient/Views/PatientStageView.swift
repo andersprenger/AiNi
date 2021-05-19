@@ -8,22 +8,24 @@
 import SwiftUI
 
 struct PatientStageView: View {
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .center, spacing: 17) {
                 Spacer()
                 ForEach (0..<4) {_ in
                     NavigationLink(destination: PatientDoingStep()) {
-                        StageCard(stageTitle: "Etapa do tratamento")
+                        StageCard(StageTitle: "Etapa do tratamento")
                     }
                 }
-            }
-            .padding(.horizontal)
-        }
-        .navigationTitle("Tratamento 1")
+            }.padding(.horizontal)
+            
+            LightButton(ButtonTitle: "Começar")
+                .padding(.vertical)
+                        
+        }.navigationTitle("Nome do Tratamento")
         .navigationBarTitleDisplayMode(.inline)
-        // MARK: --TODO: adicionar botoes de add e editar quando prontos
-        //.navigationBarItems(leading: <#T##View#>, trailing: <#T##View#>)
+        
     }
 }
 

@@ -8,37 +8,40 @@
 import SwiftUI
 
 struct PatientTreatmentCard: View {
+    
+    @State var Treatment: String
+    @State var StageofTreatment: String
+    
     var body: some View {
         ZStack {
             CardsGradientStyle()
             
             VStack (alignment: .leading) {
-                Text("Nome do tratamento")
+                Text(Treatment)
                     .font(.title)
-                    .foregroundColor(Color("text-color"))
+                    .foregroundColor(.white)
                 
-                Text("Etapa atual")
-                    .foregroundColor(Color("text-color"))
+                Text(StageofTreatment)
+                    .foregroundColor(.white)
                 
                 HStack (spacing: 2) {
                     HStack (alignment: .center, spacing: -5) {
                         
                     }
                     Spacer()
-                    
                 }
-                
             }
             .padding()
             
         }
         .frame(height: 133, alignment: .center)
+        .clipShape(RoundedRectangle(cornerRadius: 22))
     }
 }
 
 struct PatientTreatmentCard_Previews: PreviewProvider {
     static var previews: some View {
-        PatientTreatmentCard()
+        PatientTreatmentCard(Treatment: "", StageofTreatment: "")
             .preferredColorScheme(.dark)
             .previewLayout(.fixed(width: 349, height: 153))
     }
