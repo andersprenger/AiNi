@@ -11,22 +11,19 @@
 import SwiftUI
 
 struct TreatmentsProView: View {
+  
+    @ObservedObject var todosTratamentos : ProCurrentTreatments = .init()
+    
     var body: some View {
         
         NavigationView {
             
-//            NavigationLink(
-//                destination: CreateNewTreatment(),
-//                label: {
-//                    Text("Novo Tratamento")
-//                }).navigationBarTitle( Text("Novo Tratamento"))
-            
             ScrollView {
                 VStack(alignment: .center, spacing: 17) {
                     Spacer() // descola o primeiro card da navigationbar
-                    ForEach (0..<10) {_ in
+                    ForEach (todosTratamentos.treatments, id:\.id) {treatment in
                         NavigationLink(destination: TreatmentProStages()) {
-                            TreatmentProCard()
+                            TreatmentProCard(treatment: treatment)
                         }
                     }
                 }
@@ -35,17 +32,19 @@ struct TreatmentsProView: View {
             .navigationTitle("Tratamentos")
             .navigationBarTitleDisplayMode(.inline)
             // MARK: --TODO: adicionar botoes de add e editar quando prontos
-            .navigationBarItems(leading: EmptyView(), trailing: mais())
+            .navigationBarItems(leading: EmptyView(), trailing: mais(tratamentos: todosTratamentos))
         }
     }
-}
+
 struct mais : View {
+     
+    var tratamentos : ProCurrentTreatments
     
     var body: some View {
         
       
-            NavigationLink(destination: CreateNewTreatment()) {
-                Text("mais")
+        NavigationLink(destination: CreateNewTreatment(todosTratamentos: tratamentos)) {
+            Image(systemName: "plus")
             }
             
         }
@@ -61,4 +60,5 @@ struct Treatments_Previews: PreviewProvider {
     static var previews: some View {
         TreatmentsProView()
     }
+}
 }

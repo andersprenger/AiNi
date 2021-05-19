@@ -10,13 +10,15 @@
 import SwiftUI
 
 struct TreatmentProCard: View {
+    var treatment: TreatmentDetailsModel
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 28)
                 .foregroundColor(Color("card-color"))
             
             VStack (alignment: .leading) {
-                Text("Nome do Tratamento")
+                Text(treatment.treatmentName)
                     .font(.title)
                     .foregroundColor(Color("text-color"))
                 
@@ -54,7 +56,7 @@ struct TreatmentProCard: View {
 
 struct TreatmentProCard_Previews: PreviewProvider {
     static var previews: some View {
-        TreatmentProCard()
+        TreatmentProCard(treatment: .init())
             .preferredColorScheme(.dark)
             .previewLayout(.fixed(width: 349, height: 153))
         

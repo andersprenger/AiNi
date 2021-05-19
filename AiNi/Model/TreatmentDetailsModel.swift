@@ -7,12 +7,18 @@
 import SwiftUI
 import Foundation
 
-class TreatmentDetailsModel: ObservableObject {
+class TreatmentDetailsModel: ObservableObject, Equatable {
+    var id : UUID = .init()
     @Published var treatmentName: String = ""
+    @Published var description: String = ""
     @Published var stepList: [StepDetailsModel] = []
+    @Published var thisTreatmentPacients : [PacientModel] = []
+//    init() {
+//
+//    }
     
-    init() {
-        
+    static func == (lhs: TreatmentDetailsModel, rhs: TreatmentDetailsModel) -> Bool {
+        lhs.stepList == rhs.stepList && lhs.thisTreatmentPacients == rhs.thisTreatmentPacients
     }
 }
 

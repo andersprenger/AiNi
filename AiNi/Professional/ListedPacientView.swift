@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct ListedPacientView: View {
+    
+    var nome: String
+    var image: String
+    
     var body: some View {
         ZStack{
             HStack{
                 
-                Image("patient-image")
+                Image(image)
                     .resizable()
                     .scaledToFit()
                     .clipShape(Circle())
                     .overlay(Circle().stroke(Color.white, lineWidth: 5))
                 
-                Text("Robertinho")
+                Text(nome)
                 
                 
                 
@@ -30,6 +34,6 @@ struct ListedPacientView: View {
 
 struct ListedPacientView_Previews: PreviewProvider {
     static var previews: some View {
-        ListedPacientView()
+        ListedPacientView(nome:"Robertinho" , image: "patient-image")
     }
 }

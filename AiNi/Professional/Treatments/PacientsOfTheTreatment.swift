@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddNewPacient: View {
+struct PacientsOfTheTreatment: View {
     
     
     @State var pacientName : String = ""
@@ -15,7 +15,7 @@ struct AddNewPacient: View {
         VStack{
             ZStack{
                 VStack{
-                
+                Text("Adicionar Paciente")
                     HStack{
                         TextField("Pesquisar Pacientes", text: $pacientName).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5)).textFieldStyle(RoundedBorderTextFieldStyle.init())
                         
@@ -29,7 +29,7 @@ struct AddNewPacient: View {
                     ScrollView{
                     ForEach(1...3, id: \.self) {_ in
                         HStack{
-                            ListedPacientView()
+                            ListedPacientView(nome: "rodriguinho", image: "patient-image")
                             Spacer()
                             Image(systemName: "minus.circle")
                         }
@@ -45,8 +45,8 @@ struct AddNewPacient: View {
     }
 }
 
-struct AddNewPacient_Previews: PreviewProvider {
+struct PacientsOfTheTreatment_Previews: PreviewProvider {
     static var previews: some View {
-        AddNewPacient()
+        PacientsOfTheTreatment()
     }
 }

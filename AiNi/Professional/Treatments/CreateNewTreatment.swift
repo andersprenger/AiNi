@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct CreateNewTreatment: View {
+    var todosTratamentos : ProCurrentTreatments
     
     @State var name : String = "Nome do Tratamento"
     @State var description : String = "Descrição"
     @State var pacientName : String = ""
+    @State var addPacient : Bool = false
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationView{
             
             VStack{
+                Spacer()
                 ZStack{
                     ZStack {
                         TextField("Nome do Tratamento", text: $name).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
@@ -37,35 +42,30 @@ struct CreateNewTreatment: View {
                 ZStack{
                     VStack{
                         HStack{
-                            
-                            Text("Adicionar Pacientes").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
+                            Image(systemName: "plus").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            Text("Adicionar Pacientes").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                             
                             Spacer()
+                        }.onTapGesture {
+                            addPacient.toggle()
                         }
-                        HStack{
-                            TextField("Pesquisar Pacientes", text: $pacientName).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5)).textFieldStyle(RoundedBorderTextFieldStyle.init())
-                            
-                            
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                                Text("Adicionar").font(.custom("SF Pro Display", size: 12)).padding()
-                            }).background(Color.white).cornerRadius(10)
-                            
-                            
+                        .sheet(isPresented: $addPacient) {
+                            PacientsOfTheTreatment()
                         }
-                        ScrollView{
-                            ForEach(1...5, id: \.self) {_ in
-                                HStack{
-                                    ListedPacientView()
-                                    Spacer()
-                                    Image(systemName: "minus.circle")
-                                }
-                            }
-                        }
+                       
+                        
                     }.padding()
                 }.background(CardsGradientStyle().opacity(0.1))
                 
+                Spacer()
                 
-                BlueButton()
+                Button("concluir"){
+                    let treatment = TreatmentDetailsModel()
+                    treatment.treatmentName=name
+                    treatment.description = description
+                    todosTratamentos.treatments.append(treatment)
+                    presentationMode.wrappedValue.dismiss()
+                }
                 
             }.navigationBarHidden(true)
             .padding()
@@ -77,6 +77,6 @@ struct CreateNewTreatment: View {
 
 struct CreateNewTreatment_Previews: PreviewProvider {
     static var previews: some View {
-        CreateNewTreatment()
+        CreateNewTreatment(todosTratamentos: .init())
     }
 }

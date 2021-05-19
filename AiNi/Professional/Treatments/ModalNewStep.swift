@@ -29,6 +29,7 @@ struct ModalNewStep: View {
         _byStep = .init(initialValue: viewModel.stepByStep)
         self.completeStep = completeStep
         self.stepId = viewModel.id
+    
     }
     
     var body: some View {

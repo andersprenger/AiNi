@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class StepDetailsModel: ObservableObject, Hashable, Identifiable{
+class StepDetailsModel: ObservableObject, Hashable, Identifiable, Equatable{
     
     @Published var title: String = ""
     @Published var stepByStep: String = ""
