@@ -55,48 +55,52 @@ struct RegisterView: View {
                     GeometryReader { geo in
                         ZStack {
                             VStack() {
-                                CustomTextField(title: "Nome Completo", value: $name)
-                                CustomTextField(title: "", value: $data_nascimento)
-                                CustomTextField(title: "Celular", value: $celular)
-                                    .padding(.bottom, 15)
-                                CustomTextField(title: "E-mail", value: $email)
-                                CustomTextField(title: "Senha", value: $password)
-                                HStack {
-                                    Spacer()
-                                        .frame(width: 40, alignment: .center)
-                                    Button("     Cadastrar     ") {
-                                        showingFullScreen.toggle()
+                                ScrollView(.vertical, showsIndicators: false) {
+                                    CustomTextField(title: "Nome Completo", value: $name)
+                                    CustomTextField(title: "", value: $data_nascimento)
+                                    CustomTextField(title: "Celular", value: $celular)
+                                        .padding(.bottom, 15)
+                                    CustomTextField(title: "E-mail", value: $email)
+                                    CustomTextField(title: "Senha", value: $password)
+                                    HStack {
+                                        Spacer()
+                                            .frame(width: 40, alignment: .center)
+                                        Button("     Cadastrar     ") {
+                                            showingFullScreen.toggle()
+                                        }
+                                        .buttonStyle(BlueButton())
+                                        .fullScreenCover(isPresented: $showingFullScreen) {
+                                            PatientTabView()
+                                        }
+                                        Spacer()
+                                            .frame(width: 40, alignment: .center)
                                     }
-                                    .buttonStyle(BlueButton())
-                                    .fullScreenCover(isPresented: $showingFullScreen) {
-                                        PatientTabView()
-                                    }
-                                    Spacer()
-                                        .frame(width: 40, alignment: .center)
                                 }
                             }.offset(x: self.currentSegment == 1 ? 0 : -geo.size.width-300, y: 0)
                             .animation(.default)
                             
                             VStack() {
-                                CustomTextField(title: "Nome Completo", value: $name)
-                                CustomTextField(title: "Profissão", value: $profissao)
-                                CustomTextField(title: "Especialização", value: $especializacao)
-                                CustomTextField(title: "Celular", value: $celular)
-                                    .padding(.bottom, 15)
-                                CustomTextField(title: "E-mail", value: $email)
-                                CustomTextField(title: "Senha", value: $password)
-                                HStack {
-                                    Spacer()
-                                        .frame(width: 40, alignment: .center)
-                                    Button("     Cadastrar     ") {
-                                        showingFullScreen.toggle()
+                                ScrollView(.vertical, showsIndicators: false) {
+                                    CustomTextField(title: "Nome Completo", value: $name)
+                                    CustomTextField(title: "Profissão", value: $profissao)
+                                    CustomTextField(title: "Especialização", value: $especializacao)
+                                    CustomTextField(title: "Celular", value: $celular)
+                                        .padding(.bottom, 15)
+                                    CustomTextField(title: "E-mail", value: $email)
+                                    CustomTextField(title: "Senha", value: $password)
+                                    HStack {
+                                        Spacer()
+                                            .frame(width: 40, alignment: .center)
+                                        Button("     Cadastrar     ") {
+                                            showingFullScreen.toggle()
+                                        }
+                                        .buttonStyle(BlueButton())
+                                        .fullScreenCover(isPresented: $showingFullScreen) {
+                                            PatientTabView()
+                                        }
+                                        Spacer()
+                                            .frame(width: 40, alignment: .center)
                                     }
-                                    .buttonStyle(BlueButton())
-                                    .fullScreenCover(isPresented: $showingFullScreen) {
-                                        PatientTabView()
-                                    }
-                                    Spacer()
-                                        .frame(width: 40, alignment: .center)
                                 }
                             }.offset(x: self.currentSegment == 0 ? 0 : -geo.size.width+900, y: 0)
                             .animation(.default)
