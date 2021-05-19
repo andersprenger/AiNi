@@ -22,8 +22,22 @@ struct PatientsView: View {
             .navigationTitle("Pacientes")
             .navigationBarTitleDisplayMode(.inline)
             // MARK: --TODO: adicionar botoes de add e editar quando prontos
-            //.navigationBarItems(leading: <#T##View#>, trailing: <#T##View#>)
+            .navigationBarItems(leading: EmptyView(), trailing: AddPatientButton())
         }
+    }
+}
+
+struct AddPatientButton: View {
+    @State private var showSheet = false
+    
+    var body: some View {
+        Image(systemName: "plus")
+            .sheet(isPresented: $showSheet) {
+                RegisterPatient()
+            }
+            .onTapGesture {
+                showSheet.toggle()
+            }
     }
 }
 
