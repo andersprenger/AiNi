@@ -11,21 +11,31 @@ import SwiftUI
 
 struct ModalNewStep: View {
     
-    // MARK --TODO: review this with mentors...
-    @ObservedObject var viewModel : StepDetailsModel
-    @Binding var novaEtapa : Bool
-    @State var activityTime = false
-    @State var frequency = false
-    @State var byStep : String = ""
-    @State var stepName : String = "Nova Estapa"
-    @State var stepTitle : String = ""
-    var completeStep : (( String, String,  Bool, Bool) -> Void)
+    @Environment (\.presentationMode) var presentationMode
+    @State private var title: String
+    @State private var activityTime: Bool
+    @State private var frequency: Bool
+    @State private var byStep: String
+    var completeStep : ((UUID, String, String, Bool, Bool) -> Void)
+    var stepId: UUID
+    @State var inputImage: UIImage?
+    @State var mostrandoPicker: Bool = false
+    @State var image : Image?
+    
+    init(viewModel: StepDetailsModel, completeStep: @escaping ((UUID, String, String,  Bool, Bool) -> Void)){
+        _title = .init(initialValue: viewModel.title)
+        _activityTime = .init(initialValue: viewModel.activityTime)
+        _frequency = .init(initialValue: viewModel.frequency)
+        _byStep = .init(initialValue: viewModel.stepByStep)
+        self.completeStep = completeStep
+        self.stepId = viewModel.id
+    }
     
     var body: some View {
         VStack {
             ZStack {
                 VStack (alignment: .center){
-                    Text(self.viewModel.title)
+                    Text(title)
                         .font(.title)
                 }
                 
@@ -46,7 +56,7 @@ struct ModalNewStep: View {
                     Spacer()
                 }
                 
-                TextField("\(viewModel.title)", text: $stepTitle)
+                TextField("\(title)", text: $title)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             .padding()
@@ -59,7 +69,7 @@ struct ModalNewStep: View {
                 }
                 
                 
-                TextField("\(viewModel.stepByStep)", text: $byStep)
+                TextField("\(byStep)", text: $byStep)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(height: 40.0)
             }
@@ -67,10 +77,22 @@ struct ModalNewStep: View {
             
             VStack {
                 HStack {
-                    Text("Adicionar Imagem:")
+                    
+                    Text("Inserir imagem").sheet(isPresented: $mostrandoPicker, onDismiss: loadImage, content: {
+                        ImagePicker(image: self.$inputImage)
+                        
+                    })
+                    Spacer()
+                    } .onTapGesture {
+                        mostrandoPicker = true
+                     }
+                if image != nil{
+                    image?.resizable().scaledToFit()
+                    
                     
                     Spacer()
                 }
+               
                 
                 // FIXME: adicionar imagem aqui
             }
@@ -133,19 +155,25 @@ struct ModalNewStep: View {
                     .font(.footnote)
                 
             }.onTapGesture {
-                self.completeStep(stepTitle,byStep,activityTime,frequency)
-                novaEtapa = false
+                self.completeStep(stepId,title,byStep,activityTime,frequency)
+                self.presentationMode.wrappedValue.dismiss()
             }
             
-        }.onAppear {
-            self.activityTime = viewModel.activityTime
-            self.frequency = viewModel.frequency
+        }
+    }
+    
+    func loadImage(){
+        guard let inputImage = inputImage else {return}
+        image = Image(uiImage: inputImage)
+        
+    }
+    
+    
+}
+
+struct ModalNewStep_Previews: PreviewProvider {
+    static var previews: some View {
+        ModalNewStep(viewModel: StepDetailsModel(title: "", stepByStep: "", activityTime: false, frequency: false)) {_, _, _, _, _ in
         }
     }
 }
-
-//struct ModalNewStep_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ModalNewStep()
-//    }
-//}

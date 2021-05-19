@@ -16,6 +16,7 @@ struct TreatmentProStages: View {
     @ObservedObject var viewModel : TreatmentDetailsModel = TreatmentDetailsModel()
     
     @State var novaEtapa = false
+    @State private var selectedStage: StepDetailsModel?
     
     var body: some View {
         ScrollView {
@@ -32,30 +33,41 @@ struct TreatmentProStages: View {
                     
                     Text("\(Image(systemName: "plus")) Nova Etapa")
                         .font(.footnote)
-                        .sheet(isPresented: $novaEtapa , content: {
-                            ModalNewStep(viewModel : StepDetailsModel(title: "Nova Etapa", stepByStep: "", activityTime: false, frequency: false),novaEtapa: $novaEtapa,completeStep: completeStep)
-                        } )
+                        .sheet(isPresented: $novaEtapa) {
+                            ModalNewStep(viewModel : StepDetailsModel(title: "Nova Etapa", stepByStep: "", activityTime: false, frequency: false),completeStep: completeStep)
+                        }
                         .onTapGesture {
                             novaEtapa = true
                         }
                 }
-                ForEach(viewModel.stepList, id: \.self) { stepItem in
+                ForEach(viewModel.stepList) { stepItem in
                     TreatmentProStage(text:stepItem.title)
-                        .sheet(isPresented: $novaEtapa , content: {
-                            ModalNewStep(viewModel : stepItem,novaEtapa: $novaEtapa,completeStep: completeStep)
-                        } ).onTapGesture {
-                            novaEtapa = true
+                        .onTapGesture {
+                            selectedStage = stepItem
                         }
-                    
                 }
-                
+                .sheet(item: $selectedStage) { step in
+                    ModalNewStep(viewModel: step, completeStep: completeStep)
+                }
             }
             .padding(.horizontal)
         }
     }
-    func completeStep(title : String, stepByStep:String, activityTime : Bool, frequency : Bool) {
-        let step : StepDetailsModel = StepDetailsModel(title:title, stepByStep:stepByStep, activityTime:activityTime, frequency:frequency)
-        viewModel.stepList.append(step)
+    
+    
+    func completeStep(id: UUID, title: String, stepByStep: String, activityTime : Bool, frequency : Bool) {
+        if let model = viewModel.stepList.first(where: { step in
+            step.id == id
+        }){
+            viewModel.objectWillChange.send()
+            model.title = title
+            model.stepByStep = stepByStep
+            model.activityTime = activityTime
+            model.frequency = frequency
+        } else {
+            let step : StepDetailsModel = StepDetailsModel(title:title, stepByStep:stepByStep, activityTime:activityTime, frequency:frequency)
+            viewModel.stepList.append(step)
+        }
     }
 }
 
