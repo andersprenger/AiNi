@@ -8,44 +8,48 @@
 import SwiftUI
 
 struct AuthView: View {
+    @State var email = ""
+    @State var password = ""
+    
     @Environment(\.presentationMode) var presentationMode
+    
     @State private var showingFullScreen = false
+    
     
     var body: some View {
         
         ZStack {
-            Color.gray.opacity(0.4)
             VStack {
                 HStack(alignment:.top) {
                     HStack {
-                        Spacer()
-                        Text("Login")
-                            .font(.title2)
-                            .bold()
-                        Spacer()
                         Button("X") {
                             presentationMode.wrappedValue.dismiss()
                         }.font(.title3)
+                        Spacer()
                     }
                 }
                 .padding()
                 Spacer()
                 VStack(alignment: .center) {
-                    Text("E-mail")
-                        .font(.title2)
-                    Text("Senha")
-                        .font(.title2)
-                    
-                    Button("Login") {
-                        showingFullScreen.toggle()
+                        
+                    CustomTextField(title: "E-mail", value: $email)
+                    CustomTextField(title: "Senha", value: $password)
+                    HStack {
+                        Spacer()
+                            .frame(width: 40, alignment: .center)
+                        Button("     Login     ") {
+                            showingFullScreen.toggle()
+                        }
+                        .buttonStyle(BlueButton())
+                        .fullScreenCover(isPresented: $showingFullScreen) {
+                            PatientTabView()
+                        }
+                        Spacer()
+                            .frame(width: 40, alignment: .center)
                     }
-                    .font(.title2)
-                    .fullScreenCover(isPresented: $showingFullScreen) {
-                        PatientTabView()
-                    }
-                    
-                    
                 }
+                .padding(.horizontal)
+                .padding(.vertical, 20)
                 Spacer()
             }
         }

@@ -22,6 +22,7 @@
 		71D1408226430DD900D2774C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D1408126430DD900D2774C /* Preview Assets.xcassets */; };
 		71DC3047264B10B60044CA11 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC3046264B10B60044CA11 /* CircleImage.swift */; };
 		71DC304B264B11910044CA11 /* PatientTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC304A264B11910044CA11 /* PatientTabView.swift */; };
+		8057C8B1265311C40006794B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057C8B0265311C40006794B /* CustomTextField.swift */; };
 		9F16FB05264E0A2800792B9B /* PatientTreatmentsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16FB04264E0A2800792B9B /* PatientTreatmentsCard.swift */; };
 		9F16FB09264E0D2C00792B9B /* StageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16FB08264E0D2C00792B9B /* StageCard.swift */; };
 		9F16FB0D264ED9AC00792B9B /* PatientStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16FB0C264ED9AC00792B9B /* PatientStageView.swift */; };
@@ -67,6 +68,7 @@
 		71D1408326430DD900D2774C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71DC3046264B10B60044CA11 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		71DC304A264B11910044CA11 /* PatientTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTabView.swift; sourceTree = "<group>"; };
+		8057C8B0265311C40006794B /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9F16FB04264E0A2800792B9B /* PatientTreatmentsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTreatmentsCard.swift; sourceTree = "<group>"; };
 		9F16FB08264E0D2C00792B9B /* StageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCard.swift; sourceTree = "<group>"; };
 		9F16FB0C264ED9AC00792B9B /* PatientStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientStageView.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		9F852759264DB8D700B5B485 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				8057C8B0265311C40006794B /* CustomTextField.swift */,
 				9F85275B264DB90000B5B485 /* AuthView.swift */,
 				9F85275A264DB90000B5B485 /* RegisterView.swift */,
 			);
@@ -369,11 +372,11 @@
 				9F16FB0D264ED9AC00792B9B /* PatientStageView.swift in Sources */,
 				71DC304B264B11910044CA11 /* PatientTabView.swift in Sources */,
 				9F89D4B42652DEBA008558C6 /* PatientDoingStep.swift in Sources */,
-				71A869E9264A7144006B1176 /* TodayTreatment.swift in Sources */,
 				FD8FE7FA264EEAD300317AD0 /* ImagePicker.swift in Sources */,
 				9FF30FAF264C69D200161638 /* PatientTreatmentsView.swift in Sources */,
 				71A869E3264A53A2006B1176 /* Treatment.swift in Sources */,
 				9F852752264DB75900B5B485 /* NotificationsView.swift in Sources */,
+				8057C8B1265311C40006794B /* CustomTextField.swift in Sources */,
 				9F85275D264DB90000B5B485 /* AuthView.swift in Sources */,
 				9F7DA084265467F60086F13E /* LightGradientStyle.swift in Sources */,
 				71D1407D26430DD700D2774C /* ContentView.swift in Sources */,
@@ -525,7 +528,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.aini.AiNi;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ain.AiNi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -548,7 +551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.aini.AiNi;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ain.AiNi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
