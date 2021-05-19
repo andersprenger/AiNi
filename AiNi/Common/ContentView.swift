@@ -16,6 +16,7 @@ struct ContentView: View {
         //TODO Imagens de Onboarding
         VStack {
             ZStack{
+                Color.blue
                 TabView {
                     Text("First")
                     Text("Second")
@@ -23,8 +24,7 @@ struct ContentView: View {
                 }
             }
             .tabViewStyle(PageTabViewStyle())
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-            VStack(spacing:10) {
+            VStack(spacing:20) {
                 Button("Abra sua Conta") {
                     showingSheetRegister.toggle()
                 }
@@ -39,7 +39,7 @@ struct ContentView: View {
                 .sheet(isPresented: $showingSheetAuth) {
                     AuthView()
                 }
-            }.padding(.vertical,30)
+            }.padding(40)
         }
         
     }

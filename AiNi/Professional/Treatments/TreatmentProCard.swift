@@ -12,23 +12,22 @@ import SwiftUI
 struct TreatmentProCard: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 28)
-                .foregroundColor(Color("card-color"))
+            CardsGradientStyle()
             
             VStack (alignment: .leading) {
                 Text("Nome do Tratamento")
                     .font(.title)
-                    .foregroundColor(Color("text-color"))
+                    .foregroundColor(.white)
                 
                 Text("Descrição do Tramento, detalhes dos passos, etc e tal.")
                     .font(.subheadline)
-                    .foregroundColor(Color("text-color"))
+                    .foregroundColor(.white)
                 
                 HStack (spacing: 2) {
                     HStack (alignment: .center, spacing: -5) {
                         ForEach(0..<3){ index in
                             Circle()
-                                .strokeBorder(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)), lineWidth: 2)
+                                .strokeBorder(Color.white, lineWidth: 2)
                                 .background(Circle().fill(Color(#colorLiteral(red: 0.2352941176, green: 0.2352941176, blue: 0.2352941176, alpha: 1))))
                                 .frame(width: 20, height: 20)
                                 .zIndex(2 - Double(index))
@@ -37,7 +36,7 @@ struct TreatmentProCard: View {
                     }
                     Text("+5")
                         .font(.subheadline)
-                        .foregroundColor(Color("card-color"))
+                        .foregroundColor(.white)
                     
                     Spacer()
                     // esse spacer garante que o conteudo do card se espalhe horizontalmente
@@ -55,7 +54,6 @@ struct TreatmentProCard: View {
 struct TreatmentProCard_Previews: PreviewProvider {
     static var previews: some View {
         TreatmentProCard()
-            .preferredColorScheme(.dark)
             .previewLayout(.fixed(width: 349, height: 153))
         
     }
