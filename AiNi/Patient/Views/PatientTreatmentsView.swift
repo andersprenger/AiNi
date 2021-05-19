@@ -11,20 +11,20 @@ struct PatientTreatmentsView: View {
     var body: some View {
         NavigationView {
             ScrollView {
+                
                 VStack(alignment: .center, spacing: 17) {
                     Spacer()
                     ForEach (0..<4) {_ in
                         NavigationLink(destination: PatientStageView()) {
-                            PatientTreatmentCard()
+                            PatientTreatmentCard(Treatment: "", StageofTreatment: "")
                         }
                     }
                 }
                 .padding(.horizontal)
-            }
-            .navigationTitle("Tratamentos")
+                
+            }.navigationTitle("Tratamentos").frame(alignment: .center)
             .navigationBarTitleDisplayMode(.inline)
-            // MARK: --TODO: adicionar botoes de add e editar quando prontos
-            //.navigationBarItems(leading: <#T##View#>, trailing: <#T##View#>)
+
         }
     }
 }

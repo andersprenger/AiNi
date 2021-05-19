@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct PatientDoingStep: View {
+    
+    @State var NextStep = false
+    
     var body: some View {
         ScrollView {
+            
             VStack(alignment: .center, spacing: 17) {
                 Spacer()
                 
@@ -24,9 +28,14 @@ struct PatientDoingStep: View {
                     .frame(width: 339, alignment: .center)
                     .padding(.top, 10)
                 
-                BlueButton()
+                TreatmentTimer()
+                
+                LightButton(ButtonTitle: "Começar")
             }
-        }
+            
+        }.navigationTitle("Tratamento 1")
+        .navigationBarTitleDisplayMode(.inline)
+        
     }
 }
 
