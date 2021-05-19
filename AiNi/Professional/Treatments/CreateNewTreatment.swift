@@ -20,8 +20,7 @@ struct CreateNewTreatment: View {
                 TextField("Nome do Tratamento", text: $name)
                 
             }.padding()
-            // FIXME: verificar isso
-            .background(LinearGradient(gradient: Gradient(colors: [.white, .red, .black]), startPoint: .leading, endPoint: .trailing).opacity(0.1))
+            .background(CardsGradientStyle())
             .cornerRadius(15)
             
                 
@@ -32,8 +31,7 @@ struct CreateNewTreatment: View {
                 TextField("Descrição", text: $description)
                 
             }.padding()
-            // FIXME: verificar isso
-            .background(LinearGradient(gradient: Gradient(colors: [.white, .red, .black]), startPoint: .leading, endPoint: .trailing).opacity(0.1))
+            .background(CardsGradientStyle())
             .cornerRadius(15)
             
             

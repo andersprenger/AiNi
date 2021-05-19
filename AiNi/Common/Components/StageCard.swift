@@ -14,7 +14,7 @@ struct StageCard: View {
     var body: some View {
         
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)
+            CardsGradientStyle()
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             
             Text(StageTitle)

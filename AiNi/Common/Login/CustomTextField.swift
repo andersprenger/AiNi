@@ -71,9 +71,7 @@ struct CustomTextField: View {
         }
         .padding(.horizontal, 20.0)
         .padding(.vertical, 10)
-        .background(
-            LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing).opacity(0.10)
-        )
+        .background(LightGradientStyle())
         .cornerRadius(18)
         
     }
