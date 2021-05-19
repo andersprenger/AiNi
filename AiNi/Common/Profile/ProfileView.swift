@@ -19,8 +19,8 @@ struct ProfileView: View {
                         Image(systemName: "square.and.arrow.up")
                             .foregroundColor(.black)
                     }
-                    
                 }
+                
                 
                 RoundedRectangle(cornerRadius: 28)
                     .frame(height: 60, alignment: .center)

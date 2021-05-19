@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct StageCard: View {
+    
     var StageTitle: String
     
     var body: some View {
+        
         ZStack {
             RoundedRectangle(cornerRadius: 10.0)
                 .frame(height: 46, alignment: .center)
