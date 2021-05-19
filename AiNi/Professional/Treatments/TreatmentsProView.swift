@@ -35,27 +35,18 @@ struct TreatmentsProView: View {
             .navigationTitle("Tratamentos")
             .navigationBarTitleDisplayMode(.inline)
             // MARK: --TODO: adicionar botoes de add e editar quando prontos
-            .navigationBarItems(leading: EmptyView(), trailing: mais())
+            .navigationBarItems(leading: EmptyView(), trailing: AddTreatment())
         }
     }
 }
-struct mais : View {
-    
+
+struct AddTreatment : View {
     var body: some View {
-        
-      
             NavigationLink(destination: CreateNewTreatment()) {
-                Text("mais")
+                Image(systemName: "plus")
             }
-            
         }
-        
-        
-        
-    
     }
-
-
 
 struct Treatments_Previews: PreviewProvider {
     static var previews: some View {
