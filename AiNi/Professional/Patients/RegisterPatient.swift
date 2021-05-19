@@ -11,8 +11,9 @@ struct RegisterPatient: View {
     @State var nome: String = "Nome completo do Paciente"
     @State var email: String = "E-mail do Paciente"
     @State var message: String = "Mensagem"
-    @State var addingTreatment: Bool = false
-    @State private var search: String = "Pesquisar Tratamento"
+    
+    @State private var addingTreatment: Bool = false
+    @State private var search: String = ""
     
     var body: some View {
         ScrollView {
@@ -86,17 +87,19 @@ struct RegisterPatient: View {
                         .padding()
                         
                         if (addingTreatment) {
-                            VStack (alignment: .center, spacing: 23) {
-                                
+                            VStack (alignment: .center) {
                                 HStack {
                                     ZStack {
                                         RoundedRectangle(cornerRadius: 10)
                                             .foregroundColor(.white)
                                         
                                         TextField("Pesquisar Tratamento", text: $search)
+                                            .font(.footnote)
                                             .padding()
                                     }
-                                    .padding()
+                                    .frame(height: 20)
+                                    .padding(.leading)
+                                    .padding(.vertical)
                                     
                                     ZStack {
                                         RoundedRectangle(cornerRadius: 10)
@@ -107,17 +110,27 @@ struct RegisterPatient: View {
                                         }
                                         .padding(.vertical)
                                     }
-                                    .frame(width: 73, height: 33)
+                                    .frame(width: 73, height: 20)
+                                    .font(.footnote)
+                                    .padding(.trailing)
+                                    .padding(.vertical)
                                 }
                                 
-                                ForEach(0..<3) {_ in
-                                    TreatmentItemNewPatient()
-                                        .padding(.horizontal)
+                                ScrollView {
+                                    VStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 20) {
+                                        ForEach(0..<6) {_ in
+                                            TreatmentItemNewPatient()
+                                                .padding(.horizontal)
+                                        }
+                                        
+                                        Spacer()
+                                    }
                                 }
-                                Spacer()
+                                .padding(.horizontal)
+                                .padding(.top, 5)
+                                .padding(.bottom)
                             }
                         }
-                        
                     }
                 }
                 .frame(height: CGFloat(addingTreatment ? 278 : 46), alignment: .center)
