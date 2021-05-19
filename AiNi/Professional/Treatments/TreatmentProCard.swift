@@ -54,7 +54,6 @@ struct TreatmentProCard: View {
 struct TreatmentProCard_Previews: PreviewProvider {
     static var previews: some View {
         TreatmentProCard()
-            .preferredColorScheme(.dark)
             .previewLayout(.fixed(width: 349, height: 153))
         
     }
