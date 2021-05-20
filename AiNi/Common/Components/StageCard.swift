@@ -8,23 +8,25 @@
 import SwiftUI
 
 struct StageCard: View {
+    
     var StageTitle: String
     
     var body: some View {
+        
         ZStack {
-            RoundedRectangle(cornerRadius: 10.0)
-                .frame(height: 46, alignment: .center)
-                .foregroundColor(Color("card-color"))
+            LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             
             Text(StageTitle)
                 .font(.footnote)
+                .foregroundColor(.white)
         }
     }
 }
 
 struct StageCard_Previews: PreviewProvider {
     static var previews: some View {
-        StageCard(StageTitle: "")
+        StageCard(StageTitle: "Etapa 1 - Iniciando Tratamento")
             .previewLayout(.fixed(width: 347, height: 66))
     }
 }

@@ -28,12 +28,14 @@ struct ContentView: View {
                 Button("Abra sua Conta") {
                     showingSheetRegister.toggle()
                 }
+                .buttonStyle(BlueButton())
                 .sheet(isPresented: $showingSheetRegister) {
                     RegisterView()
                 }
                 Button("Login") {
                     showingSheetAuth.toggle()
                 }
+                .buttonStyle(BlueButton())
                 .sheet(isPresented: $showingSheetAuth) {
                     AuthView()
                 }

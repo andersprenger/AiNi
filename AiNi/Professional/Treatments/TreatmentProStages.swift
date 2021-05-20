@@ -43,13 +43,13 @@ struct TreatmentProStages: View {
                                 }
                         }
                         ForEach(viewModel.stepList) { stepItem in
-                            TreatmentProStage(text:stepItem.title)
+                            StageCard(StageTitle: stepItem.title)
                                 .onTapGesture {
                                     selectedStage = stepItem
                                 }
-                        }
-                        .sheet(item: $selectedStage) { step in
+                        }.sheet(item: $selectedStage) { step in
                             ModalNewStep(viewModel: step, completeStep: completeStep)
+
                         }
                     }
                     .padding(.horizontal)
