@@ -23,6 +23,8 @@
 		71D1408226430DD900D2774C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D1408126430DD900D2774C /* Preview Assets.xcassets */; };
 		71DC3047264B10B60044CA11 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC3046264B10B60044CA11 /* CircleImage.swift */; };
 		71DC304B264B11910044CA11 /* PatientTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC304A264B11910044CA11 /* PatientTabView.swift */; };
+		8021066226559BD200787B12 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8021066126559BD200787B12 /* User.swift */; };
+		802106642656F64F00787B12 /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802106632656F64F00787B12 /* UserType.swift */; };
 		8057C8B1265311C40006794B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057C8B0265311C40006794B /* CustomTextField.swift */; };
 		9F16FB05264E0A2800792B9B /* PatientTreatmentsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16FB04264E0A2800792B9B /* PatientTreatmentsCard.swift */; };
 		9F16FB09264E0D2C00792B9B /* StageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16FB08264E0D2C00792B9B /* StageCard.swift */; };
@@ -76,6 +78,8 @@
 		71D1408326430DD900D2774C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71DC3046264B10B60044CA11 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		71DC304A264B11910044CA11 /* PatientTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTabView.swift; sourceTree = "<group>"; };
+		8021066126559BD200787B12 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		802106632656F64F00787B12 /* UserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
 		8057C8B0265311C40006794B /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9F16FB04264E0A2800792B9B /* PatientTreatmentsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTreatmentsCard.swift; sourceTree = "<group>"; };
 		9F16FB08264E0D2C00792B9B /* StageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCard.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				71A869E2264A53A2006B1176 /* Treatment.swift */,
 				FD8FE84426544A2F00317AD0 /* PacientModel.swift */,
 				FD8FE84626544F1B00317AD0 /* AllPacientsModel.swift */,
+				8021066126559BD200787B12 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				8057C8B0265311C40006794B /* CustomTextField.swift */,
 				9F85275B264DB90000B5B485 /* AuthView.swift */,
 				9F85275A264DB90000B5B485 /* RegisterView.swift */,
+				802106632656F64F00787B12 /* UserType.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -405,6 +411,8 @@
 				9F85275D264DB90000B5B485 /* AuthView.swift in Sources */,
 				7183607D2654579D00CB91DE /* TreatmentItemNewPatient.swift in Sources */,
 				9F7DA084265467F60086F13E /* LightGradientStyle.swift in Sources */,
+				802106642656F64F00787B12 /* UserType.swift in Sources */,
+				8021066226559BD200787B12 /* User.swift in Sources */,
 				71D1407D26430DD700D2774C /* ContentView.swift in Sources */,
 				FD8FE8412654356500317AD0 /* ListedPacientView.swift in Sources */,
 				9F85274F264DB73C00B5B485 /* TreatmentProCard.swift in Sources */,

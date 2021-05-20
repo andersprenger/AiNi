@@ -15,6 +15,9 @@ struct AuthView: View {
     
     @State private var showingFullScreen = false
     
+    init() {
+        
+    }
     
     var body: some View {
         

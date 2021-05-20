@@ -8,6 +8,23 @@
 import SwiftUI
 
 struct ProfileHeader: View {
+    
+    var loadedPerson: User {
+        if let savedUser = UserDefaults.standard.object(forKey: "SavedUser") as? Data {
+            let decoder = JSONDecoder()
+            do {
+                let loadedPerson = try decoder.decode(User.self, from: savedUser)
+                print(loadedPerson)
+                return loadedPerson
+                
+            } catch {
+                print(error)
+            }
+            
+        }
+        fatalError("Should have saved user")
+    }
+    
     var body: some View {
         VStack (alignment: .leading){
             HStack (alignment: .top, spacing: 20){
@@ -15,13 +32,13 @@ struct ProfileHeader: View {
                 
                 VStack (alignment: .leading) {
                     HStack {
-                        Text("Flavio Fonseca")
+                        Text(loadedPerson.name)
                             .font(.title2)
                         
                         Image(systemName: "pencil.circle")
                     }
                     
-                    Text("Bancário")
+                    Text(loadedPerson.type)
                         .font(.subheadline)
                     
                     HStack {
