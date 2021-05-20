@@ -12,7 +12,7 @@ import SwiftUI
 
 struct TreatmentsProView: View {
     
-    @ObservedObject var todosTratamentos : ProCurrentTreatments = .init()
+    @ObservedObject var todosTratamentos : ProCurrentTreatments = ProCurrentTreatments.mockDosTratamentos
     
     var body: some View {
         
@@ -23,16 +23,11 @@ struct TreatmentsProView: View {
                     Spacer() // descola o primeiro card da navigationbar
                     ForEach (todosTratamentos.treatments, id:\.id) {treatment in
                         NavigationLink(destination: TreatmentProStages(viewModel: treatment)) {
-                            TreatmentProCard(treatment: treatment)
+                            TreatmentProCard(treatment: treatment).cornerRadius(15)
                         }
                         
                     }
-//                    ForEach (ProCurrentTreatments.mockDosTratamentos, id:\.id ) {treatment in
-//                        NavigationLink(destination: TreatmentProStages(viewModel: treatment)) {
-//                            TreatmentProCard(treatment: treatment)
-//                        }
-//
-//                    }
+                    
                 }
                 .padding(.horizontal)
             }

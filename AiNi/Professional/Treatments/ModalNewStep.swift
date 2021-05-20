@@ -126,7 +126,7 @@ struct ModalNewStep: View {
                                     .frame(width: 40, height: 40, alignment:.center)
                                     .foregroundColor(Color(.systemBlue))
                                     .padding(.leading)
-                                Image(systemName: "clock.arrow.2.circlepath").frame(alignment:.center).foregroundColor(.white).padding(.leading)
+                                Image(systemName: "repeat.circle").frame(alignment:.center).foregroundColor(.white).padding(.leading)
                             }
                             Text("REPETIR")
                                 //.frame(width: 116, height: 16, alignment:.leading)
@@ -151,7 +151,7 @@ struct ModalNewStep: View {
                 
                 
                 HStack {
-                    Toggle(isOn: $activityTime){
+                    
                         HStack {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 10)
@@ -164,6 +164,8 @@ struct ModalNewStep: View {
                                 //.frame(width: 116, height: 16, alignment:.leading)
                                 .font(.caption)
                         }
+                    Toggle(isOn: $activityTime){}.onTapGesture {
+                        activityTime.toggle()
                     }
                 }
                 .padding(.trailing) // desgruda o toggle da borda do retangulo
@@ -177,7 +179,7 @@ struct ModalNewStep: View {
                     .foregroundColor(Color(.systemGray6))
                 
                 HStack {
-                    Toggle(isOn: $frequency){
+                    
                         HStack{
                             ZStack{
                                 RoundedRectangle(cornerRadius: 10)
@@ -190,6 +192,8 @@ struct ModalNewStep: View {
                                 //.frame(width: 116, height: 16, alignment:.leading)
                                 .font(.caption)
                         }
+                    Toggle(isOn: $frequency){}.onTapGesture {
+                        frequency.toggle()
                     }
                 }
                 .padding(.trailing) // desgruda o toggle da borda do retangulo
