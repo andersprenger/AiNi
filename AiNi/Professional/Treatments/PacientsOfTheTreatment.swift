@@ -28,9 +28,9 @@ struct PacientsOfTheTreatment: View {
                         
                     }
                     ScrollView{
-                    ForEach(1...3, id: \.self) {_ in
+                        ForEach(todosPacientes.pacients, id: \.self) {pacient in
                         HStack{
-                            ListedPacientView(nome: "rodriguinho", image: "patient-image")
+                            ListedPacientView(nome: pacient.name, image: pacient.name)
                             Spacer()
                             Image(systemName: "minus.circle")
                         }
