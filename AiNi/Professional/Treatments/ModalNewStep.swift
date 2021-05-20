@@ -120,16 +120,18 @@ struct ModalNewStep: View {
                 RoundedRectangle(cornerRadius: 10.0)
                     .frame(height: 65, alignment: .center)
                     .foregroundColor(Color(.systemGray5))
-                //foto aqui
+                
                 
                 HStack {
                     Toggle(isOn: $activityTime){
                         HStack {
+                            ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 40, height: 40, alignment:.center)
-                                .foregroundColor(Color(.systemGray6))
+                                .foregroundColor(Color(.blue))
                                 .padding(.leading)
-                            
+                                Image(systemName: "stopwatch").frame(alignment:.center).foregroundColor(.white)
+                        }
                             Text("TEMPO DA ATIVIDADE")
                                 //.frame(width: 116, height: 16, alignment:.leading)
                                 .font(.caption)
@@ -137,7 +139,7 @@ struct ModalNewStep: View {
                     }
                 }
                 .padding(.trailing) // desgruda o toggle da borda do retangulo
-            }
+            }.shadow(radius: 4.0)
             .padding()
             
             ZStack {
