@@ -49,8 +49,8 @@
 		FD8FE8412654356500317AD0 /* ListedPacientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE8402654356500317AD0 /* ListedPacientView.swift */; };
 		FD8FE843265444D400317AD0 /* PacientsOfTheTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE842265444D400317AD0 /* PacientsOfTheTreatment.swift */; };
 		FD8FE84526544A2F00317AD0 /* PacientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE84426544A2F00317AD0 /* PacientModel.swift */; };
-		FD8FE84726544F1B00317AD0 /* AllPacientsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE84626544F1B00317AD0 /* AllPacientsModel.swift */; };
 		FD8FE84926558D6E00317AD0 /* ProCurrentTreatments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE84826558D6E00317AD0 /* ProCurrentTreatments.swift */; };
+		FDA8D0092656EE44002D98BD /* AllPacientsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA8D0082656EE44002D98BD /* AllPacientsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,8 +99,8 @@
 		FD8FE8402654356500317AD0 /* ListedPacientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedPacientView.swift; sourceTree = "<group>"; };
 		FD8FE842265444D400317AD0 /* PacientsOfTheTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientsOfTheTreatment.swift; sourceTree = "<group>"; };
 		FD8FE84426544A2F00317AD0 /* PacientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientModel.swift; sourceTree = "<group>"; };
-		FD8FE84626544F1B00317AD0 /* AllPacientsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPacientsModel.swift; sourceTree = "<group>"; };
 		FD8FE84826558D6E00317AD0 /* ProCurrentTreatments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCurrentTreatments.swift; sourceTree = "<group>"; };
+		FDA8D0082656EE44002D98BD /* AllPacientsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPacientsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +183,7 @@
 				FD480D38264B0239008A8F07 /* StepDetailsModel.swift */,
 				71A869E2264A53A2006B1176 /* Treatment.swift */,
 				FD8FE84426544A2F00317AD0 /* PacientModel.swift */,
-				FD8FE84626544F1B00317AD0 /* AllPacientsModel.swift */,
+				FDA8D0082656EE44002D98BD /* AllPacientsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -375,11 +375,11 @@
 				711A06D426464F54000CA449 /* ProfessionalTabView.swift in Sources */,
 				9FF30FAC264C446600161638 /* TodayView.swift in Sources */,
 				71DC3047264B10B60044CA11 /* CircleImage.swift in Sources */,
-				FD8FE84726544F1B00317AD0 /* AllPacientsModel.swift in Sources */,
 				FD8FE83F2652ECEF00317AD0 /* CreateNewTreatment.swift in Sources */,
 				71A869DE264A52B4006B1176 /* ProfileHeader.swift in Sources */,
 				FD8FE843265444D400317AD0 /* PacientsOfTheTreatment.swift in Sources */,
 				711A06C52646414B000CA449 /* PatientCard.swift in Sources */,
+				FDA8D0092656EE44002D98BD /* AllPacientsModel.swift in Sources */,
 				9F16FB11264EFCBA00792B9B /* CardsGradientStyle.swift in Sources */,
 				9F16FB0D264ED9AC00792B9B /* PatientStageView.swift in Sources */,
 				71DC304B264B11910044CA11 /* PatientTabView.swift in Sources */,

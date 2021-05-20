@@ -74,16 +74,7 @@ struct ModalNewStep: View {
                    Spacer()
                 }.background(  RoundedRectangle(cornerRadius: 10.0).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)).opacity(0.1))
                 .padding(.bottom).padding(.horizontal)
-                
-                
-           
-            
-            
-                
-                
-              
-                    
-                    
+       
                 VStack{
                     HStack {
                         Text("Adicionar imagem").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)

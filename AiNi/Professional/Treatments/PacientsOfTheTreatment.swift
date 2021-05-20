@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PacientsOfTheTreatment: View {
     
+    @ObservedObject var todosPacientes = PacientModel.mockDosPacietes
     
     @State var pacientName : String = ""
     var body: some View {
@@ -36,7 +37,7 @@ struct PacientsOfTheTreatment: View {
                     }
                     }
                 }.padding()
-            }.background(CardsGradientStyle().opacity(0.1).cornerRadius(10)).padding()
+            }.background(CardsGradientStyle().opacity(0.1).cornerRadius(15)).padding()
             
             Button("textinho"){
                 
