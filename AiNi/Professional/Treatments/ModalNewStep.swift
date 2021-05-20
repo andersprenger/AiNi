@@ -97,12 +97,13 @@ struct ModalNewStep: View {
                         mostrandoPicker = true
                     }
                     .padding()
+                    HStack{
                     if image != nil{
-                        image?.resizable().scaledToFit().cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+                        image?.resizable().scaledToFit().cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/).padding()
                         
-                        
+                
                         Spacer()
-                        
+                    }
                         
                     }
                     
