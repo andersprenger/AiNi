@@ -60,48 +60,59 @@ struct ModalNewStep: View {
                     
                 }
             }
-            .padding()
+            .padding(.leading)
+            .padding(.trailing)
             
-            VStack {
+            
                 
                 ZStack{
-                    RoundedRectangle(cornerRadius: 10.0).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)).opacity(0.1)
-                        .frame(height: 46, alignment: .center)
-                        .foregroundColor(Color("card-color"))
-                    
-                    TextField("\(byStep)", text: $byStep)
+                    RoundedRectangle(cornerRadius: 10.0).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)).opacity(0.1).frame(height: 156)
+                       
                         
+                    VStack{
+                        TextField("Passo a passo", text: $byStep).padding(.top,25)
+                            .padding(.leading)
+                    Spacer()
+                    }
                 }
                 
                 
-                
-                
-               
-            }
-            .padding()
             
-            VStack {
+            .padding(.leading)
+            .padding(.trailing)
+            ZStack{
+            
+                
+                RoundedRectangle(cornerRadius: 10.0).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)).opacity(0.1)
+                        
+                        .foregroundColor(Color("card-color"))
+                VStack{
                 HStack {
-                    
-                    Text("Inserir imagem").sheet(isPresented: $mostrandoPicker, onDismiss: loadImage, content: {
+                    Text("Inserir imagem").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        .sheet(isPresented: $mostrandoPicker, onDismiss: loadImage, content: {
                         ImagePicker(image: self.$inputImage)
+                            
                         
                     })
                     Spacer()
-                    } .onTapGesture {
+                } .onTapGesture {
                         mostrandoPicker = true
                      }
+                .padding()
                 if image != nil{
-                    image?.resizable().scaledToFit()
+                    image?.resizable().scaledToFit().cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
                     
                     
                     Spacer()
-                }
-               
                 
+               
+            }
+                    Spacer()
+                }
                 // FIXME: adicionar imagem aqui
             }
-            .padding()
+            .padding(.leading)
+            .padding(.trailing)
             
             Spacer()
             
@@ -109,6 +120,7 @@ struct ModalNewStep: View {
                 RoundedRectangle(cornerRadius: 10.0)
                     .frame(height: 65, alignment: .center)
                     .foregroundColor(Color(.systemGray5))
+                //foto aqui
                 
                 HStack {
                     Toggle(isOn: $activityTime){
