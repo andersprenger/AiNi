@@ -11,45 +11,60 @@
 import SwiftUI
 
 struct TreatmentsProView: View {
+    
+    @ObservedObject var todosTratamentos : ProCurrentTreatments = .init()
+    
     var body: some View {
         
         NavigationView {
             
-//            NavigationLink(
-//                destination: CreateNewTreatment(),
-//                label: {
-//                    Text("Novo Tratamento")
-//                }).navigationBarTitle( Text("Novo Tratamento"))
-            
             ScrollView {
                 VStack(alignment: .center, spacing: 17) {
                     Spacer() // descola o primeiro card da navigationbar
-                    ForEach (0..<10) {_ in
-                        NavigationLink(destination: TreatmentProStages()) {
-                            TreatmentProCard()
+                    ForEach (todosTratamentos.treatments, id:\.id) {treatment in
+                        NavigationLink(destination: TreatmentProStages(viewModel: treatment)) {
+                            TreatmentProCard(treatment: treatment)
                         }
+                        
                     }
+//                    ForEach (ProCurrentTreatments.mockDosTratamentos, id:\.id ) {treatment in
+//                        NavigationLink(destination: TreatmentProStages(viewModel: treatment)) {
+//                            TreatmentProCard(treatment: treatment)
+//                        }
+//
+//                    }
                 }
                 .padding(.horizontal)
             }
             .navigationTitle("Tratamentos")
             .navigationBarTitleDisplayMode(.inline)
             // MARK: --TODO: adicionar botoes de add e editar quando prontos
-            .navigationBarItems(leading: EmptyView(), trailing: AddTreatment())
+            .navigationBarItems(leading: EmptyView(), trailing: mais(tratamentos: todosTratamentos))
         }
     }
-}
-
-struct AddTreatment : View {
-    var body: some View {
-            NavigationLink(destination: CreateNewTreatment()) {
+    
+    struct mais : View {
+        
+        var tratamentos : ProCurrentTreatments
+        
+        var body: some View {
+            
+            
+            NavigationLink(destination: CreateNewTreatment(todosTratamentos: tratamentos)) {
                 Image(systemName: "plus")
             }
         }
+        
+        
+        
+        
     }
-
-struct Treatments_Previews: PreviewProvider {
-    static var previews: some View {
-        TreatmentsProView()
+    
+    
+    
+    struct Treatments_Previews: PreviewProvider {
+        static var previews: some View {
+            TreatmentsProView()
+        }
     }
 }

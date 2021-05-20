@@ -18,7 +18,7 @@ struct PatientDoingStep: View {
                 Image("step1")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                
+                    
                 Text("Com os dedos apoiados no nariz, vibrar a boca e o nariz. Emita um som como se fosse de abelha (hummmmmm) por 1 minuto.")
                     .multilineTextAlignment(.center)
                     .frame(width: 339, alignment: .center)
