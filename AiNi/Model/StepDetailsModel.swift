@@ -41,16 +41,16 @@ class StepDetailsModel: ObservableObject, Hashable, Identifiable, Equatable{
     
     @Published var title: String = ""
     @Published var stepByStep: String = ""
-    @Published var image: String = ""
+    @Published var image: UIImage?
     @Published var activityTime: Bool = false
     @Published var frequency: Bool = false
     
     var id: UUID = UUID()
     
-    init(title: String, stepByStep:String, activityTime: Bool, frequency: Bool) {
+    init(title: String, stepByStep:String, activityTime: Bool, frequency: Bool, image: UIImage? = nil) {
         self.title = title
         self.stepByStep = stepByStep
-        self.image = ""
+        self.image = image
         self.activityTime = activityTime
         self.frequency = frequency
     }

@@ -116,9 +116,9 @@
 		711A06C826464BCC000CA449 /* Treatments */ = {
 			isa = PBXGroup;
 			children = (
-				FD480D34264AFD52008A8F07 /* ModalNewStep.swift */,
 				FD8FE83E2652ECEF00317AD0 /* CreateNewTreatment.swift */,
 				FD8FE842265444D400317AD0 /* PacientsOfTheTreatment.swift */,
+				FD480D34264AFD52008A8F07 /* ModalNewStep.swift */,
 				711A06C0264630FA000CA449 /* TreatmentProStages.swift */,
 				9F85274E264DB73C00B5B485 /* TreatmentsProView.swift */,
 			);
