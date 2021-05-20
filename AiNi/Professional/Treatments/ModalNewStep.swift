@@ -128,7 +128,7 @@ struct ModalNewStep: View {
                             ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 40, height: 40, alignment:.center)
-                                .foregroundColor(Color(.blue))
+                                .foregroundColor(Color(.systemBlue))
                                 .padding(.leading)
                                 Image(systemName: "stopwatch").frame(alignment:.center).foregroundColor(.white)
                         }
@@ -151,11 +151,13 @@ struct ModalNewStep: View {
                 HStack {
                     Toggle(isOn: $frequency){
                         HStack{
+                            ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 40, height: 40, alignment:.center)
-                                .foregroundColor(Color(.systemGray6))
+                                .foregroundColor(Color(.systemBlue))
                                 .padding(.leading)
-
+                                Image(systemName: "clock.arrow.2.circlepath").frame(alignment:.center).foregroundColor(.white)
+                            }
                             Text("FREQUÊNCIA")
                                 //.frame(width: 116, height: 16, alignment:.leading)
                                 .font(.caption)
