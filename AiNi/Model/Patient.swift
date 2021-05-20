@@ -9,8 +9,11 @@ import Foundation
 import SwiftUI
 
 struct Patient: Identifiable {
-    var id: String = UUID().uuidString
-
+    
+    
+    
+    
+    var id: String = UUID()
     var name: String
     var age: Int
     var occupation: String
@@ -20,4 +23,8 @@ struct Patient: Identifiable {
     var image: Image {
         Image(imageName)
     }
+    
+    
+    
+    
 }

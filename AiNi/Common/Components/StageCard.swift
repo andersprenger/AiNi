@@ -20,6 +20,7 @@ struct StageCard: View {
             Text(StageTitle)
                 .font(.footnote)
                 .foregroundColor(.white)
+                .padding()
         }
     }
 }
