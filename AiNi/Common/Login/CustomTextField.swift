@@ -11,13 +11,12 @@ struct CustomTextField: View {
     
     //    var image: String
     static let taskDateFormat: DateFormatter = {
-            let formatter = DateFormatter()
-            formatter.dateStyle = .long
-            return formatter
-        }()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter
+    }()
     
     @State var actualDate = Date()
-    
     var title: String
     @Binding var value: String
     
@@ -58,6 +57,7 @@ struct CustomTextField: View {
                 } else {
                     DatePicker("Data de Nascimento", selection: $actualDate, in: ...Date(), displayedComponents: .date)
                         .foregroundColor(.gray)
+                    
 //                        .onAppear{
 //                            self.dis
 //                        }
