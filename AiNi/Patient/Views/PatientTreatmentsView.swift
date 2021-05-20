@@ -10,7 +10,7 @@ import SwiftUI
 struct PatientTreatmentsView: View {
     var body: some View {
         NavigationView {
-            ScrollView {
+            ScrollView(.vertical, showsIndicators: false) {
                 
                 VStack(alignment: .center, spacing: 17) {
                     Spacer()
@@ -24,7 +24,7 @@ struct PatientTreatmentsView: View {
                 
             }.navigationTitle("Tratamentos").frame(alignment: .center)
             .navigationBarTitleDisplayMode(.inline)
-
+            
         }
     }
 }

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct LightButton: View {
     
-    var ButtonTitle: String
     @State var NextStep = false
+    @State var ButtonTitle = ""
     
     var body: some View {
         ZStack {
