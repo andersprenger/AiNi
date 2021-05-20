@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PacientsOfTheTreatment: View {
     
-    @ObservedObject var todosPacientes = PacientModel.mockDosPacietes
+    @ObservedObject var todosPacientes : AllPacientsModel = AllPacientsModel.mockDosPacientes
     
     @State var pacientName : String = ""
     var body: some View {
