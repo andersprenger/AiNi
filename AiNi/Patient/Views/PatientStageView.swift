@@ -9,20 +9,18 @@ import SwiftUI
 
 struct PatientStageView: View {
     
+    @State var StageTitle: String = ""
+   
     var body: some View {
-        ScrollView {
+        ScrollView(.vertical, showsIndicators: false){
             VStack(alignment: .center, spacing: 17) {
-                Spacer()
                 ForEach (0..<4) {_ in
-                    NavigationLink(destination: PatientDoingStep()) {
-                        StageCard(StageTitle: "Etapa do tratamento")
-                    }
-                }
-            }.padding(.horizontal)
-            
-            LightButton(ButtonTitle: "Começar")
-                .padding(.vertical)
+                    Button( "\(StageTitle)" , action: {
                         
+                    }).buttonStyle(StageCard()).background(Color("card-color"))
+                }
+            }
+            
         }.navigationTitle("Nome do Tratamento")
         .navigationBarTitleDisplayMode(.inline)
         

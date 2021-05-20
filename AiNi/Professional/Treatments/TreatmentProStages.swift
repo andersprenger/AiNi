@@ -26,34 +26,39 @@ struct TreatmentProStages: View {
                     .frame(width: 339, alignment: .center)
                     .padding(.top, 15)
                 
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10.0)
-                        .frame(height: 46, alignment: .center)
-                        .foregroundColor(Color("card-color"))
+                VStack {
+                    Button(action:{ novaEtapa = true }, label: {
+                        Text("\(Image(systemName: "plus")) Nova Etapa")
+                            .foregroundColor(.black)
+                            .font(.subheadline)
+                        
+                    }).buttonStyle(StageCard())
+                    .background(LightGradientStyle())
+                    .cornerRadius(10)
                     
-                    Text("\(Image(systemName: "plus")) Nova Etapa")
-                        .font(.footnote)
-                        .sheet(isPresented: $novaEtapa) {
-                            ModalNewStep(viewModel : StepDetailsModel(title: "Nova Etapa", stepByStep: "", activityTime: false, frequency: false),completeStep: completeStep)
-                        }
-                        .onTapGesture {
-                            novaEtapa = true
-                        }
+                    
+                    .sheet(isPresented: $novaEtapa) {
+                        ModalNewStep(viewModel : StepDetailsModel(title: "Nova Etapa", stepByStep: "", activityTime: false, frequency: false),completeStep: completeStep)
+                    }
+                    
+                    ForEach(viewModel.stepList) { stepItem in
+                        Button(action: { selectedStage = stepItem }, label: {
+                            Text("\(stepItem.title)")
+                                .foregroundColor(.white)
+
+                        }).buttonStyle(StageCard())
+                        .background(CardsGradientStyle())
+                        .cornerRadius(10)
+                    }
+                    
+                    .sheet(item: $selectedStage) { step in
+                        ModalNewStep(viewModel: step, completeStep: completeStep)
+                    }
                 }
-                ForEach(viewModel.stepList) { stepItem in
-                    StageCard(StageTitle: stepItem.title)
-                        .onTapGesture {
-                            selectedStage = stepItem
-                        }
-                }
-                .sheet(item: $selectedStage) { step in
-                    ModalNewStep(viewModel: step, completeStep: completeStep)
-                }
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
         }
     }
-    
     
     func completeStep(id: UUID, title: String, stepByStep: String, activityTime : Bool, frequency : Bool) {
         if let model = viewModel.stepList.first(where: { step in

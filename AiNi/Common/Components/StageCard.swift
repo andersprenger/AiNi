@@ -7,26 +7,11 @@
 
 import SwiftUI
 
-struct StageCard: View {
-    
-    var StageTitle: String
-    
-    var body: some View {
-        
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-            
-            Text(StageTitle)
-                .font(.footnote)
-                .foregroundColor(.white)
-        }
-    }
-}
-
-struct StageCard_Previews: PreviewProvider {
-    static var previews: some View {
-        StageCard(StageTitle: "Etapa 1 - Iniciando Tratamento")
-            .previewLayout(.fixed(width: 347, height: 66))
+struct StageCard: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .foregroundColor(Color.black)
+            .frame(width: 350, height: 46, alignment: .center)
     }
 }

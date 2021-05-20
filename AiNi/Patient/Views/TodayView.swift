@@ -10,7 +10,7 @@ import SwiftUI
 struct TodayView: View {
     var body: some View {
         NavigationView {
-            ScrollView {
+            ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .center, spacing: 17) {
                     Spacer()
                     ForEach (0..<3) {_ in

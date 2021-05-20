@@ -114,10 +114,6 @@
 			children = (
 				9F85274D264DB73C00B5B485 /* TreatmentProCard.swift */,
 				711A06C0264630FA000CA449 /* TreatmentProStages.swift */,
-				719AC35E264CF103000DF672 /* TreatmentProStage.swift */,
-				FD480D36264B0176008A8F07 /* TreatmentDetailsModel.swift */,
-				FD480D38264B0239008A8F07 /* StepDetailsModel.swift */,
-				FD480D3A264B04CA008A8F07 /* TreatmentsModel.swift */,
 				9F85274E264DB73C00B5B485 /* TreatmentsProView.swift */,
 				FD480D34264AFD52008A8F07 /* ModalNewStep.swift */,
 				FD8FE83E2652ECEF00317AD0 /* CreateNewTreatment.swift */,
