@@ -23,7 +23,7 @@ struct TreatmentsProView: View {
                     Spacer() // descola o primeiro card da navigationbar
                     ForEach (todosTratamentos.treatments, id:\.id) {treatment in
                         NavigationLink(destination: TreatmentProStages(viewModel: treatment)) {
-                            TreatmentProCard(treatment: treatment).cornerRadius(15)
+                            TreatmentProCard(treatment: treatment)
                         }
                         
                     }

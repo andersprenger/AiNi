@@ -11,7 +11,7 @@ import SwiftUI
 
 struct TreatmentProCard: View {
     
-    var treatment: TreatmentDetailsModel// ISSO É O TRATAMENTO. TreatmentDetailsModel é um tratamento
+    var treatment: TreatmentDetailsModel
     
     var body: some View {
         ZStack {
@@ -28,13 +28,18 @@ struct TreatmentProCard: View {
                 
                 HStack (spacing: 2) {
                     HStack (alignment: .center, spacing: -5) {
-                        ForEach(0..<3){ index in
-                            Circle()
-                                .strokeBorder(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)), lineWidth: 2)
-                                .background(Circle().fill(Color(#colorLiteral(red: 0.2352941176, green: 0.2352941176, blue: 0.2352941176, alpha: 1))))
-                                .frame(width: 20, height: 20)
-                                .zIndex(2 - Double(index))
-
+                        //                        ForEach(0..<3){ index in
+                        ////                            Circle()
+                        ////                                .strokeBorder(Color(#colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)), lineWidth: 2)
+                        ////                                .background(Circle().fill(Color(#colorLiteral(red: 0.2352941176, green: 0.2352941176, blue: 0.2352941176, alpha: 1))))
+                        ////                                .frame(width: 20, height: 20)
+                        ////                                .zIndex(2 - Double(index))
+                        //                            CircleImage(imageName: treatment.thisTreatmentPacients[index].name, size: 20)
+                        //                        }
+                        ForEach(treatment.thisTreatmentPacients) { pacient in
+                            HStack{
+                                CircleImage(imageName: pacient.name, size: 20)
+                            }
                         }
                     }
                     Text("+5")
@@ -51,6 +56,7 @@ struct TreatmentProCard: View {
             
         }
         .frame(height: 133, alignment: .center)
+        .cornerRadius(22)
     }
 }
 

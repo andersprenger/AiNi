@@ -19,7 +19,7 @@ class TreatmentDetailsModel: ObservableObject, Equatable {
         mock1.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[1])
         mock1.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[2])
         mock1.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[6])
-        mock1.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[10])
+        //mock1.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[10])
         let mock2 = TreatmentDetailsModel()
         mock2.treatmentName = "Tratamento da mão"
         mock2.stepList = StepDetailsModel.mockDosSteps2
@@ -28,14 +28,14 @@ class TreatmentDetailsModel: ObservableObject, Equatable {
         mock2.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[7])
         mock2.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[8])
         mock2.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[4])
-        mock2.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[10])
+        //mock2.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[10])
         let mock3 = TreatmentDetailsModel()
         mock3.treatmentName = "Tratamento da Rinite"
         mock3.stepList = StepDetailsModel.mockDosSteps3
         mock3.description = "Tratamento de Rinite com spray"
         mock3.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[3])
         mock3.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[6])
-        mock3.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[10])
+//        mock3.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[10])
         mock2.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[2])
         mock2.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[7])
         mock2.thisTreatmentPacients.append(AllPacientsModel.mockDosPacientes.pacients[8])
