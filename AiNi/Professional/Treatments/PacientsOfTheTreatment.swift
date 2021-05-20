@@ -38,9 +38,11 @@ struct PacientsOfTheTreatment: View {
                 }.padding()
             }.background(CardsGradientStyle().opacity(0.1)).padding()
             
-            
-            BlueButton()
-        
+            Button("textinho"){
+                
+            }
+            .buttonStyle(BlueButton())
+                    
         }
     }
 }
