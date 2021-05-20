@@ -10,7 +10,8 @@
 import SwiftUI
 
 struct TreatmentProCard: View {
-    var treatment: TreatmentDetailsModel
+    
+    var treatment: TreatmentDetailsModel// ISSO É O TRATAMENTO. TreatmentDetailsModel é um tratamento
     
     var body: some View {
         ZStack {
