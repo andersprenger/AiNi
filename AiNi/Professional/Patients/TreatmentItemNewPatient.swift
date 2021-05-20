@@ -22,5 +22,6 @@ struct TreatmentItemNewPatient: View {
 struct TreatmentItemNewPatient_Previews: PreviewProvider {
     static var previews: some View {
         TreatmentItemNewPatient()
+            .previewLayout(.fixed(width: 347, height: 30))
     }
 }

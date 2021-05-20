@@ -47,9 +47,13 @@
 		FD480D35264AFD52008A8F07 /* ModalNewStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD480D34264AFD52008A8F07 /* ModalNewStep.swift */; };
 		FD480D37264B0176008A8F07 /* TreatmentDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD480D36264B0176008A8F07 /* TreatmentDetailsModel.swift */; };
 		FD480D39264B0239008A8F07 /* StepDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD480D38264B0239008A8F07 /* StepDetailsModel.swift */; };
-		FD480D3B264B04CA008A8F07 /* TreatmentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD480D3A264B04CA008A8F07 /* TreatmentsModel.swift */; };
 		FD8FE7FA264EEAD300317AD0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE7F9264EEAD300317AD0 /* ImagePicker.swift */; };
 		FD8FE83F2652ECEF00317AD0 /* CreateNewTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE83E2652ECEF00317AD0 /* CreateNewTreatment.swift */; };
+		FD8FE8412654356500317AD0 /* ListedPacientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE8402654356500317AD0 /* ListedPacientView.swift */; };
+		FD8FE843265444D400317AD0 /* PacientsOfTheTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE842265444D400317AD0 /* PacientsOfTheTreatment.swift */; };
+		FD8FE84526544A2F00317AD0 /* PacientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE84426544A2F00317AD0 /* PacientModel.swift */; };
+		FD8FE84726544F1B00317AD0 /* AllPacientsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE84626544F1B00317AD0 /* AllPacientsModel.swift */; };
+		FD8FE84926558D6E00317AD0 /* ProCurrentTreatments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE84826558D6E00317AD0 /* ProCurrentTreatments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,9 +100,13 @@
 		FD480D34264AFD52008A8F07 /* ModalNewStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNewStep.swift; sourceTree = "<group>"; };
 		FD480D36264B0176008A8F07 /* TreatmentDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentDetailsModel.swift; sourceTree = "<group>"; };
 		FD480D38264B0239008A8F07 /* StepDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDetailsModel.swift; sourceTree = "<group>"; };
-		FD480D3A264B04CA008A8F07 /* TreatmentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentsModel.swift; sourceTree = "<group>"; };
 		FD8FE7F9264EEAD300317AD0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FD8FE83E2652ECEF00317AD0 /* CreateNewTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTreatment.swift; sourceTree = "<group>"; };
+		FD8FE8402654356500317AD0 /* ListedPacientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedPacientView.swift; sourceTree = "<group>"; };
+		FD8FE842265444D400317AD0 /* PacientsOfTheTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientsOfTheTreatment.swift; sourceTree = "<group>"; };
+		FD8FE84426544A2F00317AD0 /* PacientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientModel.swift; sourceTree = "<group>"; };
+		FD8FE84626544F1B00317AD0 /* AllPacientsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPacientsModel.swift; sourceTree = "<group>"; };
+		FD8FE84826558D6E00317AD0 /* ProCurrentTreatments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCurrentTreatments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +124,11 @@
 		711A06C826464BCC000CA449 /* Treatments */ = {
 			isa = PBXGroup;
 			children = (
-				9F85274D264DB73C00B5B485 /* TreatmentProCard.swift */,
-				711A06C0264630FA000CA449 /* TreatmentProStages.swift */,
-				9F85274E264DB73C00B5B485 /* TreatmentsProView.swift */,
 				FD480D34264AFD52008A8F07 /* ModalNewStep.swift */,
 				FD8FE83E2652ECEF00317AD0 /* CreateNewTreatment.swift */,
+				FD8FE842265444D400317AD0 /* PacientsOfTheTreatment.swift */,
+				711A06C0264630FA000CA449 /* TreatmentProStages.swift */,
+				9F85274E264DB73C00B5B485 /* TreatmentsProView.swift */,
 			);
 			path = Treatments;
 			sourceTree = "<group>";
@@ -156,6 +164,9 @@
 		711A06D226464E71000CA449 /* Professional */ = {
 			isa = PBXGroup;
 			children = (
+				FD8FE8402654356500317AD0 /* ListedPacientView.swift */,
+				719AC35E264CF103000DF672 /* TreatmentProStage.swift */,
+				9F85274D264DB73C00B5B485 /* TreatmentProCard.swift */,
 				711A06C826464BCC000CA449 /* Treatments */,
 				711A06C926464C2A000CA449 /* Patients */,
 				711A06D326464F54000CA449 /* ProfessionalTabView.swift */,
@@ -174,11 +185,14 @@
 		71A869DF264A537B006B1176 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FD8FE84826558D6E00317AD0 /* ProCurrentTreatments.swift */,
 				FD480D36264B0176008A8F07 /* TreatmentDetailsModel.swift */,
 				FD480D38264B0239008A8F07 /* StepDetailsModel.swift */,
 				FD480D3A264B04CA008A8F07 /* TreatmentsModel.swift */,
 				71A869E0264A5395006B1176 /* Patient.swift */,
 				71A869E2264A53A2006B1176 /* Treatment.swift */,
+				FD8FE84426544A2F00317AD0 /* PacientModel.swift */,
+				FD8FE84626544F1B00317AD0 /* AllPacientsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -374,11 +388,12 @@
 				711A06D426464F54000CA449 /* ProfessionalTabView.swift in Sources */,
 				9FF30FAC264C446600161638 /* TodayView.swift in Sources */,
 				71DC3047264B10B60044CA11 /* CircleImage.swift in Sources */,
+				FD8FE84726544F1B00317AD0 /* AllPacientsModel.swift in Sources */,
 				FD8FE83F2652ECEF00317AD0 /* CreateNewTreatment.swift in Sources */,
 				71A869DE264A52B4006B1176 /* ProfileHeader.swift in Sources */,
+				FD8FE843265444D400317AD0 /* PacientsOfTheTreatment.swift in Sources */,
 				711A06C52646414B000CA449 /* PatientCard.swift in Sources */,
 				9F16FB11264EFCBA00792B9B /* CardsGradientStyle.swift in Sources */,
-				FD480D3B264B04CA008A8F07 /* TreatmentsModel.swift in Sources */,
 				9F16FB0D264ED9AC00792B9B /* PatientStageView.swift in Sources */,
 				71DC304B264B11910044CA11 /* PatientTabView.swift in Sources */,
 				9F89D4B42652DEBA008558C6 /* PatientDoingStep.swift in Sources */,
@@ -391,11 +406,14 @@
 				7183607D2654579D00CB91DE /* TreatmentItemNewPatient.swift in Sources */,
 				9F7DA084265467F60086F13E /* LightGradientStyle.swift in Sources */,
 				71D1407D26430DD700D2774C /* ContentView.swift in Sources */,
+				FD8FE8412654356500317AD0 /* ListedPacientView.swift in Sources */,
 				9F85274F264DB73C00B5B485 /* TreatmentProCard.swift in Sources */,
 				FD480D37264B0176008A8F07 /* TreatmentDetailsModel.swift in Sources */,
 				71D1407B26430DD700D2774C /* AiNiApp.swift in Sources */,
 				71A869E1264A5395006B1176 /* Patient.swift in Sources */,
 				71836075265433FF00CB91DE /* RegisterPatient.swift in Sources */,
+				FD8FE84526544A2F00317AD0 /* PacientModel.swift in Sources */,
+				FD8FE84926558D6E00317AD0 /* ProCurrentTreatments.swift in Sources */,
 				9F85275C264DB90000B5B485 /* RegisterView.swift in Sources */,
 				9F16FB09264E0D2C00792B9B /* StageCard.swift in Sources */,
 				711A06D026464DF4000CA449 /* ProfileView.swift in Sources */,
