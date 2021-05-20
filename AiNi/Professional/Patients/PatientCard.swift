@@ -12,21 +12,26 @@ import SwiftUI
 struct PatientCard: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 28)
-                .foregroundColor(Color("card-color"))
+            CardsGradientStyle()
+                .clipShape(RoundedRectangle(cornerRadius: 28))
             
             HStack(alignment: .center, spacing: 21) {
                 CircleImage(imageName: "patient-image", size: 86)
                 
                 VStack(alignment: .leading) {
                     Text("Flavio Fonseca")
+                        .foregroundColor(.white)
                         .font(.title)
                     
                     Text("Bancario, 50 anos.")
+                        .foregroundColor(.white)
+
                         .font(.footnote)
                     Text("Procedimentos pós cirurgico.")
+                        .foregroundColor(.white)
                         .font(.footnote)
                     Text("Tem alzheimer.")
+                        .foregroundColor(.white)
                         .font(.footnote)
                 }
                 Spacer()
