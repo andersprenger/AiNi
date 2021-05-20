@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PatientsView: View {
+    @State private var showSheet = false
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -22,15 +24,11 @@ struct PatientsView: View {
             .navigationTitle("Pacientes")
             .navigationBarTitleDisplayMode(.inline)
             // MARK: --TODO: adicionar botoes de add e editar quando prontos
-            .navigationBarItems(leading: EmptyView(), trailing: AddPatientButton())
+            .navigationBarItems(leading: EmptyView(), trailing: patientButton)
         }
     }
-}
-
-struct AddPatientButton: View {
-    @State private var showSheet = false
     
-    var body: some View {
+    var patientButton: some View {
         Image(systemName: "plus")
             .sheet(isPresented: $showSheet) {
                 RegisterPatient()

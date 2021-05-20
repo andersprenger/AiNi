@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RegisterPatient: View {
+    @Environment (\.presentationMode) var presentationMode
+    
     @State var nome: String = "Nome completo do Paciente"
     @State var email: String = "E-mail do Paciente"
     @State var message: String = "Mensagem"
@@ -21,7 +23,9 @@ struct RegisterPatient: View {
                 ZStack {
                     HStack {
                         Text("Cancelar")
-                        
+                            .onTapGesture {
+                                self.presentationMode.wrappedValue.dismiss()
+                            }
                         Spacer()
                     }
                     
