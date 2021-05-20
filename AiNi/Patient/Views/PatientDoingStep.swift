@@ -31,20 +31,6 @@ struct PatientDoingStep: View {
                 
                 Spacer()
                 
-                HStack {
-                    Button("\(isActive ? "Concluir" : !isActive && timeRemaining == defaultTImeRemaining ? "Concluir" : "Concluir")", action: {
-                        isActive = false
-                        timeRemaining = defaultTImeRemaining
-                        
-                    })
-                    .padding()
-                    .background(LightGradientStyle())
-                    .foregroundColor(Color.black)
-                    .font(.subheadline)
-                    .frame(width: 100, height: 50, alignment: .center)
-
-                    
-                }.cornerRadius(20)
                 
             }.navigationTitle("Tratamento 1")
             .navigationBarTitleDisplayMode(.inline)

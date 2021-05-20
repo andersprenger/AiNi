@@ -10,7 +10,6 @@ import SwiftUI
 struct PatientProgressView: View {
     
     @State var SelectedStage = 0
-        
     var Stages = ["Etapa 1", "Etapa 2", "Etapa 3", "Etapa 4", "Etapa 5"]
     
     var body: some View {
@@ -33,7 +32,6 @@ struct PatientProgressView: View {
                     VStack() {
                         ScrollView(.vertical, showsIndicators: false) {
                             Text("")
-                            
                         }
                     }
                     

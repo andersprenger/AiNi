@@ -61,26 +61,31 @@ struct TreatmentTimer: View {
                         Button("\(isActive ? "Pausar" : !isActive && timeRemaining == defaultTImeRemaining ? "Começar" : "Pausado")", action: {
                             isActive.toggle()
                             
-                        }).buttonStyle(BlueButton())                                    
+                        }).buttonStyle(BlueButton())
+                        
+                        if isActive == false {
+                            DoneStageButton()
+                            
+                        }
                     }
                 }
+            }
+            
+        }.onReceive(timer, perform: { _ in
+            guard isActive else { return }
+            
+            if timeRemaining > 0 {
+                timeRemaining -= 1
                 
-            }.onReceive(timer, perform: { _ in
-                guard isActive else { return }
+                //                }else if seconds > 60 {
+                //                    minutes -= 1
                 
-                if timeRemaining > 0 {
-                    timeRemaining -= 1
-                    
-                    //                }else if seconds > 60 {
-                    //                    minutes -= 1
-                    
-                }else{
-                    
-                    isActive = false
-                    timeRemaining = defaultTImeRemaining
-                }
-            })
-        }
+            }else{
+                
+                isActive = false
+                timeRemaining = defaultTImeRemaining
+            }
+        })
     }
 }
 
