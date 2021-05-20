@@ -11,20 +11,25 @@ import SwiftUI
 class PacientModel: ObservableObject, Hashable, Identifiable{
     
     @Published var name: String = ""
-    @Published var gender: String = ""
+    
     @Published var picture: String = ""
     
     var id: UUID = UUID()
     
-    init(name: String, gender: String, picture: String ) {
-        self.name = name
-        self.gender = gender
-        self.picture = picture
+    
+    static var mockDosPacietes : [PacientModel] = {
+        let mock1 = PacientModel()
+        let mock2 = PacientModel()
+        let mock3 = PacientModel()
+        return [mock1, mock2 , mock3]
+    }()
+    
+    init( ) {
        
     }
     
     static func == (lhs: PacientModel, rhs: PacientModel) -> Bool {
-        return lhs.name == rhs.name && lhs.gender == rhs.gender && lhs.picture == rhs.picture
+        return lhs.name == rhs.name
     }
     
     func hash(into hasher: inout Hasher) {
