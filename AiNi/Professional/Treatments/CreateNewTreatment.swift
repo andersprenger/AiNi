@@ -46,7 +46,8 @@ struct CreateNewTreatment: View {
                             Text("Adicionar Pacientes").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                             
                             Spacer()
-                        }.onTapGesture {
+                        }
+                        .onTapGesture {
                             addPacient.toggle()
                         }
                         .sheet(isPresented: $addPacient) {
@@ -55,7 +56,7 @@ struct CreateNewTreatment: View {
                        
                         
                     }.padding()
-                }.background(CardsGradientStyle().opacity(0.1))
+                }.background(CardsGradientStyle().opacity(0.1).cornerRadius(15))
                 
                 Spacer()
                 

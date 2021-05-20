@@ -36,7 +36,7 @@ struct PacientsOfTheTreatment: View {
                     }
                     }
                 }.padding()
-            }.background(CardsGradientStyle().opacity(0.1)).padding()
+            }.background(CardsGradientStyle().opacity(0.1).cornerRadius(10)).padding()
             
             Button("textinho"){
                 

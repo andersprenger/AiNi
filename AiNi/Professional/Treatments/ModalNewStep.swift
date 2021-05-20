@@ -15,6 +15,7 @@ struct ModalNewStep: View {
     @State private var title: String
     @State private var activityTime: Bool
     @State private var frequency: Bool
+    @State private var repeating: Bool = false
     @State private var byStep: String
     var completeStep : ((UUID, String, String, Bool, Bool) -> Void)
     var stepId: UUID
@@ -29,7 +30,7 @@ struct ModalNewStep: View {
         _byStep = .init(initialValue: viewModel.stepByStep)
         self.completeStep = completeStep
         self.stepId = viewModel.id
-    
+        
     }
     
     var body: some View {
@@ -64,74 +65,101 @@ struct ModalNewStep: View {
             .padding(.trailing)
             
             
-                
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10.0).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)).opacity(0.1).frame(height: 156)
-                       
-                        
-                    VStack{
-                        TextField("Passo a passo", text: $byStep).padding(.top,25)
-                            .padding(.leading)
-                    Spacer()
-                    }
-                }
-                
-                
-            
-            .padding(.leading)
-            .padding(.trailing)
-            ZStack{
-            
-                
-                RoundedRectangle(cornerRadius: 10.0).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)).opacity(0.1)
-                        
-                        .foregroundColor(Color("card-color"))
-                VStack{
-                HStack {
-                    Text("Inserir imagem").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                        .sheet(isPresented: $mostrandoPicker, onDismiss: loadImage, content: {
-                        ImagePicker(image: self.$inputImage)
                             
-                        
-                    })
-                    Spacer()
-                } .onTapGesture {
-                        mostrandoPicker = true
-                     }
-                .padding()
-                if image != nil{
-                    image?.resizable().scaledToFit().cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
-                    
-                    
-                    Spacer()
                 
-               
-            }
-                    Spacer()
-                }
+                
+                VStack{
+                    TextField("Passo a passo", text: $byStep).padding(.horizontal).padding(.vertical)
+                        
+                   Spacer()
+                }.background(  RoundedRectangle(cornerRadius: 10.0).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)).opacity(0.1))
+                .padding(.bottom).padding(.horizontal)
+                
+                
+           
+            
+            
+                
+                
+              
+                    
+                    
+                VStack{
+                    HStack {
+                        Text("Adicionar imagem").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            .sheet(isPresented: $mostrandoPicker, onDismiss: loadImage, content: {
+                                ImagePicker(image: self.$inputImage)
+                                
+                                
+                            })
+                        Spacer()
+                    } .onTapGesture {
+                        mostrandoPicker = true
+                    }
+                    .padding()
+                    if image != nil{
+                        image?.resizable().scaledToFit().cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+                        
+                        
+                        Spacer()
+                        
+                        
+                    }
+                    
+                }.background(  RoundedRectangle(cornerRadius: 10.0).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)).opacity(0.1))
+                .padding(.horizontal)
                 // FIXME: adicionar imagem aqui
-            }
-            .padding(.leading)
-            .padding(.trailing)
+            
+            
             
             Spacer()
-            
             ZStack {
                 RoundedRectangle(cornerRadius: 10.0)
                     .frame(height: 65, alignment: .center)
-                    .foregroundColor(Color(.systemGray5))
+                    .foregroundColor(Color(.systemGray6))
+                
+                HStack {
+                    
+                        
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 10)
+                                    .frame(width: 40, height: 40, alignment:.center)
+                                    .foregroundColor(Color(.systemBlue))
+                                    .padding(.leading)
+                                Image(systemName: "clock.arrow.2.circlepath").frame(alignment:.center).foregroundColor(.white).padding(.leading)
+                            }
+                            Text("REPETIR")
+                                //.frame(width: 116, height: 16, alignment:.leading)
+                                .font(.caption)
+                        
+                    Spacer()
+                    Toggle("repetir" ,isOn: $repeating).onTapGesture {
+                        repeating.toggle()
+                    }
+                        .labelsHidden()
+                    
+                }
+                .padding(.trailing) // desgruda o toggle da borda do retangulo
+            }.shadow(radius: 5.0,x: CGFloat(-1),
+                     y: CGFloat(3))
+            .padding(.horizontal)
+            .padding(.top)
+            ZStack {
+                RoundedRectangle(cornerRadius: 10.0)
+                    .frame(height: 65, alignment: .center)
+                    .foregroundColor(Color(.systemGray6))
                 
                 
                 HStack {
                     Toggle(isOn: $activityTime){
                         HStack {
                             ZStack{
-                            RoundedRectangle(cornerRadius: 10)
-                                .frame(width: 40, height: 40, alignment:.center)
-                                .foregroundColor(Color(.systemBlue))
-                                .padding(.leading)
-                                Image(systemName: "stopwatch").frame(alignment:.center).foregroundColor(.white)
-                        }
+                                RoundedRectangle(cornerRadius: 10)
+                                    .frame(width: 40, height: 40, alignment:.center)
+                                    .foregroundColor(Color(.systemBlue))
+                                    .padding(.leading)
+                                Image(systemName: "stopwatch").frame(alignment:.center).foregroundColor(.white).padding(.leading)
+                            }
                             Text("TEMPO DA ATIVIDADE")
                                 //.frame(width: 116, height: 16, alignment:.leading)
                                 .font(.caption)
@@ -146,17 +174,17 @@ struct ModalNewStep: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 10.0)
                     .frame(height: 65, alignment: .center)
-                    .foregroundColor(Color(.systemGray5))
+                    .foregroundColor(Color(.systemGray6))
                 
                 HStack {
                     Toggle(isOn: $frequency){
                         HStack{
                             ZStack{
-                            RoundedRectangle(cornerRadius: 10)
-                                .frame(width: 40, height: 40, alignment:.center)
-                                .foregroundColor(Color(.systemBlue))
-                                .padding(.leading)
-                                Image(systemName: "clock.arrow.2.circlepath").frame(alignment:.center).foregroundColor(.white)
+                                RoundedRectangle(cornerRadius: 10)
+                                    .frame(width: 40, height: 40, alignment:.center)
+                                    .foregroundColor(Color(.systemBlue))
+                                    .padding(.leading)
+                                Image(systemName: "clock.arrow.2.circlepath").frame(alignment:.center).foregroundColor(.white).padding(.leading)
                             }
                             Text("FREQUÊNCIA")
                                 //.frame(width: 116, height: 16, alignment:.leading)
@@ -167,17 +195,18 @@ struct ModalNewStep: View {
                 .padding(.trailing) // desgruda o toggle da borda do retangulo
             }.shadow(radius: 5.0,x: CGFloat(-1),
                      y: CGFloat(3))
-            .padding()
+            .padding(.horizontal)
             
             ZStack {
                 RoundedRectangle(cornerRadius: 10.0) .fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing))
                     .frame(width: 150, height: 45, alignment: .center)
-                   
+                
                 
                 Text("Concluir").foregroundColor(.white)
                     .font(.footnote)
                 
-            }.onTapGesture {
+            }.padding()
+            .onTapGesture {
                 self.completeStep(stepId,title,byStep,activityTime,frequency)
                 self.presentationMode.wrappedValue.dismiss()
             }
