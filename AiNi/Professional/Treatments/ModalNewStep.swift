@@ -139,7 +139,8 @@ struct ModalNewStep: View {
                     }
                 }
                 .padding(.trailing) // desgruda o toggle da borda do retangulo
-            }.shadow(radius: 4.0)
+            }.shadow(radius: 5.0,x: CGFloat(-1),
+                     y: CGFloat(3))
             .padding()
             
             ZStack {
@@ -162,7 +163,8 @@ struct ModalNewStep: View {
                     }
                 }
                 .padding(.trailing) // desgruda o toggle da borda do retangulo
-            }
+            }.shadow(radius: 5.0,x: CGFloat(-1),
+                     y: CGFloat(3))
             .padding()
             
             ZStack {
