@@ -8,43 +8,75 @@
 import SwiftUI
 
 struct CreateNewTreatment: View {
+    var todosTratamentos : ProCurrentTreatments
     
-    @State var name : String = ""
-    @State var description : String = ""
+    @State var name : String = "Nome do Tratamento"
+    @State var description : String = "Descrição"
+    @State var pacientName : String = ""
+    @State var addPacient : Bool = false
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationView{
             
-        VStack{
-            ZStack{
-            ZStack {
-                TextField("Nome do Tratamento", text: $name)
+            VStack{
                 
-            }.padding()
-            .background(LinearGradient(gradient: Gradient(colors: [.white, .red, .black]), startPoint: .leading, endPoint: .trailing).opacity(0.1))
-            .cornerRadius(15)
-            
+                ZStack{
+                    ZStack {
+                        TextField("Nome do Tratamento", text: $name).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
+                        
+                    }.padding()
+                    .background(CardsGradientStyle().opacity(0.1))
+                    .cornerRadius(15)
+                    
+                    
+                    
+                }
+                ZStack {
+                    
+                    TextField("Descrição", text: $description).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
+                    
+                }.padding()
+                .background(CardsGradientStyle().opacity(0.1))
+                .cornerRadius(15)
+                ZStack{
+                    VStack{
+                        HStack{
+                            Image(systemName: "plus").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            Text("Adicionar Pacientes").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            
+                            Spacer()
+                        }.onTapGesture {
+                            addPacient.toggle()
+                        }
+                        .sheet(isPresented: $addPacient) {
+                            PacientsOfTheTreatment()
+                        }
+                       
+                        
+                    }.padding()
+                }.background(CardsGradientStyle().opacity(0.1))
                 
+                Spacer()
                 
-            }
-            ZStack {
+                Button("concluir"){
+                    let treatment = TreatmentDetailsModel()
+                    treatment.treatmentName=name
+                    treatment.description = description
+                    todosTratamentos.treatments.append(treatment)
+                    presentationMode.wrappedValue.dismiss()
+                }
                 
-                TextField("Descrição", text: $description)
-                
-            }.padding()
-            .background(LinearGradient(gradient: Gradient(colors: [.white, .red, .black]), startPoint: .leading, endPoint: .trailing).opacity(0.1))
-            .cornerRadius(15)
+            }.navigationBarHidden(true)
+            .padding()
             
             
-            
-            
-        }.navigationBarHidden(true)
-            
-        }.navigationBarTitle("bergmann")
+        }.navigationBarTitle("Novo Tratamento")
     }
 }
 
 struct CreateNewTreatment_Previews: PreviewProvider {
     static var previews: some View {
-        CreateNewTreatment()
+        CreateNewTreatment(todosTratamentos: .init())
     }
 }
