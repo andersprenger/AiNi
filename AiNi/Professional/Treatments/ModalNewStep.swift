@@ -44,35 +44,39 @@ struct ModalNewStep: View {
                     HStack {
                         Spacer()
                         
-                        Text("Lixo")
+                        Image(systemName: "trash")
                     }
                 }
             }
             .padding()
             
             VStack {
-                HStack {
-                    Text("Título:")
+                ZStack{
+                    RoundedRectangle(cornerRadius: 10.0).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)).opacity(0.1)
+                        .frame(height: 46, alignment: .center)
+                        .foregroundColor(Color("card-color"))
+                    TextField("Título", text: $title).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5)).padding()
                     
-                    Spacer()
+                    
                 }
-                
-                TextField("\(title)", text: $title)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             .padding()
             
             VStack {
-                HStack {
-                    Text("Passo a passo:")
+                
+                ZStack{
+                    RoundedRectangle(cornerRadius: 10.0).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)).opacity(0.1)
+                        .frame(height: 46, alignment: .center)
+                        .foregroundColor(Color("card-color"))
                     
-                    Spacer()
+                    TextField("\(byStep)", text: $byStep)
+                        
                 }
                 
                 
-                TextField("\(byStep)", text: $byStep)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(height: 40.0)
+                
+                
+               
             }
             .padding()
             
@@ -148,11 +152,11 @@ struct ModalNewStep: View {
             .padding()
             
             ZStack {
-                RoundedRectangle(cornerRadius: 10.0)
+                RoundedRectangle(cornerRadius: 10.0) .fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing))
                     .frame(width: 150, height: 45, alignment: .center)
-                    .foregroundColor(Color(.systemGray6))
+                   
                 
-                Text("concluir")
+                Text("Concluir").foregroundColor(.white)
                     .font(.footnote)
                 
             }.onTapGesture {

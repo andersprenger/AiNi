@@ -110,10 +110,10 @@
 		711A06C826464BCC000CA449 /* Treatments */ = {
 			isa = PBXGroup;
 			children = (
-				711A06C0264630FA000CA449 /* TreatmentProStages.swift */,
 				FD480D34264AFD52008A8F07 /* ModalNewStep.swift */,
 				FD8FE83E2652ECEF00317AD0 /* CreateNewTreatment.swift */,
 				FD8FE842265444D400317AD0 /* PacientsOfTheTreatment.swift */,
+				711A06C0264630FA000CA449 /* TreatmentProStages.swift */,
 				9F85274E264DB73C00B5B485 /* TreatmentsProView.swift */,
 			);
 			path = Treatments;
@@ -170,8 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				FD8FE84826558D6E00317AD0 /* ProCurrentTreatments.swift */,
-				FD480D38264B0239008A8F07 /* StepDetailsModel.swift */,
 				FD480D36264B0176008A8F07 /* TreatmentDetailsModel.swift */,
+				FD480D38264B0239008A8F07 /* StepDetailsModel.swift */,
 				71A869E0264A5395006B1176 /* Patient.swift */,
 				71A869E2264A53A2006B1176 /* Treatment.swift */,
 				FD8FE84426544A2F00317AD0 /* PacientModel.swift */,

@@ -11,7 +11,7 @@
 import SwiftUI
 
 struct TreatmentsProView: View {
-  
+    
     @ObservedObject var todosTratamentos : ProCurrentTreatments = .init()
     
     var body: some View {
@@ -22,10 +22,17 @@ struct TreatmentsProView: View {
                 VStack(alignment: .center, spacing: 17) {
                     Spacer() // descola o primeiro card da navigationbar
                     ForEach (todosTratamentos.treatments, id:\.id) {treatment in
-                        NavigationLink(destination: TreatmentProStages()) {
+                        NavigationLink(destination: TreatmentProStages(viewModel: treatment)) {
                             TreatmentProCard(treatment: treatment)
                         }
+                        
                     }
+//                    ForEach (ProCurrentTreatments.mockDosTratamentos, id:\.id ) {treatment in
+//                        NavigationLink(destination: TreatmentProStages(viewModel: treatment)) {
+//                            TreatmentProCard(treatment: treatment)
+//                        }
+//
+//                    }
                 }
                 .padding(.horizontal)
             }
@@ -35,30 +42,30 @@ struct TreatmentsProView: View {
             .navigationBarItems(leading: EmptyView(), trailing: mais(tratamentos: todosTratamentos))
         }
     }
-
-struct mais : View {
-     
-    var tratamentos : ProCurrentTreatments
     
-    var body: some View {
+    struct mais : View {
         
-      
-        NavigationLink(destination: CreateNewTreatment(todosTratamentos: tratamentos)) {
-            Image(systemName: "plus")
+        var tratamentos : ProCurrentTreatments
+        
+        var body: some View {
+            
+            
+            NavigationLink(destination: CreateNewTreatment(todosTratamentos: tratamentos)) {
+                Image(systemName: "plus")
             }
             
         }
         
         
         
+        
+    }
     
+    
+    
+    struct Treatments_Previews: PreviewProvider {
+        static var previews: some View {
+            TreatmentsProView()
+        }
     }
-
-
-
-struct Treatments_Previews: PreviewProvider {
-    static var previews: some View {
-        TreatmentsProView()
-    }
-}
 }

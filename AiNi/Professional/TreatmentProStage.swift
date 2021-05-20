@@ -14,12 +14,14 @@ struct TreatmentProStage: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 10.0)
+            RoundedRectangle(cornerRadius: 10.0).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing))
                 .frame(height: 46, alignment: .center)
                 .foregroundColor(Color("card-color"))
             
+            
+            
             Text(text)
-                .font(.footnote)
+                .font(.footnote).foregroundColor(.white)
         }
     }
 }

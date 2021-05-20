@@ -23,8 +23,7 @@ struct PatientTreatmentsView: View {
             }
             .navigationTitle("Tratamentos")
             .navigationBarTitleDisplayMode(.inline)
-            // MARK: --TODO: adicionar botoes de add e editar quando prontos
-            //.navigationBarItems(leading: <#T##View#>, trailing: <#T##View#>)
+            
         }
     }
 }

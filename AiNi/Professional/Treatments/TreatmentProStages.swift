@@ -13,47 +13,60 @@ import SwiftUI
 struct TreatmentProStages: View {
     
     
-    @ObservedObject var viewModel : TreatmentDetailsModel = TreatmentDetailsModel()
+    @ObservedObject var viewModel : TreatmentDetailsModel
     
     @State var novaEtapa = false
     @State private var selectedStage: StepDetailsModel?
     
     var body: some View {
-        ScrollView {
-            VStack (alignment: .center, spacing: 15) {
-                Text("Crie o seu tratamento do jeito que quiser, adicione etapas, tarefas, frequência e tempo.")
-                    .font(.footnote)
-                    .frame(width: 339, alignment: .center)
-                    .padding(.top, 15)
-                
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10.0)
-                        .frame(height: 46, alignment: .center)
-                        .foregroundColor(Color("card-color"))
-                    
-                    Text("\(Image(systemName: "plus")) Nova Etapa")
+        VStack{
+            ScrollView {
+                VStack (alignment: .center, spacing: 15) {
+                    Text("Crie o seu tratamento do jeito que quiser, adicione etapas, tarefas, frequência e tempo.")
                         .font(.footnote)
-                        .sheet(isPresented: $novaEtapa) {
-                            ModalNewStep(viewModel : StepDetailsModel(title: "Nova Etapa", stepByStep: "", activityTime: false, frequency: false),completeStep: completeStep)
-                        }
-                        .onTapGesture {
-                            novaEtapa = true
-                        }
+                        .frame(width: 339, alignment: .center)
+                        .padding(.top, 15)
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10.0).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)).opacity(0.1)
+                            .frame(height: 46, alignment: .center)
+                            .foregroundColor(Color("card-color"))
+                        
+                        Text("\(Image(systemName: "plus")) Nova Etapa")
+                            .font(.footnote).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            .sheet(isPresented: $novaEtapa) {
+                                ModalNewStep(viewModel : StepDetailsModel(title: "Nova Etapa", stepByStep: "", activityTime: false, frequency: false),completeStep: completeStep)
+                            }
+                            .onTapGesture {
+                                novaEtapa = true
+                            }
+                    }
+                    ForEach(viewModel.stepList) { stepItem in
+                        TreatmentProStage(text:stepItem.title)
+                            .onTapGesture {
+                                selectedStage = stepItem
+                            }
+                    }
+                    .sheet(item: $selectedStage) { step in
+                        ModalNewStep(viewModel: step, completeStep: completeStep)
+                    }
                 }
-                ForEach(viewModel.stepList) { stepItem in
-                    TreatmentProStage(text:stepItem.title)
-                        .onTapGesture {
-                            selectedStage = stepItem
-                        }
-                }
-                .sheet(item: $selectedStage) { step in
-                    ModalNewStep(viewModel: step, completeStep: completeStep)
-                }
+                .padding(.horizontal)
+                
+                
             }
-            .padding(.horizontal)
+            Spacer()
+            ZStack {
+                RoundedRectangle(cornerRadius: 10.0) .fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing))
+                    .frame(width: 150, height: 45, alignment: .center)
+                
+                
+                Text("Seguinte").foregroundColor(.white)
+                    .font(.footnote)
+                
+            }.padding()
         }
     }
-    
     
     func completeStep(id: UUID, title: String, stepByStep: String, activityTime : Bool, frequency : Bool) {
         if let model = viewModel.stepList.first(where: { step in
@@ -73,6 +86,6 @@ struct TreatmentProStages: View {
 
 struct TreatmentProStages_Previews: PreviewProvider {
     static var previews: some View {
-        TreatmentProStages()
+        TreatmentProStages(viewModel: .init())
     }
 }

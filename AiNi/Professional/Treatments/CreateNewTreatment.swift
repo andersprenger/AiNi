@@ -20,7 +20,7 @@ struct CreateNewTreatment: View {
         NavigationView{
             
             VStack{
-                Spacer()
+                
                 ZStack{
                     ZStack {
                         TextField("Nome do Tratamento", text: $name).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
@@ -71,7 +71,7 @@ struct CreateNewTreatment: View {
             .padding()
             
             
-        }.navigationBarTitle("bergmann")
+        }.navigationBarTitle("Novo Tratamento")
     }
 }
 

@@ -9,6 +9,13 @@ import SwiftUI
 
 class ProCurrentTreatments: ObservableObject, Hashable, Identifiable{
     
+    static var mockDosTratamentos : ProCurrentTreatments = {
+        let mock = ProCurrentTreatments()
+        mock.treatments = TreatmentDetailsModel.mockDosDetalhesDosTratamentos
+        return mock
+    }()
+    
+    
     @Published var treatments: [TreatmentDetailsModel]
     var id: UUID = UUID()
     
