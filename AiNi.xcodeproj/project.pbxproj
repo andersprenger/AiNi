@@ -237,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				719AC368264D114C000DF672 /* AiNi.entitlements */,
-				71DC3046264B10B60044CA11 /* CircleImage.swift */,
 				71D1407A26430DD700D2774C /* AiNiApp.swift */,
 				71A869EB264A72BE006B1176 /* Common */,
 				71A869E4264A6FE4006B1176 /* Patient */,
@@ -272,6 +271,7 @@
 		9F89D4B72652EA9B008558C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				71DC3046264B10B60044CA11 /* CircleImage.swift */,
 				9F89D4B82652EADF008558C6 /* BlueButton.swift */,
 				9F16FB08264E0D2C00792B9B /* StageCard.swift */,
 				9F16FB10264EFCBA00792B9B /* CardsGradientStyle.swift */,
