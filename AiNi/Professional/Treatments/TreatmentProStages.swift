@@ -43,16 +43,25 @@ struct TreatmentProStages: View {
                                 }
                         }
                         ForEach(viewModel.stepList) { stepItem in
-                            StageCard(StageTitle: stepItem.title)
-                                .onTapGesture {
-                                    selectedStage = stepItem
-                                }
+                            Button(action: {
+                                selectedStage = stepItem
+
+                            }){
+                                Text(stepItem.title)
+                                    .foregroundColor(.white)
+
+                            }.buttonStyle(StageCard())
+                            .background(CardsGradientStyle())
+                            .cornerRadius(10)
+                            
+                            
                         }.sheet(item: $selectedStage) { step in
                             ModalNewStep(viewModel: step, completeStep: completeStep)
-
+                            
                         }
                     }
                     .padding(.horizontal)
+                    
                     
                     
                 }
@@ -65,7 +74,7 @@ struct TreatmentProStages: View {
                     Text("Seguinte").foregroundColor(.white)
                         .font(.footnote)
                     
-             
+                    
                 }.padding()
                 .onTapGesture {
                     /////////////

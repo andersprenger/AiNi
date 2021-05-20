@@ -39,6 +39,8 @@
 		9F89D4B62652E12E008558C6 /* PatientProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F89D4B52652E12E008558C6 /* PatientProgressView.swift */; };
 		9F89D4B92652EADF008558C6 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F89D4B82652EADF008558C6 /* BlueButton.swift */; };
 		9FD5D6762654B877004F39F6 /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5D6752654B877004F39F6 /* LightButton.swift */; };
+		9FEB86242656BA5F0087D892 /* StepTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB86232656BA5F0087D892 /* StepTwoView.swift */; };
+		9FEB86272656F5D10087D892 /* DoneStageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB86262656F5D10087D892 /* DoneStageButton.swift */; };
 		9FF30FAC264C446600161638 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF30FAB264C446600161638 /* TodayView.swift */; };
 		9FF30FAF264C69D200161638 /* PatientTreatmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF30FAE264C69D200161638 /* PatientTreatmentsView.swift */; };
 		FD480D35264AFD52008A8F07 /* ModalNewStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD480D34264AFD52008A8F07 /* ModalNewStep.swift */; };
@@ -89,6 +91,8 @@
 		9F89D4B52652E12E008558C6 /* PatientProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientProgressView.swift; sourceTree = "<group>"; };
 		9F89D4B82652EADF008558C6 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		9FD5D6752654B877004F39F6 /* LightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButton.swift; sourceTree = "<group>"; };
+		9FEB86232656BA5F0087D892 /* StepTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwoView.swift; sourceTree = "<group>"; };
+		9FEB86262656F5D10087D892 /* DoneStageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneStageButton.swift; sourceTree = "<group>"; };
 		9FF30FAB264C446600161638 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		9FF30FAE264C69D200161638 /* PatientTreatmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTreatmentsView.swift; sourceTree = "<group>"; };
 		FD480D34264AFD52008A8F07 /* ModalNewStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNewStep.swift; sourceTree = "<group>"; };
@@ -271,6 +275,7 @@
 				9F7DA083265467F60086F13E /* LightGradientStyle.swift */,
 				9F7DA081265430F70086F13E /* TreatmentTimer.swift */,
 				9FD5D6752654B877004F39F6 /* LightButton.swift */,
+				9FEB86262656F5D10087D892 /* DoneStageButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				9FF30FAE264C69D200161638 /* PatientTreatmentsView.swift */,
 				9F16FB0C264ED9AC00792B9B /* PatientStageView.swift */,
 				9F89D4B32652DEBA008558C6 /* PatientDoingStep.swift */,
+				9FEB86232656BA5F0087D892 /* StepTwoView.swift */,
 				9FF30FAB264C446600161638 /* TodayView.swift */,
 			);
 			path = Views;
@@ -365,11 +371,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FEB86242656BA5F0087D892 /* StepTwoView.swift in Sources */,
 				9F89D4B92652EADF008558C6 /* BlueButton.swift in Sources */,
 				9F852754264DB77200B5B485 /* PatientsView.swift in Sources */,
 				FD480D35264AFD52008A8F07 /* ModalNewStep.swift in Sources */,
 				FD480D39264B0239008A8F07 /* StepDetailsModel.swift in Sources */,
 				9F852750264DB73C00B5B485 /* TreatmentsProView.swift in Sources */,
+				9FEB86272656F5D10087D892 /* DoneStageButton.swift in Sources */,
 				9F16FB05264E0A2800792B9B /* PatientTreatmentsCard.swift in Sources */,
 				9F7DA082265430F70086F13E /* TreatmentTimer.swift in Sources */,
 				711A06D426464F54000CA449 /* ProfessionalTabView.swift in Sources */,

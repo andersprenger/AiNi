@@ -9,23 +9,50 @@ import SwiftUI
 
 struct PatientStageView: View {
     
+    @State var stageTitle = ""
+    @ State var nextStep = false
+    @ State var doStep = false
+    
     var body: some View {
-        ScrollView {
-            VStack(alignment: .center, spacing: 17) {
-                Spacer()
-                ForEach (0..<4) {_ in
-                    NavigationLink(destination: PatientDoingStep()) {
-                        StageCard(StageTitle: "Etapa do tratamento")
-                    }
-                }
-            }.padding(.horizontal)
-            
-            LightButton(ButtonTitle: "Começar")
-                .padding(.vertical)
-                        
-        }.navigationTitle("Nome do Tratamento")
-        .navigationBarTitleDisplayMode(.inline)
         
+        ScrollView(.vertical, showsIndicators: false){
+            
+            VStack(alignment: .center, spacing: 17) {
+                
+                Spacer()
+                
+                ForEach (0..<1) {_ in
+                    Button(action: { doStep = true }, label: {
+                        Text("\(stageTitle)")
+                            .font(.subheadline)
+                            .fontWeight(.light)
+                            .foregroundColor(Color.white)
+                        
+                    })
+                    .background(CardsGradientStyle())
+                    .buttonStyle(StageCard())
+                    .cornerRadius(10)
+                    
+                }
+                
+                ForEach (0..<4) {_ in
+                    Button(action: { nextStep = true }, label: {
+                        Text("\(stageTitle)")
+                            .font(.subheadline)
+                            .fontWeight(.light)
+                            .foregroundColor(Color("card-color"))
+                        
+                    })
+                    .background(LightGradientStyle())
+                    .buttonStyle(StageCard())
+                    .cornerRadius(10)
+
+                }
+                
+            }.navigationTitle("Nome do Tratamento")
+            .navigationBarTitleDisplayMode(.inline)
+            
+        }
     }
 }
 
@@ -34,3 +61,7 @@ struct PatientStageView_Previews: PreviewProvider {
         PatientStageView()
     }
 }
+
+//func () {
+//
+//}
