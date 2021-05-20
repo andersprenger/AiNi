@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PacientsOfTheTreatment: View {
     
+    @ObservedObject var todosPacientes : AllPacientsModel = AllPacientsModel.mockDosPacientes
     
     @State var pacientName : String = ""
     var body: some View {
@@ -27,16 +28,16 @@ struct PacientsOfTheTreatment: View {
                         
                     }
                     ScrollView{
-                    ForEach(1...3, id: \.self) {_ in
+                        ForEach(todosPacientes.pacients, id: \.self) {pacient in
                         HStack{
-                            ListedPacientView(nome: "rodriguinho", image: "patient-image")
+                            ListedPacientView(nome: pacient.name, image: pacient.name)
                             Spacer()
                             Image(systemName: "minus.circle")
                         }
                     }
                     }
                 }.padding()
-            }.background(CardsGradientStyle().opacity(0.1)).padding()
+            }.background(CardsGradientStyle().opacity(0.1).cornerRadius(15)).padding()
             
             Button("textinho"){
                 

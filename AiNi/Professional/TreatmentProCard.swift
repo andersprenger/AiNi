@@ -14,18 +14,16 @@ struct TreatmentProCard: View {
     
     var body: some View {
         ZStack {
-            
-            RoundedRectangle(cornerRadius: 28)
-                .foregroundColor(Color("card-color"))
             CardsGradientStyle()
+            
             VStack (alignment: .leading) {
                 Text(treatment.treatmentName)
                     .font(.title)
-                    .foregroundColor(Color("text-color"))
+                    .foregroundColor(Color(.white))
                 
                 Text(treatment.description)
                     .font(.subheadline)
-                    .foregroundColor(Color("text-color"))
+                    .foregroundColor(Color(.white))
                 
                 HStack (spacing: 2) {
                     HStack (alignment: .center, spacing: -5) {

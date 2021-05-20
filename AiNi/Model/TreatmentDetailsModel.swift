@@ -36,6 +36,7 @@ class TreatmentDetailsModel: ObservableObject, Equatable {
     @Published var description: String = ""
     @Published var stepList: [StepDetailsModel] = []
     @Published var thisTreatmentPacients : [PacientModel] = []
+    
 //    init() {
 //
 //    }

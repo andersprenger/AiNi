@@ -88,7 +88,7 @@ struct TreatmentProStages: View {
         }
         
     }
-    func completeStep(id: UUID, title: String, stepByStep: String, activityTime : Bool, frequency : Bool) {
+    func completeStep(id: UUID, title: String, stepByStep: String, activityTime : Bool, frequency : Bool, image : UIImage? = nil) {
         if let model = viewModel.stepList.first(where: { step in
             step.id == id
         }){
@@ -97,8 +97,9 @@ struct TreatmentProStages: View {
             model.stepByStep = stepByStep
             model.activityTime = activityTime
             model.frequency = frequency
+            model.image = image
         } else {
-            let step : StepDetailsModel = StepDetailsModel(title:title, stepByStep:stepByStep, activityTime:activityTime, frequency:frequency)
+            let step : StepDetailsModel = StepDetailsModel(title:title, stepByStep:stepByStep, activityTime:activityTime, frequency:frequency, image: image)
             viewModel.stepList.append(step)
         }
     }
