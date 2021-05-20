@@ -42,9 +42,9 @@ struct TreatmentProCard: View {
                             }
                         }
                     }
-                    Text("+5")
-                        .font(.subheadline)
-                        .foregroundColor(Color("card-color"))
+//                    Text("+5")
+//                        .font(.subheadline)
+//                        .foregroundColor(Color("card-color"))
                     
                     Spacer()
                     // esse spacer garante que o conteudo do card se espalhe horizontalmente

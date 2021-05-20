@@ -83,11 +83,11 @@ struct TreatmentProStages: View {
         .navigationBarTitleDisplayMode(.inline)
         // MARK: --TODO: adicionar botoes de add e editar quando prontos
         .navigationBarItems(leading: EmptyView(), trailing: HStack {
-            Image(systemName: "clock")
+            Image(systemName: "eye")
                 .onTapGesture {
                     print("clock")
                 }
-            Image(systemName: "plus")
+            Image(systemName: "person.badge.plus")
                 .onTapGesture {
                     print("plus")
                 }
