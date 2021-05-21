@@ -63,7 +63,8 @@ struct ModalNewStep: View {
                     RoundedRectangle(cornerRadius: 10.0).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing)).opacity(0.1)
                         .frame(height: 46, alignment: .center)
                         .foregroundColor(Color("card-color"))
-                    TextField("Título", text: $title).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5)).padding()
+                    
+                    TextField("Nome do Tratamento", text: $title).padding(.horizontal).padding(.vertical).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
                     
                     
                 }

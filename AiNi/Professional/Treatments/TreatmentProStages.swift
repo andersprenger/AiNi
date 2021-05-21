@@ -1,11 +1,3 @@
-//
-//  TreatmentProStages.swift
-//  AiNi
-//
-//  Etapas de um tratamento, a view chamada ao editar um tratamento.
-//
-//  Created by Anderson Sprenger on 07/05/21.
-//
 
 
 import SwiftUI
@@ -65,32 +57,32 @@ struct TreatmentProStages: View {
                 
             }
             Spacer()
-            ZStack {
-                RoundedRectangle(cornerRadius: 10.0) .fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing))
-                    .frame(width: 150, height: 45, alignment: .center)
-                
-                
-                Text("Seguinte").foregroundColor(.white)
-                    .font(.footnote)
-                
-                
-            }.padding()
-            .onTapGesture {
-                /////////////
+            NavigationLink(destination: AtributesOfTheTreatment(tratamento: viewModel, name: viewModel.treatmentName, description: viewModel.description) ){
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10.0) .fill(LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemIndigo)]), startPoint: .leading, endPoint: .trailing))
+                        .frame(width: 150, height: 45, alignment: .center)
+                    
+                    
+                    Text("Seguinte").foregroundColor(.white)
+                        .font(.footnote)
+                    
+                    
+                }.padding()
+            
             }
+            
+            
+            
             
         }.navigationTitle(viewModel.treatmentName)
         .navigationBarTitleDisplayMode(.inline)
         // MARK: --TODO: adicionar botoes de add e editar quando prontos
         .navigationBarItems(leading: EmptyView(), trailing: HStack {
-            Image(systemName: "clock")
-                .onTapGesture {
-                    print("clock")
-                }
-            Image(systemName: "plus")
-                .onTapGesture {
-                    print("plus")
-                }
+            Image(systemName: "eye")
+                
+            NavigationLink(destination: PacientsOfTheTreatment(tratamento: viewModel)){
+            Image(systemName: "person.badge.plus")
+            }.buttonStyle(PlainButtonStyle())
         })
         
         

@@ -87,7 +87,7 @@ struct RegisterView: View {
                                         }
                                         .buttonStyle(BlueButton())
                                         .fullScreenCover(isPresented: $showingFullScreen) {
-                                            PatientTabView()
+                                            ProfessionalTabView()
                                         }
                                         Spacer()
                                             .frame(width: 40, alignment: .center)
