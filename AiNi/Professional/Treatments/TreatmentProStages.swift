@@ -82,7 +82,7 @@ struct TreatmentProStages: View {
                 
             NavigationLink(destination: PacientsOfTheTreatment(tratamento: viewModel)){
             Image(systemName: "person.badge.plus")
-            }
+            }.buttonStyle(PlainButtonStyle())
         })
         
         
