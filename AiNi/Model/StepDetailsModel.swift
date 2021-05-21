@@ -55,6 +55,20 @@ class StepDetailsModel: ObservableObject, Hashable, Identifiable, Equatable{
         self.frequency = frequency
     }
     
+    
+   static func isInTreatment(tratamento : TreatmentDetailsModel, paciente : PacientModel ) -> Bool{
+        for pacient in tratamento.thisTreatmentPacients {
+        
+            if paciente.name == pacient.name{
+                return true
+            }
+        }
+        return false
+    }
+
+    
+    
+    
     static func == (lhs: StepDetailsModel, rhs: StepDetailsModel) -> Bool {
         return lhs.title == rhs.title && lhs.stepByStep == rhs.stepByStep && lhs.activityTime == rhs.activityTime && lhs.frequency == rhs.frequency && lhs.id == rhs.id
     }
