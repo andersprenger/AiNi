@@ -45,7 +45,8 @@ class TreatmentDetailsModel: ObservableObject, Equatable {
     
     
     
-    
+   
+
     
     
     var id : UUID = .init()

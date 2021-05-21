@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct PacientsOfTheTreatment: View {
-    
+    @Environment (\.presentationMode) var presentationMode
     @ObservedObject var todosPacientes : AllPacientsModel = AllPacientsModel.mockDosPacientes
-    
+    @State var tratamento : TreatmentDetailsModel
     @State var pacientName : String = ""
+    @State var atualisaView : Int = 0
     var body: some View {
         VStack{
             ZStack{
@@ -32,15 +33,31 @@ struct PacientsOfTheTreatment: View {
                         HStack{
                             ListedPacientView(nome: pacient.name, image: pacient.name)
                             Spacer()
-                            Image(systemName: "minus.circle")
+                            
+                            
+                            if StepDetailsModel.isInTreatment(tratamento: tratamento, paciente: pacient){
+                                Image(systemName: "minus.circle").onTapGesture {
+                                    tratamento.thisTreatmentPacients.removeAll{ paci in
+                                        return paci == pacient
+                                    }
+                                    atualisaView += 1
+                                }
+                            }else{
+                                Image(systemName: "plus.circle").onTapGesture {
+                                    tratamento.thisTreatmentPacients.append(pacient)
+                                    atualisaView += 1
+                                }
+                               
+                            }
+                            
                         }
                     }
                     }
                 }.padding()
             }.background(CardsGradientStyle().opacity(0.1).cornerRadius(15)).padding()
             
-            Button("textinho"){
-                
+            Button("Concluir"){
+                self.presentationMode.wrappedValue.dismiss()
             }
             .buttonStyle(BlueButton())
                     
@@ -50,6 +67,6 @@ struct PacientsOfTheTreatment: View {
 
 struct PacientsOfTheTreatment_Previews: PreviewProvider {
     static var previews: some View {
-        PacientsOfTheTreatment()
+        PacientsOfTheTreatment( tratamento: ProCurrentTreatments.mockDosTratamentos.treatments[0])
     }
 }

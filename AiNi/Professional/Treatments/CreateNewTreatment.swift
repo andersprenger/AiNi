@@ -15,7 +15,9 @@ struct CreateNewTreatment: View {
     @State var pacientName : String = ""
     @State var addPacient : Bool = false
     @Environment(\.presentationMode) var presentationMode
-    
+    var deuNil = ProCurrentTreatments.mockDosTratamentos.treatments[0]
+    @State var addPacientsController : Int = 0
+    @State var treatment : TreatmentDetailsModel? = nil
     var body: some View {
         NavigationView{
             
@@ -48,10 +50,18 @@ struct CreateNewTreatment: View {
                             Spacer()
                         }
                         .onTapGesture {
+                            
+                            
+                            if  addPacientsController == 0 {
+                            treatment = TreatmentDetailsModel()
+                            
+                            }
+                            
+                            addPacientsController += 1
                             addPacient.toggle()
                         }
                         .sheet(isPresented: $addPacient) {
-                            PacientsOfTheTreatment()
+                            PacientsOfTheTreatment( tratamento: treatment ?? deuNil )
                         }
                        
                         
@@ -61,12 +71,23 @@ struct CreateNewTreatment: View {
                 Spacer()
                 
                 Button("concluir"){
-                    let treatment = TreatmentDetailsModel()
-                    treatment.treatmentName=name
-                    treatment.description = description
-                    todosTratamentos.treatments.append(treatment)
-                    presentationMode.wrappedValue.dismiss()
-                }
+                    if treatment == nil {
+                         let treatment = TreatmentDetailsModel()
+                        treatment.treatmentName=name
+                        treatment.description = description
+                        todosTratamentos.treatments.append(treatment)
+                        presentationMode.wrappedValue.dismiss()
+                    }else{
+                    
+                        treatment?.treatmentName=name
+                        treatment?.description = description
+                        todosTratamentos.treatments.append(treatment ?? deuNil)
+                        presentationMode.wrappedValue.dismiss()
+                        
+                    }
+                    
+                    
+                }.buttonStyle(BlueButton())
                 
             }.navigationBarHidden(true)
             .padding()
