@@ -54,6 +54,7 @@
 		FD8FE84526544A2F00317AD0 /* PacientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE84426544A2F00317AD0 /* PacientModel.swift */; };
 		FD8FE84926558D6E00317AD0 /* ProCurrentTreatments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FE84826558D6E00317AD0 /* ProCurrentTreatments.swift */; };
 		FDA8D0092656EE44002D98BD /* AllPacientsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA8D0082656EE44002D98BD /* AllPacientsModel.swift */; };
+		FDDD12E92657DF6100138FB2 /* AtributesOfTheTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD12E82657DF6100138FB2 /* AtributesOfTheTreatment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,7 @@
 		FD8FE84426544A2F00317AD0 /* PacientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientModel.swift; sourceTree = "<group>"; };
 		FD8FE84826558D6E00317AD0 /* ProCurrentTreatments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCurrentTreatments.swift; sourceTree = "<group>"; };
 		FDA8D0082656EE44002D98BD /* AllPacientsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPacientsModel.swift; sourceTree = "<group>"; };
+		FDDD12E82657DF6100138FB2 /* AtributesOfTheTreatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtributesOfTheTreatment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				FD480D34264AFD52008A8F07 /* ModalNewStep.swift */,
 				711A06C0264630FA000CA449 /* TreatmentProStages.swift */,
 				9F85274E264DB73C00B5B485 /* TreatmentsProView.swift */,
+				FDDD12E82657DF6100138FB2 /* AtributesOfTheTreatment.swift */,
 			);
 			path = Treatments;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				9F7DA084265467F60086F13E /* LightGradientStyle.swift in Sources */,
 				802106642656F64F00787B12 /* UserType.swift in Sources */,
 				8021066226559BD200787B12 /* User.swift in Sources */,
+				FDDD12E92657DF6100138FB2 /* AtributesOfTheTreatment.swift in Sources */,
 				71D1407D26430DD700D2774C /* ContentView.swift in Sources */,
 				FD8FE8412654356500317AD0 /* ListedPacientView.swift in Sources */,
 				9F85274F264DB73C00B5B485 /* TreatmentProCard.swift in Sources */,

@@ -38,3 +38,4 @@ class AllPacientsModel: ObservableObject, Hashable, Identifiable{
         hasher.combine(self.id)
     }
 }
+

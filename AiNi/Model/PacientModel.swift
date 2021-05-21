@@ -11,7 +11,7 @@ import SwiftUI
 class PacientModel: ObservableObject, Hashable, Identifiable{
     
     @Published var name: String = ""
-    
+    @Published var auxiliarGambiarra : Int = 0
     var id: UUID = UUID()
     
     
@@ -43,7 +43,7 @@ class PacientModel: ObservableObject, Hashable, Identifiable{
     }
     
     static func == (lhs: PacientModel, rhs: PacientModel) -> Bool {
-        return lhs.name == rhs.name
+        return lhs.name == rhs.name && lhs.auxiliarGambiarra == rhs.auxiliarGambiarra
     }
     
     func hash(into hasher: inout Hasher) {
