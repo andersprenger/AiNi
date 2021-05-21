@@ -17,27 +17,19 @@ struct CreateNewTreatment: View {
     @Environment(\.presentationMode) var presentationMode
     var deuNil = ProCurrentTreatments.mockDosTratamentos.treatments[0]
     @State var addPacientsController : Int = 0
-    @State var treatment : TreatmentDetailsModel? = nil
+    @State var treatment : TreatmentDetailsModel = TreatmentDetailsModel()
     var body: some View {
         NavigationView{
-            
             VStack{
-                
                 ZStack{
                     ZStack {
                         TextField("Nome do Tratamento", text: $name).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
-                        
                     }.padding()
                     .background(CardsGradientStyle().opacity(0.1))
                     .cornerRadius(15)
-                    
-                    
-                    
                 }
                 ZStack {
-                    
                     TextField("Descrição", text: $description).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
-                    
                 }.padding()
                 .background(CardsGradientStyle().opacity(0.1))
                 .cornerRadius(15)
@@ -46,47 +38,24 @@ struct CreateNewTreatment: View {
                         HStack{
                             Image(systemName: "plus").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                             Text("Adicionar Pacientes").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                            
                             Spacer()
                         }
                         .onTapGesture {
-                            
-                            
-                            if  addPacientsController == 0 {
-                            treatment = TreatmentDetailsModel()
-                            
-                            }
-                            
-                            addPacientsController += 1
                             addPacient.toggle()
                         }
                         .sheet(isPresented: $addPacient) {
-                            PacientsOfTheTreatment( tratamento: treatment ?? deuNil )
+                            PacientsOfTheTreatment( tratamento: treatment  )
                         }
-                       
-                        
                     }.padding()
                 }.background(CardsGradientStyle().opacity(0.1).cornerRadius(15))
-                
                 Spacer()
-                
                 Button("concluir"){
-                    if treatment == nil {
-                         let treatment = TreatmentDetailsModel()
                         treatment.treatmentName=name
                         treatment.description = description
                         todosTratamentos.treatments.append(treatment)
                         presentationMode.wrappedValue.dismiss()
-                    }else{
                     
-                        treatment?.treatmentName=name
-                        treatment?.description = description
-                        todosTratamentos.treatments.append(treatment ?? deuNil)
-                        presentationMode.wrappedValue.dismiss()
-                        
-                    }
-                    
-                    
+   
                 }.buttonStyle(BlueButton())
                 
             }.navigationBarHidden(true)

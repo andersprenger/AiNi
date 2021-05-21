@@ -38,7 +38,7 @@ struct PacientsOfTheTreatment: View {
                             if StepDetailsModel.isInTreatment(tratamento: tratamento, paciente: pacient){
                                 Image(systemName: "minus.circle").onTapGesture {
                                     tratamento.thisTreatmentPacients.removeAll{ paci in
-                                        return paci == pacient
+                                        return paci.name == pacient.name
                                     }
                                     atualisaView += 1
                                 }
@@ -46,6 +46,7 @@ struct PacientsOfTheTreatment: View {
                                 Image(systemName: "plus.circle").onTapGesture {
                                     tratamento.thisTreatmentPacients.append(pacient)
                                     atualisaView += 1
+                                
                                 }
                                
                             }
