@@ -15,7 +15,6 @@ struct ListedPacientView: View {
     var body: some View {
         ZStack{
             HStack{
-                
                 Image(image)
                     .resizable()
                     .scaledToFit()

@@ -11,7 +11,7 @@ import SwiftUI
 struct AiNiApp: App {
     var body: some Scene {
         WindowGroup {
-            ProfessionalTabView()
+            ContentView()
         }
     }
 }

@@ -25,9 +25,7 @@ struct TreatmentsProView: View {
                         NavigationLink(destination: TreatmentProStages(viewModel: treatment)) {
                             TreatmentProCard(treatment: treatment)
                         }
-                        
                     }
-                    
                 }
                 .padding(.horizontal)
             }

@@ -53,7 +53,11 @@ class TreatmentDetailsModel: ObservableObject, Equatable {
     @Published var treatmentName: String = ""
     @Published var description: String = ""
     @Published var stepList: [StepDetailsModel] = []
-    @Published var thisTreatmentPacients : [PacientModel] = []
+    @Published var thisTreatmentPacients : [PacientModel] = [] {
+        willSet {
+            objectWillChange.send()
+        }
+    }
     
 //    init() {
 //

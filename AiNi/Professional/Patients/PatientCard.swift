@@ -10,16 +10,20 @@
 import SwiftUI
 
 struct PatientCard: View {
+    
+    var nome: String
+    var image: String
+    
     var body: some View {
         ZStack {
             CardsGradientStyle()
                 .clipShape(RoundedRectangle(cornerRadius: 28))
             
             HStack(alignment: .center, spacing: 21) {
-                CircleImage(imageName: "patient-image", size: 86)
+                CircleImage(imageName: image, size: 86)
                 
                 VStack(alignment: .leading) {
-                    Text("Flavio Fonseca")
+                    Text(nome)
                         .foregroundColor(.white)
                         .font(.title)
                     
@@ -45,7 +49,7 @@ struct PatientCard: View {
 
 struct PatientCard_Previews: PreviewProvider {
     static var previews: some View {
-        PatientCard()
+        PatientCard(nome: "Flávio", image: "patient-image")
             .previewLayout(.fixed(width: 349, height: 153))
     }
 }

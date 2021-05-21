@@ -64,6 +64,7 @@ struct ModalNewStep: View {
                         .frame(height: 46, alignment: .center)
                         .foregroundColor(Color("card-color"))
                     
+                    TextField("Nome do Tratamento", text: $title).padding(.horizontal).padding(.vertical).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.5))
                     
                     
                 }
