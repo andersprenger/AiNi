@@ -10,9 +10,9 @@ import SwiftUI
 struct RegisterPatient: View {
     @Environment (\.presentationMode) var presentationMode
     
-    @State var nome: String = "Nome completo do Paciente"
-    @State var email: String = "E-mail do Paciente"
-    @State var message: String = "Mensagem"
+    @State var nome: String = ""
+    @State var email: String = ""
+    @State var message: String = ""
     
     @State private var addingTreatment: Bool = false
     @State private var search: String = ""
@@ -23,6 +23,8 @@ struct RegisterPatient: View {
                 ZStack {
                     HStack {
                         Text("Cancelar")
+                            //.font(.footnote)
+                            .foregroundColor(.blue)
                             .onTapGesture {
                                 self.presentationMode.wrappedValue.dismiss()
                             }
@@ -38,8 +40,9 @@ struct RegisterPatient: View {
                 
                 ZStack {
                     LightGradientStyle()
+                        .cornerRadius(10)
                     
-                    TextField("Nome Completo", text: $nome)
+                    TextField("Nome completo do Paciente", text: $nome)
                         .textContentType(.name)
                         .foregroundColor(Color(.systemBlue))
                         .opacity(0.5)
@@ -50,8 +53,9 @@ struct RegisterPatient: View {
                 
                 ZStack {
                     LightGradientStyle()
-                    
-                    TextField("Email", text: $email)
+                        .cornerRadius(10)
+
+                    TextField("E-mail do Paciente", text: $email)
                         .textContentType(.emailAddress)
                         .textCase(.lowercase)
                         .foregroundColor(Color(.systemBlue))
@@ -63,7 +67,8 @@ struct RegisterPatient: View {
                 
                 ZStack {
                     LightGradientStyle()
-                    
+                        .cornerRadius(10)
+
                     VStack {
                         TextField("Mensagem", text: $message)
                             .foregroundColor(Color(.systemBlue))
@@ -78,7 +83,8 @@ struct RegisterPatient: View {
                 
                 ZStack {
                     LightGradientStyle()
-                    
+                        .cornerRadius(10)
+
                     VStack {
                         HStack {
                             Button("\(Image(systemName: "plus")) Adicionar a tratamento", action: {
@@ -122,10 +128,18 @@ struct RegisterPatient: View {
                                 
                                 ScrollView {
                                     VStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 20) {
-                                        ForEach(0..<6) {_ in
-                                            TreatmentItemNewPatient()
-                                                .padding(.horizontal)
-                                        }
+                                        TreatmentItemNewPatient(description: "Tratamento Pós-Cirurgico")
+                                            .padding(.horizontal)
+                                        
+                                        TreatmentItemNewPatient(description: "Artuculação")
+                                            .padding(.horizontal)
+                                        
+                                        TreatmentItemNewPatient(description: "Linguágem Pragmatica")
+                                            .padding(.horizontal)
+                                        
+                                        TreatmentItemNewPatient(description: "Tratamento Traumológico")
+                                            .padding(.horizontal)
+                                        
                                         
                                         Spacer()
                                     }
@@ -142,8 +156,8 @@ struct RegisterPatient: View {
                 
                 Spacer()
                 
-                Button("botao") {
-                    //
+                Button("Cadastrar") {
+                    self.presentationMode.wrappedValue.dismiss()
                 }
                 .buttonStyle(BlueButton())
             }

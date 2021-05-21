@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct TreatmentItemNewPatient: View {
+    var description: String
+    
     var body: some View {
         HStack {
-            Text("Articulação")
+            Text(description)
             
             Spacer()
             
@@ -21,7 +23,7 @@ struct TreatmentItemNewPatient: View {
 
 struct TreatmentItemNewPatient_Previews: PreviewProvider {
     static var previews: some View {
-        TreatmentItemNewPatient()
+        TreatmentItemNewPatient(description: "articulação")
             .previewLayout(.fixed(width: 347, height: 30))
     }
 }
