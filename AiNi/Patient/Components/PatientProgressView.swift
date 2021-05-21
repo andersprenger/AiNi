@@ -9,13 +9,13 @@ import SwiftUI
 
 struct PatientProgressView: View {
     
-    @State var SelectedStage = 0
+    @State var selectedStage: Int = 0
     var Stages = ["Etapa 1", "Etapa 2", "Etapa 3", "Etapa 4", "Etapa 5"]
     
     var body: some View {
         ZStack{
             VStack {
-                Picker(selection: $SelectedStage, label: Text("")) {
+                Picker(selection: $selectedStage, label: Text("")) {
                     Text("Etapa 1").tag(0)
                     Text("Etapa 2").tag(1)
                     Text("Etapa 3").tag(2)
@@ -27,18 +27,6 @@ struct PatientProgressView: View {
             .background(LightGradientStyle())
             .padding()
             
-            GeometryReader { geo in
-                ZStack {
-                    VStack() {
-                        ScrollView(.vertical, showsIndicators: false) {
-                            Text("")
-                        }
-                    }
-                    
-                }.offset(x: self.SelectedStage == 1 ? 0 : -geo.size.width-300, y: 0)
-                .animation(.default)
-            }
-            
         }
     }
 }
@@ -46,6 +34,6 @@ struct PatientProgressView: View {
 
 struct PatientProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        PatientProgressView()
+        PatientProgressView(selectedStage: 4)
     }
 }

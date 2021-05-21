@@ -16,11 +16,10 @@ struct ProfileHeader: View {
                 let loadedPerson = try decoder.decode(User.self, from: savedUser)
                 print(loadedPerson)
                 return loadedPerson
-                
+
             } catch {
                 print(error)
             }
-            
         }
         fatalError("Should have saved user")
     }
@@ -33,12 +32,13 @@ struct ProfileHeader: View {
                 VStack (alignment: .leading) {
                     HStack {
                         Text(loadedPerson.name)
+//                        Text("Julia")
                             .font(.title2)
                         
                         Image(systemName: "pencil.circle")
                     }
-                    
                     Text(loadedPerson.type)
+//                    Text("Profissional")
                         .font(.subheadline)
                     
                     HStack {

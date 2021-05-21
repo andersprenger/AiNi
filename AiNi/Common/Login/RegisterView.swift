@@ -31,8 +31,8 @@ struct RegisterView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        var patient = User(name: "Giovani", profissao: nil, especializacao: nil, data_nascimento: "05/11/1996", celular: "51 992116008", email: "bettoni.gn@gmail.com", password: "Teste123", type: UserType.patient.rawValue)
-        var professional = User(name: "Julia", profissao: "Fono", especializacao: "", data_nascimento: nil, celular: "51 99456878", email: "admin@gmail.com", password: "Teste123", type: UserType.professional.rawValue)
+    var patient = User(name: "Giovani", profissao: nil, especializacao: nil, data_nascimento: "05/11/1996", celular: "51 992116008", email: "bettoni.gn@gmail.com", password: "Teste123", type: UserType.patient.rawValue)
+    var professional = User(name: "Julia", profissao: "Fono", especializacao: "", data_nascimento: nil, celular: "51 99456878", email: "admin@gmail.com", password: "Teste123", type: UserType.professional.rawValue)
         
         ZStack {
             VStack {
@@ -45,9 +45,10 @@ struct RegisterView: View {
                     }
                 }
                 .padding()
-                Spacer()
-                    .frame(height: 50)
                 VStack(alignment: .center) {
+                    Image("logo")
+                        .resizable()
+                        .frame(width: 80.0, height: 32.0)
                     Picker(selection: $currentSegment, label: Text("")) {
                         Text("Profissional").tag(0)
                         Text("Paciente").tag(1)
@@ -70,18 +71,18 @@ struct RegisterView: View {
                                         Spacer()
                                             .frame(width: 40, alignment: .center)
                                         Button("     Cadastrar     ") {
-                                            patient = User(name: name, profissao: nil, especializacao: nil, data_nascimento: data_nascimento, celular: celular, email: email, password: password, type: UserType.patient.rawValue)
-                                            print(patient)
-                                            let isSavedUser = true
-                                            let encoder = JSONEncoder()
-                                            do {
-                                                let encoded = try encoder.encode(patient)
-                                                let defaults = UserDefaults.standard
-                                                defaults.set(encoded, forKey: "SavedUser")
-                                                defaults.set(isSavedUser, forKey: "isSavedUser")
-                                            } catch {
-                                                print(error)
-                                            }
+                                        patient = User(name: name, profissao: nil, especializacao: nil, data_nascimento: data_nascimento, celular: celular, email: email, password: password, type: UserType.patient.rawValue)
+                                        print(patient)
+                                        let isSavedUser = true
+                                        let encoder = JSONEncoder()
+                                        do {
+                                            let encoded = try encoder.encode(patient)
+                                            let defaults = UserDefaults.standard
+                                            defaults.set(encoded, forKey: "SavedUser")
+                                            defaults.set(isSavedUser, forKey: "isSavedUser")
+                                        } catch {
+                                            print(error)
+                                        }
                                             showingFullScreen.toggle()
                                         }
                                         .buttonStyle(BlueButton())
@@ -125,7 +126,7 @@ struct RegisterView: View {
                                         }
                                         .buttonStyle(BlueButton())
                                         .fullScreenCover(isPresented: $showingFullScreen) {
-                                            PatientTabView()
+                                            ProfessionalTabView()
                                         }
                                         Spacer()
                                             .frame(width: 40, alignment: .center)

@@ -8,16 +8,28 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State private var showingFullScreen = false
+    
     var body: some View {
         VStack (alignment: .center, spacing: 32){
             ProfileHeader()
             
             VStack (alignment: .center, spacing: 18){
                 HStack {
-                    Button(action: actionSheet) {
-                        Text("🙈 Compartilhar App ")
-                        Image(systemName: "square.and.arrow.up")
-                            .foregroundColor(.black)
+//                    Button(action: actionSheet) {
+//                        Text("🙈 Compartilhar App ")
+//                        Image(systemName: "square.and.arrow.up")
+//                            .foregroundColor(.black)
+//                    }
+                    Button("Sair") {
+                        let isSavedUser = false
+                        let defaults = UserDefaults.standard
+                        defaults.set(isSavedUser, forKey: "isSavedUser")
+                        showingFullScreen.toggle()
+                    }
+                    .buttonStyle(BlueButton())
+                    .fullScreenCover(isPresented: $showingFullScreen) {
+                        ContentView()
                     }
                 }
                 

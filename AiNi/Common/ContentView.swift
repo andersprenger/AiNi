@@ -12,65 +12,116 @@ struct ContentView: View {
     @State private var showingSheetAuth = false
     
     let defaults = UserDefaults.standard
-    let userType = UserType.professional
     
-    var isSavedUser: Bool {
-        let isSavedUser = defaults.bool(forKey: "isSavedUser")
-        return isSavedUser
-    }
-    
-    var loadedPerson: User {
-        if let savedUser = defaults.object(forKey: "SavedUser") as? Data {
-            let decoder = JSONDecoder()
-            do {
-                let loadedPerson = try decoder.decode(User.self, from: savedUser)
-                print(loadedPerson)
-                return loadedPerson
-                
-            } catch {
-                print(error)
-            }
-            
+        var isSavedUser: Bool {
+            let isSavedUser = defaults.bool(forKey: "isSavedUser")
+//            let isSavedUser = false
+            return isSavedUser
         }
-        fatalError("Should have saved user in ContentView")
-    }
+    
+        var loadedUser: User {
+            if let savedUser = defaults.object(forKey: "SavedUser") as? Data {
+                let decoder = JSONDecoder()
+                do {
+                    let loadedUser = try decoder.decode(User.self, from: savedUser)
+                    print(loadedUser)
+                    return loadedUser
+    
+                } catch {
+                    print(error)
+                }
+    
+            }
+            fatalError("Should have saved user in ContentView")
+        }
     
     
     var body: some View {
-        
         if isSavedUser == true {
-            if loadedPerson.type == UserType.patient.rawValue {
-                PatientTabView()
-            } else {
+            if loadedUser.type == UserType.professional.rawValue {
                 ProfessionalTabView()
+            } else {
+                PatientTabView()
             }
         } else {
             VStack {
                 ZStack{
-                    Color.blue
                     TabView {
-                        Text("First")
-                        Text("Second")
-                        Text("Third")
+                        VStack {
+                            Text("Acompanhamento")
+                                .bold()
+                                .font(.title2)
+                            Text("Crie tratamentos e acompanhe o progresso")
+                            Text("dos seus pacientes")
+                            Image("Onboarding2")
+                                .resizable()
+                                .scaledToFit()
+                                .padding()
+                        }
+                        
+                        VStack {
+                            Text("Gerenciamento")
+                                .bold()
+                                .font(.title2)
+                            Text("Cadastre seus pacientes no App e faça o")
+                            Text("acompanhamento remoto do progresso")
+                            Text("de seus pacientes")
+                            Image("Onboarding1")
+                                .resizable()
+                                .scaledToFit()
+                                .padding()
+                        }
+                        VStack {
+                            Text("Notificações")
+                                .bold()
+                                .font(.title2)
+                            Text("Seja notificado quando seus pacientes")
+                            Text("realizarem os tratamentos")
+                            Image("Onboarding3")
+                                .resizable()
+                                .scaledToFit()
+                                .padding()
+                        }
                     }
                 }
+//                .onAppear{
+//                    if let bundleID = Bundle.main.bundleIdentifier {
+//                        UserDefaults.standard.removePersistentDomain(forName: bundleID)
+//                    }
+//                }
                 .tabViewStyle(PageTabViewStyle())
+                .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                .ignoresSafeArea()
+                
                 VStack(spacing:20) {
-                    Button("Abra sua Conta") {
-                        showingSheetRegister.toggle()
-                    }
-                    .buttonStyle(BlueButton())
-                    .sheet(isPresented: $showingSheetRegister) {
-                        RegisterView()
-                    }
                     Button("Login") {
                         showingSheetAuth.toggle()
                     }
-                    .buttonStyle(BlueButton())
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(CardsGradientStyle())
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 40)
+                    .frame(width: 370, height: 45, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .sheet(isPresented: $showingSheetAuth) {
                         AuthView()
                     }
-                }.padding(40)
+                    Button("Abra sua Conta") {
+                        showingSheetRegister.toggle()
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(LightGradientStyle())
+                    .foregroundColor(.black)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 40)
+                    .frame(width: 370, height: 45, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .sheet(isPresented: $showingSheetRegister) {
+                        RegisterView()
+                    }
+                    
+                }.padding(.vertical, 40)
             }
             
         }
